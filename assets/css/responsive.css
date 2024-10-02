@@ -253,7 +253,7 @@ Version      : 1.0
     }
 
     .main-menu .mobile-logo img {
-        width: 40px;
+        width: 272px;
     }
 
     .about-social {
@@ -874,7 +874,7 @@ Version      : 1.0
 
 @media only screen and (max-width: 575px) {
     .main-menu .mobile-logo {
-        max-width: 150px;
+        max-width: 272px;
     }
 }
 
