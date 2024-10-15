@@ -918,7 +918,7 @@ html {
 }
 
 .main-header .logo img {
-    width: 240px;
+    width: 150px;
 }
 
 .main-header .nice-select .current {
@@ -3433,4 +3433,41 @@ hr.separtor{
 }
 .calender-modal  .modal-footer{
     border: 0;
+}
+
+.skills-list {
+        display: flex;
+        gap: 30px;
+}
+
+
+.skill-title {
+    font-size: 32px;
+    color: #c2f12c;
+}
+
+.title-list strong {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.title-list.soft-skills strong:before {
+    content: ">";
+    padding-right: 20px;
+    font-size: 25px;
+    color: #c2f12c;
+}
+
+.title-list li ul li{
+    padding-bottom: 20px;
+}
+
+.skill-sec .single-side-bar{
+    min-height: 490px;
+}
+
+.lang-list li{
+    padding-bottom: 20px;
 }
