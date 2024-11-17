@@ -918,7 +918,7 @@ html {
 }
 
 .main-header .logo img {
-    width: 150px;
+    width: 160px;
 }
 
 .main-header .nice-select .current {
@@ -3470,4 +3470,8 @@ hr.separtor{
 
 .lang-list li{
     padding-bottom: 20px;
+}
+
+.f-28{
+    font-size: 20px;
 }
