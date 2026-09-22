@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap");
 :root {
-  --bg: #080b10;
-  --panel: #10151b;
-  --line: #263039;
-  --text: #edf0e9;
-  --muted: #939da5;
-  --lime: #d5f588;
-  --orange: #e7996e;
-  --mono: "Space Mono", monospace;
-  --display: "Space Grotesk", sans-serif;
+  --bg: #0b0c21;
+  --panel: #15172e;
+  --line: #31334f;
+  --text: #f5f2ec;
+  --muted: #abaecb;
+  --lime: #ff997f;
+  --orange: #f9ba7a;
+  --mono: "IBM Plex Mono", monospace;
+  --display: "Syne", sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -21,7 +21,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font: 15px/1.7 "DM Sans", sans-serif;
+  font: 15px/1.7 "Manrope", sans-serif;
 }
 button,
 a,

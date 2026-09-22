@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#080b10" />
+    <meta name="theme-color" content="#0b0c21" />
     <title>Kshitij Joshi — AI Engineer & Curious Explorer</title>
     <meta
       name="description"
@@ -20,7 +20,12 @@
     <meta property="og:type" content="website" />
     <link rel="icon" href="assets/images/orbit-mark.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/orbit.css" />
+    <link rel="stylesheet" href="assets/css/aurora.css" />
+    <link rel="stylesheet" href="assets/css/arcade.css" />
     <script defer src="assets/js/projects.js"></script>
+    <script defer src="assets/js/arcade.js"></script>
+    <script defer src="assets/js/copilot.js"></script>
+    <script defer src="assets/js/journal.js"></script>
     <script defer src="assets/js/orbit.js"></script>
   </head>
   <body>
@@ -36,7 +41,7 @@
         <nav class="nav" aria-label="Main navigation">
           <a href="#missions">Missions</a><a href="#trajectory">Trajectory</a
           ><a href="#research">Research</a><a href="#off-duty">Off-duty</a
-          ><a href="#contact">Contact ↗</a>
+          ><a href="#journal">Journal</a><a href="#contact">Contact ↗</a>
         </nav>
         <button class="command-trigger" aria-label="Open command palette">
           <span class="command-label">Jump to</span><kbd>⌘ K</kbd></button
@@ -92,7 +97,15 @@
               <div class="orbit"></div>
               <div class="orbit two"></div>
               <div class="orbit three"></div>
-              <div class="planet" aria-hidden="true"></div>
+              <div class="planet" aria-hidden="true">
+                <img
+                  src="assets/images/aurora-planet.svg"
+                  alt=""
+                  width="440"
+                  height="440"
+                  fetchpriority="high"
+                />
+              </div>
               <div class="moon" aria-hidden="true"></div>
               <span class="crosshair c1" aria-hidden="true">+</span
               ><span class="crosshair c2" aria-hidden="true">+</span
@@ -105,12 +118,20 @@
                 ><span>♫</span> SIDE QUESTS ↗</a
               >
               <div class="planet-label">
-                <span>OBJECT: KJ–01<br />CLASS: CURIOUS BUILDER</span
+                <span>OBJECT: KJ–01<br />CLASS: LIMITLESS CURIOSITY</span
                 ><span><b>∞</b> POSSIBILITIES<br />01 HOME PLANET</span>
               </div>
             </div>
           </div>
           <div class="hero-bottom">
+            <button
+              class="theme-toggle"
+              id="theme-toggle"
+              aria-label="Switch cosmic color palette"
+              aria-pressed="false"
+            >
+              ◐ <span>SUPERNOVA</span>
+            </button>
             <div class="stack">
               <span>PYTHON</span><span>LLMs & AGENTS</span><span>RAG</span
               ><span>MCP</span><span>HUMAN CURIOSITY</span>
@@ -130,42 +151,124 @@
             problems worth solving.
           </p>
         </div>
-        <div class="filters" aria-label="Filter projects">
-          <button class="filter" data-filter="all" aria-pressed="true">
-            All missions / 06</button
-          ><button class="filter" data-filter="agentic" aria-pressed="false">
-            Agentic AI</button
-          ><button class="filter" data-filter="retrieval" aria-pressed="false">
-            Retrieval</button
-          ><button class="filter" data-filter="research" aria-pressed="false">
-            Research & NLP
-          </button>
+        <div class="project-toolbar">
+          <div class="filters" aria-label="Filter projects">
+            <button class="filter" data-filter="all" aria-pressed="true">
+              All missions
+            </button>
+            <button class="filter" data-filter="eox" aria-pressed="false">
+              At EOX Vantage
+            </button>
+            <button class="filter" data-filter="agentic" aria-pressed="false">
+              Agentic AI
+            </button>
+            <button class="filter" data-filter="research" aria-pressed="false">
+              Research
+            </button>
+            <button class="filter" data-filter="planned" aria-pressed="false">
+              Weekend lab <span>Planned</span>
+            </button>
+          </div>
+          <label class="project-search"
+            >⌕
+            <input
+              id="project-search"
+              type="search"
+              placeholder="Find a mission or technology…"
+              aria-label="Search projects"
+          /></label>
         </div>
+        <p class="project-count" id="project-count" role="status"></p>
+        <!-- PROJECTS:START -->
         <div class="projects">
-          <article class="project" data-category="agentic">
+          <article
+            class="project"
+            data-id="agents"
+            data-category="agentic"
+            data-lifecycle="built"
+            style="--card-accent: #ffac96; --card-glow: #a571ec44"
+          >
             <div class="project-art" aria-hidden="true">
-              <span class="art-index">EXPERIMENT / 01</span>
-              <div class="node-graph">
-                <svg viewBox="0 0 235 125">
-                  <path d="M20 17L117 64L215 17M20 106L117 64L215 106" />
-                </svg>
-                <div class="graph-core">AGENT</div>
-                <div class="graph-node">⌘</div>
-                <div class="graph-node">≋</div>
-                <div class="graph-node">✧</div>
-                <div class="graph-node">⌁</div>
-              </div>
-              <span class="art-type">AGENTIC SYSTEMS</span>
+              <span class="art-index">MISSION / 01</span
+              ><svg viewBox="0 0 320 200">
+                <defs>
+                  <linearGradient id="g-agents" x2="1" y2="1">
+                    <stop stop-color="#ffac96" />
+                    <stop offset="1" stop-color="#a571ec" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M69 54L160 103L249 50M64 155L160 103L253 155"
+                  stroke="#ffac96"
+                  stroke-width="2"
+                  stroke-dasharray="4 5"
+                />
+                <rect
+                  x="120"
+                  y="70"
+                  width="80"
+                  height="64"
+                  rx="16"
+                  fill="url(#g-agents)"
+                />
+                <path
+                  d="M142 102h36M160 84v36"
+                  stroke="#fff"
+                  stroke-opacity=".8"
+                  stroke-width="2"
+                />
+                <rect
+                  x="46"
+                  y="31"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#ffac96"
+                />
+                <circle cx="64" cy="47" r="4" fill="#ffac96" />
+                <rect
+                  x="229"
+                  y="29"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#ffac96"
+                />
+                <circle cx="247" cy="45" r="6" fill="#ffac96" />
+                <rect
+                  x="40"
+                  y="133"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#ffac96"
+                />
+                <circle cx="58" cy="149" r="4" fill="#ffac96" />
+                <rect
+                  x="232"
+                  y="132"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#ffac96"
+                />
+                <circle cx="250" cy="148" r="6" fill="#ffac96" /></svg
+              ><span class="art-type">AGENTIC SYSTEMS</span>
             </div>
             <div class="project-body">
-              <div class="project-meta">EOX VANTAGE · 2026</div>
+              <div class="project-meta">EOX VANTAGE · 2026–PRESENT</div>
               <h3>Enterprise AI agents</h3>
               <p>
-                Connecting enterprise knowledge, tools, and reasoning to turn
-                complex requests into useful actions.
+                Enterprise knowledge meets tool use: agentic workflows designed
+                around real business decisions.
               </p>
               <div class="tags">
-                <span>Tool orchestration</span><span>MCP</span><span>LLMs</span>
+                <span>Tool orchestration</span><span>Enterprise data</span
+                ><span>LLM evaluation</span>
               </div>
               <button
                 class="project-link"
@@ -176,57 +279,280 @@
               </button>
             </div>
           </article>
-          <article class="project" data-category="agentic">
+          <article
+            class="project"
+            data-id="enterprise-rag"
+            data-category="retrieval"
+            data-lifecycle="built"
+            style="--card-accent: #74f0dc; --card-glow: #3c87d844"
+          >
             <div class="project-art" aria-hidden="true">
-              <span class="art-index">EXPERIMENT / 02</span>
-              <div class="doc-stack">
-                <div class="doc-sheet"><i></i><i></i><i></i><i></i></div>
-                <div class="doc-sheet"><i></i><i></i><i></i><i></i></div>
-                <span class="doc-badge">✓ VERIFIED</span>
-              </div>
-              <span class="art-type">MULTI-MODEL ORCHESTRATION</span>
+              <span class="art-index">MISSION / 02</span
+              ><svg viewBox="0 0 320 200">
+                <defs>
+                  <linearGradient id="g-enterprise-rag" x2="1" y2="1">
+                    <stop stop-color="#74f0dc" />
+                    <stop offset="1" stop-color="#3c87d8" />
+                  </linearGradient>
+                </defs>
+                <g transform="rotate(-13 125 99)">
+                  <rect
+                    x="80"
+                    y="35"
+                    width="92"
+                    height="124"
+                    rx="9"
+                    fill="#322e53"
+                    stroke="#74f0dc"
+                  />
+                  <path
+                    d="M98 60h52M98 76h39M98 93h51M98 110h32"
+                    stroke="#74f0dc"
+                    stroke-width="3"
+                    opacity=".7"
+                  />
+                </g>
+                <g transform="rotate(10 195 105)">
+                  <rect
+                    x="150"
+                    y="47"
+                    width="88"
+                    height="118"
+                    rx="9"
+                    fill="url(#g-enterprise-rag)"
+                  />
+                  <path
+                    d="M168 75h48M168 91h35M168 108h46M168 125h27"
+                    stroke="#fff"
+                    stroke-width="3"
+                    opacity=".7"
+                  />
+                </g>
+                <rect
+                  x="177"
+                  y="135"
+                  width="87"
+                  height="28"
+                  rx="5"
+                  fill="#172a33"
+                  stroke="#74f0dc"
+                />
+                <path
+                  d="M186 148l5 5 9-12"
+                  stroke="#74f0dc"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <text
+                  x="211"
+                  y="153"
+                  fill="#74f0dc"
+                  font-size="10"
+                  font-family="monospace"
+                >
+                  CONTEXT
+                </text></svg
+              ><span class="art-type">PRODUCTION RAG</span>
             </div>
             <div class="project-body">
-              <div class="project-meta">EOX VANTAGE · 2026</div>
-              <h3>Document intelligence</h3>
+              <div class="project-meta">EOX VANTAGE · 2026–PRESENT</div>
+              <h3>Enterprise knowledge engine</h3>
               <p>
-                From insurance documents to structured answers, with extraction,
-                verification, and reconciliation built in.
+                A production retrieval platform that makes enterprise knowledge
+                available to AI workflows.
               </p>
               <div class="tags">
-                <span>OCR</span><span>Verification</span
+                <span>Semantic retrieval</span><span>Knowledge bases</span
                 ><span>LLM pipelines</span>
               </div>
               <button
                 class="project-link"
-                data-project="documents"
-                aria-label="Explore Document intelligence"
+                data-project="enterprise-rag"
+                aria-label="Explore Enterprise knowledge engine"
               >
                 Explore mission <span>↗</span>
               </button>
             </div>
           </article>
-          <article class="project" data-category="agentic">
+          <article
+            class="project"
+            data-id="documents"
+            data-category="agentic"
+            data-lifecycle="built"
+            style="--card-accent: #c0a0ff; --card-glow: #6175ed44"
+          >
             <div class="project-art" aria-hidden="true">
-              <span class="art-index">EXPERIMENT / 03</span>
-              <div class="node-graph">
-                <svg viewBox="0 0 235 125">
-                  <path d="M20 17L117 64L215 17M20 106L117 64L215 106" />
-                </svg>
-                <div class="graph-core">LOCAL</div>
-                <div class="graph-node">⌘</div>
-                <div class="graph-node">≋</div>
-                <div class="graph-node">✧</div>
-                <div class="graph-node">⌁</div>
+              <span class="art-index">MISSION / 03</span
+              ><svg viewBox="0 0 320 200">
+                <defs>
+                  <linearGradient id="g-documents" x2="1" y2="1">
+                    <stop stop-color="#c0a0ff" />
+                    <stop offset="1" stop-color="#6175ed" />
+                  </linearGradient>
+                </defs>
+                <g transform="rotate(-13 125 99)">
+                  <rect
+                    x="80"
+                    y="35"
+                    width="92"
+                    height="124"
+                    rx="9"
+                    fill="#322e53"
+                    stroke="#c0a0ff"
+                  />
+                  <path
+                    d="M98 60h52M98 76h39M98 93h51M98 110h32"
+                    stroke="#c0a0ff"
+                    stroke-width="3"
+                    opacity=".7"
+                  />
+                </g>
+                <g transform="rotate(10 195 105)">
+                  <rect
+                    x="150"
+                    y="47"
+                    width="88"
+                    height="118"
+                    rx="9"
+                    fill="url(#g-documents)"
+                  />
+                  <path
+                    d="M168 75h48M168 91h35M168 108h46M168 125h27"
+                    stroke="#fff"
+                    stroke-width="3"
+                    opacity=".7"
+                  />
+                </g>
+                <rect
+                  x="177"
+                  y="135"
+                  width="87"
+                  height="28"
+                  rx="5"
+                  fill="#172a33"
+                  stroke="#c0a0ff"
+                />
+                <path
+                  d="M186 148l5 5 9-12"
+                  stroke="#c0a0ff"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <text
+                  x="211"
+                  y="153"
+                  fill="#c0a0ff"
+                  font-size="10"
+                  font-family="monospace"
+                >
+                  CONTEXT
+                </text></svg
+              ><span class="art-type">MULTI-MODEL DOCUMENT AI</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">EOX VANTAGE · 2026–PRESENT</div>
+              <h3>Policy Quality Check</h3>
+              <p>
+                An insurance document review pipeline with extraction,
+                verification, and reconciliation built in.
+              </p>
+              <div class="tags">
+                <span>OCR</span><span>Structured extraction</span
+                ><span>Reconciliation</span>
               </div>
-              <span class="art-type">LOCAL FOUNDATION MODELS</span>
+              <button
+                class="project-link"
+                data-project="documents"
+                aria-label="Explore Policy Quality Check"
+              >
+                Explore mission <span>↗</span>
+              </button>
+            </div>
+          </article>
+          <article
+            class="project"
+            data-id="local"
+            data-category="agentic"
+            data-lifecycle="built"
+            style="--card-accent: #f8cd83; --card-glow: #e870a444"
+          >
+            <div class="project-art" aria-hidden="true">
+              <span class="art-index">MISSION / 04</span
+              ><svg viewBox="0 0 320 200">
+                <defs>
+                  <linearGradient id="g-local" x2="1" y2="1">
+                    <stop stop-color="#f8cd83" />
+                    <stop offset="1" stop-color="#e870a4" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M69 54L160 103L249 50M64 155L160 103L253 155"
+                  stroke="#f8cd83"
+                  stroke-width="2"
+                  stroke-dasharray="4 5"
+                />
+                <rect
+                  x="120"
+                  y="70"
+                  width="80"
+                  height="64"
+                  rx="16"
+                  fill="url(#g-local)"
+                />
+                <path
+                  d="M142 102h36M160 84v36"
+                  stroke="#fff"
+                  stroke-opacity=".8"
+                  stroke-width="2"
+                />
+                <rect
+                  x="46"
+                  y="31"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#f8cd83"
+                />
+                <circle cx="64" cy="47" r="4" fill="#f8cd83" />
+                <rect
+                  x="229"
+                  y="29"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#f8cd83"
+                />
+                <circle cx="247" cy="45" r="6" fill="#f8cd83" />
+                <rect
+                  x="40"
+                  y="133"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#f8cd83"
+                />
+                <circle cx="58" cy="149" r="4" fill="#f8cd83" />
+                <rect
+                  x="232"
+                  y="132"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#f8cd83"
+                />
+                <circle cx="250" cy="148" r="6" fill="#f8cd83" /></svg
+              ><span class="art-type">LOCAL FOUNDATION MODELS</span>
             </div>
             <div class="project-body">
               <div class="project-meta">PERSONAL PROJECT · 2026</div>
               <h3>A more personal AI</h3>
               <p>
-                A local assistant exploring what happens when retrieval and
-                model behavior adapt to the person using them.
+                A local assistant exploring retrieval and model behavior that
+                adapt to the person using them.
               </p>
               <div class="tags">
                 <span>Llama 3.2</span><span>LoRA</span><span>Unsloth</span>
@@ -240,18 +566,83 @@
               </button>
             </div>
           </article>
-          <article class="project" data-category="retrieval">
+          <article
+            class="project"
+            data-id="financial"
+            data-category="retrieval"
+            data-lifecycle="built"
+            style="--card-accent: #83ddff; --card-glow: #7173e244"
+          >
             <div class="project-art" aria-hidden="true">
-              <span class="art-index">EXPERIMENT / 04</span>
-              <div class="doc-stack">
-                <div class="doc-sheet"><i></i><i></i><i></i><i></i></div>
-                <div class="doc-sheet"><i></i><i></i><i></i><i></i></div>
-                <span class="doc-badge">{ CONTEXT }</span>
-              </div>
-              <span class="art-type">RETRIEVAL & REASONING</span>
+              <span class="art-index">MISSION / 05</span
+              ><svg viewBox="0 0 320 200">
+                <defs>
+                  <linearGradient id="g-financial" x2="1" y2="1">
+                    <stop stop-color="#83ddff" />
+                    <stop offset="1" stop-color="#7173e2" />
+                  </linearGradient>
+                </defs>
+                <g transform="rotate(-13 125 99)">
+                  <rect
+                    x="80"
+                    y="35"
+                    width="92"
+                    height="124"
+                    rx="9"
+                    fill="#322e53"
+                    stroke="#83ddff"
+                  />
+                  <path
+                    d="M98 60h52M98 76h39M98 93h51M98 110h32"
+                    stroke="#83ddff"
+                    stroke-width="3"
+                    opacity=".7"
+                  />
+                </g>
+                <g transform="rotate(10 195 105)">
+                  <rect
+                    x="150"
+                    y="47"
+                    width="88"
+                    height="118"
+                    rx="9"
+                    fill="url(#g-financial)"
+                  />
+                  <path
+                    d="M168 75h48M168 91h35M168 108h46M168 125h27"
+                    stroke="#fff"
+                    stroke-width="3"
+                    opacity=".7"
+                  />
+                </g>
+                <rect
+                  x="177"
+                  y="135"
+                  width="87"
+                  height="28"
+                  rx="5"
+                  fill="#172a33"
+                  stroke="#83ddff"
+                />
+                <path
+                  d="M186 148l5 5 9-12"
+                  stroke="#83ddff"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <text
+                  x="211"
+                  y="153"
+                  fill="#83ddff"
+                  font-size="10"
+                  font-family="monospace"
+                >
+                  CONTEXT
+                </text></svg
+              ><span class="art-type">RETRIEVAL &amp; REASONING</span>
             </div>
             <div class="project-body">
-              <div class="project-meta">PROJECT · 2024</div>
+              <div class="project-meta">PERSONAL PROJECT · FALL 2024</div>
               <h3>Financial RAG, with context</h3>
               <p>
                 Financial answers that preserve the important part: the
@@ -269,23 +660,139 @@
               </button>
             </div>
           </article>
-          <article class="project" data-category="research">
+          <article
+            class="project"
+            data-id="evaluations"
+            data-category="agentic"
+            data-lifecycle="built"
+            style="--card-accent: #ff9dcc; --card-glow: #a269e444"
+          >
             <div class="project-art" aria-hidden="true">
-              <span class="art-index">EXPERIMENT / 05</span>
-              <div class="translation"><b>અ</b><span>⇄</span><b>A</b></div>
-              <span class="art-type">LOW-RESOURCE NLP</span>
+              <span class="art-index">MISSION / 06</span
+              ><svg viewBox="0 0 320 200">
+                <defs>
+                  <linearGradient id="g-evaluations" x2="1" y2="1">
+                    <stop stop-color="#ff9dcc" />
+                    <stop offset="1" stop-color="#a269e4" />
+                  </linearGradient>
+                </defs>
+                <circle
+                  cx="160"
+                  cy="100"
+                  r="67"
+                  fill="#21203c"
+                  stroke="#ff9dcc"
+                  stroke-opacity=".5"
+                />
+                <circle
+                  cx="160"
+                  cy="100"
+                  r="45"
+                  fill="none"
+                  stroke="#ff9dcc"
+                  stroke-opacity=".4"
+                />
+                <circle cx="160" cy="100" r="24" fill="url(#g-evaluations)" />
+                <path
+                  d="M160 22v24M160 156v24M80 100h25M216 100h24"
+                  stroke="#ff9dcc"
+                  stroke-width="2"
+                />
+                <path d="M160 100l42-45" stroke="#fff" stroke-width="2" />
+                <circle cx="202" cy="55" r="6" fill="#ff9dcc" /></svg
+              ><span class="art-type">LLM EVALUATION &amp; POST-TRAINING</span>
             </div>
             <div class="project-body">
-              <div class="project-meta">
-                JOHNS HOPKINS / LEGALEASE · 2024–25
-              </div>
-              <h3>Language without barriers</h3>
+              <div class="project-meta">SCALE AI · 2025–26</div>
+              <h3>Understanding model behavior</h3>
               <p>
-                From Gujarati–English translation to legal language: making
-                information accessible across boundaries.
+                Model evaluation work connecting reasoning failures and
+                behavioral patterns to better training decisions.
               </p>
               <div class="tags">
-                <span>MarianMT</span><span>NLLB</span><span>IndicTrans</span>
+                <span>Code reasoning</span><span>Failure analysis</span
+                ><span>RL experiments</span>
+              </div>
+              <button
+                class="project-link"
+                data-project="evaluations"
+                aria-label="Explore Understanding model behavior"
+              >
+                Explore mission <span>↗</span>
+              </button>
+            </div>
+          </article>
+          <article
+            class="project"
+            data-id="translation"
+            data-category="research"
+            data-lifecycle="built"
+            style="--card-accent: #ffac96; --card-glow: #a571ec44"
+          >
+            <div class="project-art" aria-hidden="true">
+              <span class="art-index">MISSION / 07</span
+              ><svg viewBox="0 0 320 200">
+                <defs>
+                  <linearGradient id="g-translation" x2="1" y2="1">
+                    <stop stop-color="#ffac96" />
+                    <stop offset="1" stop-color="#a571ec" />
+                  </linearGradient>
+                </defs>
+                <rect
+                  x="49"
+                  y="50"
+                  width="87"
+                  height="93"
+                  rx="15"
+                  fill="url(#g-translation)"
+                />
+                <rect
+                  x="191"
+                  y="60"
+                  width="81"
+                  height="90"
+                  rx="15"
+                  fill="#25213e"
+                  stroke="#ffac96"
+                />
+                <text
+                  x="92"
+                  y="113"
+                  text-anchor="middle"
+                  font-family="sans-serif"
+                  font-size="49"
+                  fill="#fff"
+                >
+                  અ
+                </text>
+                <text
+                  x="232"
+                  y="121"
+                  text-anchor="middle"
+                  font-family="sans-serif"
+                  font-size="50"
+                  fill="#ffac96"
+                >
+                  A
+                </text>
+                <path
+                  d="M145 83h36l-7-7m7 7-7 7M181 119h-36l7-7m-7 7 7 7"
+                  stroke="#ffac96"
+                  stroke-width="2"
+                  fill="none"
+                /></svg
+              ><span class="art-type">LOW-RESOURCE NLP</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">JOHNS HOPKINS CLSP · 2024–25</div>
+              <h3>Language without barriers</h3>
+              <p>
+                LLM-assisted translation research for a language pair with fewer
+                resources and plenty of room to improve.
+              </p>
+              <div class="tags">
+                <span>MarianMT</span><span>NLLB</span
+                ><span>Gujarati–English</span>
               </div>
               <button
                 class="project-link"
@@ -296,24 +803,181 @@
               </button>
             </div>
           </article>
-          <article class="project" data-category="research">
+          <article
+            class="project"
+            data-id="legalease"
+            data-category="research"
+            data-lifecycle="built"
+            style="--card-accent: #74f0dc; --card-glow: #3c87d844"
+          >
             <div class="project-art" aria-hidden="true">
-              <span class="art-index">EXPERIMENT / 06</span
-              ><svg
-                width="200"
-                height="130"
-                viewBox="0 0 200 130"
-                fill="none"
-                stroke="#88b4ba"
-                stroke-width="2"
-              >
-                <circle cx="62" cy="28" r="9" />
-                <path
-                  d="M62 43v36h42l17 28h22M62 57h31M51 64a28 28 0 1 0 37 36"
+              <span class="art-index">MISSION / 08</span
+              ><svg viewBox="0 0 320 200">
+                <defs>
+                  <linearGradient id="g-legalease" x2="1" y2="1">
+                    <stop stop-color="#74f0dc" />
+                    <stop offset="1" stop-color="#3c87d8" />
+                  </linearGradient>
+                </defs>
+                <rect
+                  x="49"
+                  y="50"
+                  width="87"
+                  height="93"
+                  rx="15"
+                  fill="url(#g-legalease)"
                 />
-                <path d="M102 30h12l5-10 7 24 7-14h25" stroke="#d5f588" />
-                <circle cx="154" cy="75" r="20" stroke-dasharray="3 4" />
-                <path d="M145 75h18M154 66v18" /></svg
+                <rect
+                  x="191"
+                  y="60"
+                  width="81"
+                  height="90"
+                  rx="15"
+                  fill="#25213e"
+                  stroke="#74f0dc"
+                />
+                <text
+                  x="92"
+                  y="113"
+                  text-anchor="middle"
+                  font-family="sans-serif"
+                  font-size="49"
+                  fill="#fff"
+                >
+                  અ
+                </text>
+                <text
+                  x="232"
+                  y="121"
+                  text-anchor="middle"
+                  font-family="sans-serif"
+                  font-size="50"
+                  fill="#74f0dc"
+                >
+                  A
+                </text>
+                <path
+                  d="M145 83h36l-7-7m7 7-7 7M181 119h-36l7-7m-7 7 7 7"
+                  stroke="#74f0dc"
+                  stroke-width="2"
+                  fill="none"
+                /></svg
+              ><span class="art-type">DOMAIN-ADAPTED TRANSLATION</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">PERSONAL PROJECT · SPRING 2024</div>
+              <h3>LegalEase</h3>
+              <p>
+                Legal document translation tuned for the domain, from model
+                fine-tuning to an automated inference workflow.
+              </p>
+              <div class="tags">
+                <span>IndicTrans</span><span>Fairseq</span
+                ><span>Legal NLP</span>
+              </div>
+              <button
+                class="project-link"
+                data-project="legalease"
+                aria-label="Explore LegalEase"
+              >
+                Explore mission <span>↗</span>
+              </button>
+            </div>
+          </article>
+          <article
+            class="project"
+            data-id="cognitive-load"
+            data-category="research"
+            data-lifecycle="built"
+            style="--card-accent: #c0a0ff; --card-glow: #6175ed44"
+          >
+            <div class="project-art" aria-hidden="true">
+              <span class="art-index">MISSION / 09</span
+              ><svg viewBox="0 0 320 200">
+                <defs>
+                  <linearGradient id="g-cognitive-load" x2="1" y2="1">
+                    <stop stop-color="#c0a0ff" />
+                    <stop offset="1" stop-color="#6175ed" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M45 100q110-113 230 0-110 106-230 0Z"
+                  fill="#201831"
+                  stroke="#c0a0ff"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="160"
+                  cy="100"
+                  r="44"
+                  fill="url(#g-cognitive-load)"
+                />
+                <circle cx="160" cy="100" r="23" fill="#101129" />
+                <circle cx="149" cy="86" r="7" fill="#fff" opacity=".9" />
+                <path
+                  d="M48 169h45l12-20 10 33 14-20h39"
+                  fill="none"
+                  stroke="#c0a0ff"
+                  stroke-width="2"
+                /></svg
+              ><span class="art-type">HUMAN–ROBOT INTERACTION</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">JOHNS HOPKINS ARCADE · 2024–25</div>
+              <h3>Reading cognitive load</h3>
+              <p>
+                Physiological signals meet machine learning to estimate
+                cognitive load during telerobotic surgery.
+              </p>
+              <div class="tags">
+                <span>Pupillometry</span><span>Gaze entropy</span
+                ><span>Random Forest</span>
+              </div>
+              <button
+                class="project-link"
+                data-project="cognitive-load"
+                aria-label="Explore Reading cognitive load"
+              >
+                Explore mission <span>↗</span>
+              </button>
+            </div>
+          </article>
+          <article
+            class="project"
+            data-id="chair"
+            data-category="research"
+            data-lifecycle="built"
+            style="--card-accent: #f8cd83; --card-glow: #e870a444"
+          >
+            <div class="project-art" aria-hidden="true">
+              <span class="art-index">MISSION / 10</span
+              ><svg viewBox="0 0 320 200">
+                <defs>
+                  <linearGradient id="g-chair" x2="1" y2="1">
+                    <stop stop-color="#f8cd83" />
+                    <stop offset="1" stop-color="#e870a4" />
+                  </linearGradient>
+                </defs>
+                <circle cx="121" cy="48" r="13" fill="url(#g-chair)" />
+                <path
+                  d="M120 70v45h49l22 38h30M120 90h45"
+                  fill="none"
+                  stroke="#f8cd83"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M101 94a37 37 0 1 0 52 43"
+                  fill="none"
+                  stroke="#f8cd83"
+                  stroke-width="5"
+                />
+                <path
+                  d="M179 44h12l7-15 10 33 9-18h25"
+                  fill="none"
+                  stroke="#e870a4"
+                  stroke-width="3"
+                /></svg
               ><span class="art-type">HUMAN-CENTERED AI</span>
             </div>
             <div class="project-body">
@@ -336,11 +1000,412 @@
               </button>
             </div>
           </article>
+          <article
+            class="project"
+            data-id="fracture"
+            data-category="research"
+            data-lifecycle="built"
+            style="--card-accent: #83ddff; --card-glow: #7173e244"
+          >
+            <div class="project-art" aria-hidden="true">
+              <span class="art-index">MISSION / 11</span
+              ><svg viewBox="0 0 320 200">
+                <defs>
+                  <linearGradient id="g-fracture" x2="1" y2="1">
+                    <stop stop-color="#83ddff" />
+                    <stop offset="1" stop-color="#7173e2" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M69 54L160 103L249 50M64 155L160 103L253 155"
+                  stroke="#83ddff"
+                  stroke-width="2"
+                  stroke-dasharray="4 5"
+                />
+                <rect
+                  x="120"
+                  y="70"
+                  width="80"
+                  height="64"
+                  rx="16"
+                  fill="url(#g-fracture)"
+                />
+                <path
+                  d="M142 102h36M160 84v36"
+                  stroke="#fff"
+                  stroke-opacity=".8"
+                  stroke-width="2"
+                />
+                <rect
+                  x="46"
+                  y="31"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#83ddff"
+                />
+                <circle cx="64" cy="47" r="4" fill="#83ddff" />
+                <rect
+                  x="229"
+                  y="29"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#83ddff"
+                />
+                <circle cx="247" cy="45" r="6" fill="#83ddff" />
+                <rect
+                  x="40"
+                  y="133"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#83ddff"
+                />
+                <circle cx="58" cy="149" r="4" fill="#83ddff" />
+                <rect
+                  x="232"
+                  y="132"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#83ddff"
+                />
+                <circle cx="250" cy="148" r="6" fill="#83ddff" /></svg
+              ><span class="art-type">MEDICAL IMAGING RESEARCH</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">RESEARCH · UNDER REVIEW</div>
+              <h3>AI for fracture detection</h3>
+              <p>
+                Research evaluating artificial intelligence methods for
+                detecting fractures in orthopedic X-rays.
+              </p>
+              <div class="tags">
+                <span>Computer vision</span><span>Orthopedic X-rays</span
+                ><span>Model evaluation</span>
+              </div>
+              <button
+                class="project-link"
+                data-project="fracture"
+                aria-label="Explore AI for fracture detection"
+              >
+                Explore mission <span>↗</span>
+              </button>
+            </div>
+          </article>
+          <article
+            class="project"
+            data-id="agent-observatory"
+            data-category="agentic"
+            data-lifecycle="planned"
+            style="--card-accent: #ff9dcc; --card-glow: #a269e444"
+          >
+            <div class="project-art" aria-hidden="true">
+              <span class="art-index">MISSION / 12</span
+              ><span class="lifecycle-badge">PLANNED</span
+              ><svg viewBox="0 0 320 200">
+                <defs>
+                  <linearGradient id="g-agent-observatory" x2="1" y2="1">
+                    <stop stop-color="#ff9dcc" />
+                    <stop offset="1" stop-color="#a269e4" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M69 54L160 103L249 50M64 155L160 103L253 155"
+                  stroke="#ff9dcc"
+                  stroke-width="2"
+                  stroke-dasharray="4 5"
+                />
+                <rect
+                  x="120"
+                  y="70"
+                  width="80"
+                  height="64"
+                  rx="16"
+                  fill="url(#g-agent-observatory)"
+                />
+                <path
+                  d="M142 102h36M160 84v36"
+                  stroke="#fff"
+                  stroke-opacity=".8"
+                  stroke-width="2"
+                />
+                <rect
+                  x="46"
+                  y="31"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#ff9dcc"
+                />
+                <circle cx="64" cy="47" r="4" fill="#ff9dcc" />
+                <rect
+                  x="229"
+                  y="29"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#ff9dcc"
+                />
+                <circle cx="247" cy="45" r="6" fill="#ff9dcc" />
+                <rect
+                  x="40"
+                  y="133"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#ff9dcc"
+                />
+                <circle cx="58" cy="149" r="4" fill="#ff9dcc" />
+                <rect
+                  x="232"
+                  y="132"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#ff9dcc"
+                />
+                <circle cx="250" cy="148" r="6" fill="#ff9dcc" /></svg
+              ><span class="art-type">PLANNED · AGENT EVALUATION</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">PLANNED / WEEKEND LAB</div>
+              <h3>Agent Observatory</h3>
+              <p>
+                A planned weekend lab for testing how tool-using agents behave
+                when their environment gets messy.
+              </p>
+              <div class="tags">
+                <span>Trace replay</span><span>Tool-use evals</span
+                ><span>Budget controls</span>
+              </div>
+              <button
+                class="project-link"
+                data-project="agent-observatory"
+                aria-label="Explore Agent Observatory"
+              >
+                View the blueprint <span>↗</span>
+              </button>
+            </div>
+          </article>
+          <article
+            class="project"
+            data-id="incident-copilot"
+            data-category="agentic"
+            data-lifecycle="planned"
+            style="--card-accent: #ffac96; --card-glow: #a571ec44"
+          >
+            <div class="project-art" aria-hidden="true">
+              <span class="art-index">MISSION / 13</span
+              ><span class="lifecycle-badge">PLANNED</span
+              ><svg viewBox="0 0 320 200">
+                <defs>
+                  <linearGradient id="g-incident-copilot" x2="1" y2="1">
+                    <stop stop-color="#ffac96" />
+                    <stop offset="1" stop-color="#a571ec" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M69 54L160 103L249 50M64 155L160 103L253 155"
+                  stroke="#ffac96"
+                  stroke-width="2"
+                  stroke-dasharray="4 5"
+                />
+                <rect
+                  x="120"
+                  y="70"
+                  width="80"
+                  height="64"
+                  rx="16"
+                  fill="url(#g-incident-copilot)"
+                />
+                <path
+                  d="M142 102h36M160 84v36"
+                  stroke="#fff"
+                  stroke-opacity=".8"
+                  stroke-width="2"
+                />
+                <rect
+                  x="46"
+                  y="31"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#ffac96"
+                />
+                <circle cx="64" cy="47" r="4" fill="#ffac96" />
+                <rect
+                  x="229"
+                  y="29"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#ffac96"
+                />
+                <circle cx="247" cy="45" r="6" fill="#ffac96" />
+                <rect
+                  x="40"
+                  y="133"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#ffac96"
+                />
+                <circle cx="58" cy="149" r="4" fill="#ffac96" />
+                <rect
+                  x="232"
+                  y="132"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#ffac96"
+                />
+                <circle cx="250" cy="148" r="6" fill="#ffac96" /></svg
+              ><span class="art-type">PLANNED · OPERATIONS AGENT</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">PLANNED / WEEKEND LAB</div>
+              <h3>Incident Flight Recorder</h3>
+              <p>
+                A planned incident triage copilot that would turn logs and
+                runbooks into a cited investigation timeline.
+              </p>
+              <div class="tags">
+                <span>Log retrieval</span><span>Read-only tools</span
+                ><span>Human approval</span>
+              </div>
+              <button
+                class="project-link"
+                data-project="incident-copilot"
+                aria-label="Explore Incident Flight Recorder"
+              >
+                View the blueprint <span>↗</span>
+              </button>
+            </div>
+          </article>
+          <article
+            class="project"
+            data-id="paper-to-experiment"
+            data-category="agentic"
+            data-lifecycle="planned"
+            style="--card-accent: #74f0dc; --card-glow: #3c87d844"
+          >
+            <div class="project-art" aria-hidden="true">
+              <span class="art-index">MISSION / 14</span
+              ><span class="lifecycle-badge">PLANNED</span
+              ><svg viewBox="0 0 320 200">
+                <defs>
+                  <linearGradient id="g-paper-to-experiment" x2="1" y2="1">
+                    <stop stop-color="#74f0dc" />
+                    <stop offset="1" stop-color="#3c87d8" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M69 54L160 103L249 50M64 155L160 103L253 155"
+                  stroke="#74f0dc"
+                  stroke-width="2"
+                  stroke-dasharray="4 5"
+                />
+                <rect
+                  x="120"
+                  y="70"
+                  width="80"
+                  height="64"
+                  rx="16"
+                  fill="url(#g-paper-to-experiment)"
+                />
+                <path
+                  d="M142 102h36M160 84v36"
+                  stroke="#fff"
+                  stroke-opacity=".8"
+                  stroke-width="2"
+                />
+                <rect
+                  x="46"
+                  y="31"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#74f0dc"
+                />
+                <circle cx="64" cy="47" r="4" fill="#74f0dc" />
+                <rect
+                  x="229"
+                  y="29"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#74f0dc"
+                />
+                <circle cx="247" cy="45" r="6" fill="#74f0dc" />
+                <rect
+                  x="40"
+                  y="133"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#74f0dc"
+                />
+                <circle cx="58" cy="149" r="4" fill="#74f0dc" />
+                <rect
+                  x="232"
+                  y="132"
+                  width="36"
+                  height="32"
+                  rx="9"
+                  fill="#201936"
+                  stroke="#74f0dc"
+                />
+                <circle cx="250" cy="148" r="6" fill="#74f0dc" /></svg
+              ><span class="art-type">PLANNED · RESEARCH AGENT</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">PLANNED / WEEKEND LAB</div>
+              <h3>Paper → Experiment</h3>
+              <p>
+                A planned research assistant that would turn an ML paper into a
+                traceable, testable reproduction plan.
+              </p>
+              <div class="tags">
+                <span>Citation grounding</span><span>Experiment planning</span
+                ><span>Reproducibility</span>
+              </div>
+              <button
+                class="project-link"
+                data-project="paper-to-experiment"
+                aria-label="Explore Paper → Experiment"
+              >
+                View the blueprint <span>↗</span>
+              </button>
+            </div>
+          </article>
+        </div>
+        <!-- PROJECTS:END -->
+        <div class="more-projects">
+          <button class="btn" id="more-projects">
+            Explore the full mission archive ↓
+          </button>
         </div>
         <p class="journey-stamp" aria-live="polite">
           MISSION PASSPORT &nbsp;
-          <span id="mission-progress">0 / 6 explored</span> &nbsp; · &nbsp;
-          Every good journey starts with curiosity.
+          <span id="mission-progress">Mission passport ready</span> &nbsp; ·
+          &nbsp; Every good journey starts with curiosity.
         </p>
       </section>
       <section class="section split-section" id="trajectory">
@@ -495,23 +1560,42 @@
               <div class="hobby-icon" aria-hidden="true">♬</div>
               <h3>Drumming</h3>
               <p>Finding the pocket.<br />One beat at a time.</p>
-              <span class="mono">PLAY THE DRUM PADS ↗</span></button
+              <span class="mono">RECORD YOUR OWN GROOVE ↗</span></button
             ><button class="hobby" data-hobby="dj">
               <div class="hobby-icon" aria-hidden="true">◎</div>
               <h3>DJing</h3>
               <p>Connecting tracks.<br />Changing the energy.</p>
-              <span class="mono">MAKE A LITTLE LOOP ↗</span></button
+              <span class="mono">MIX A THREE-TRACK SET ↗</span></button
             ><button class="hobby" data-hobby="jiu">
               <div class="hobby-icon" aria-hidden="true">∞</div>
               <h3>Jiu Jitsu</h3>
               <p>Stay curious.<br />Keep showing up.</p>
-              <span class="mono">ENTER THE FLOW STATE ↗</span></button
+              <span class="mono">EXPLORE THE DECISION TREE ↗</span></button
             ><button class="hobby" data-hobby="soccer">
               <div class="hobby-icon" aria-hidden="true">⚽</div>
               <h3>Soccer</h3>
               <p>A different kind<br />of field work.</p>
-              <span class="mono">TAKE A PENALTY ↗</span>
+              <span class="mono">FIVE SHOTS. ONE SHOOTOUT. ↗</span>
             </button>
+          </div>
+          <div class="earth-note">
+            <span class="earth-icon" aria-hidden="true">↟</span>
+            <div>
+              <p class="section-index">BACK ON EARTH</p>
+              <h3>A little time for the world outside.</h3>
+              <p>
+                Alongside the side quests: environmental volunteering with the
+                Nirja Foundation, helping organize tree planting, plant care,
+                and supplies in Vadodara.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/kshitijjoshi10/"
+                target="_blank"
+                rel="noopener"
+                >More of the human story ↗</a
+              >
+            </div>
+            <span class="earth-date">2021–2023</span>
           </div>
           <div class="arcade-banner">
             <span class="icon" aria-hidden="true">♧</span>
@@ -528,9 +1612,114 @@
           </div>
         </div>
       </section>
+      <section
+        class="section journal-section"
+        id="journal"
+        aria-labelledby="journal-heading"
+      >
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <div class="section-index">05 / FIELD NOTES</div>
+              <h2 id="journal-heading">Life, outside the viewport.</h2>
+            </div>
+            <p>
+              Photo journals, travel memories,<br />and the occasional long
+              thought.
+            </p>
+          </div>
+          <div class="journal-filters" aria-label="Filter journal">
+            <button
+              class="filter"
+              data-journal-filter="all"
+              aria-pressed="true"
+            >
+              All field notes</button
+            ><button
+              class="filter"
+              data-journal-filter="photo"
+              aria-pressed="false"
+            >
+              Photography</button
+            ><button
+              class="filter"
+              data-journal-filter="travel"
+              aria-pressed="false"
+            >
+              Travel</button
+            ><button
+              class="filter"
+              data-journal-filter="writing"
+              aria-pressed="false"
+            >
+              Writing
+            </button>
+          </div>
+          <p id="journal-status" class="project-count" role="status">
+            The first entries are on their way.
+          </p>
+          <div class="journal-grid" id="journal-grid"></div>
+          <div class="journal-empty" id="journal-empty">
+            <article class="journal-preview photo">
+              <div class="journal-art" aria-hidden="true">
+                <span class="camera-frame"><i></i></span
+                ><span class="film-index">FRAME / 001</span>
+              </div>
+              <div>
+                <span class="section-index">PHOTO JOURNAL</span>
+                <h3>Through my lens.</h3>
+                <p>
+                  A place for the moments I want to keep.<br />First photographs
+                  coming soon.
+                </p>
+                <span class="journal-coming">AWAITING THE FIRST FRAME</span>
+              </div>
+            </article>
+            <article class="journal-preview travel">
+              <div class="journal-art" aria-hidden="true">
+                <svg viewBox="0 0 280 130" fill="none">
+                  <circle cx="200" cy="31" r="17" fill="#f0bd89" />
+                  <path d="M12 113L85 30l55 71 33-40 93 65" fill="#497676" />
+                  <path d="M85 30l-25 29 24-7 23 8Z" fill="#cee8e2" />
+                  <path
+                    d="M80 126q42-62 64-22t70-8"
+                    stroke="#f1be97"
+                    stroke-dasharray="4 5"
+                    stroke-width="2"
+                  /></svg
+                ><span class="film-index">NEXT STOP / OPEN</span>
+              </div>
+              <div>
+                <span class="section-index">TRAVEL DIARY</span>
+                <h3>A little further out.</h3>
+                <p>
+                  Places, detours, and the stories in between.<br />The first
+                  travel entry is still ahead.
+                </p>
+                <span class="journal-coming">STORIES ON THE HORIZON</span>
+              </div>
+            </article>
+            <article class="journal-preview writing">
+              <div class="journal-art" aria-hidden="true">
+                <span class="journal-paper"><i></i><i></i><i></i><i></i></span
+                ><span class="film-index">NOTE / 001</span>
+              </div>
+              <div>
+                <span class="section-index">PERSONAL BLOG</span>
+                <h3>Thinking out loud.</h3>
+                <p>
+                  A corner for ideas that need a little room.<br />New writing
+                  will live here.
+                </p>
+                <span class="journal-coming">FIRST NOTE COMING SOON</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
       <section class="contact" id="contact">
         <div class="wrap">
-          <div class="section-index">05 / OPEN A CHANNEL</div>
+          <div class="section-index">06 / OPEN A CHANNEL</div>
           <h2>Great things start<br />with a <span>hello.</span></h2>
           <p>
             Have an interesting problem, a wild idea, or a really good playlist?
@@ -578,6 +1767,8 @@
       <p id="project-description"></p>
       <div class="detail-flow" id="project-flow"></div>
       <p id="project-outcome"></p>
+      <ul id="project-highlights" class="project-highlights"></ul>
+      <p id="project-source" class="source-note"></p>
       <div class="tags" id="project-tags"></div>
       <div class="dialog-actions" id="project-actions"></div>
     </dialog>
@@ -606,35 +1797,49 @@
         </div>
         <button class="close" aria-label="Close copilot">×</button>
       </div>
+      <div class="copilot-status">
+        <span class="live" id="copilot-mode">SOURCE MODE · NO TOKENS</span
+        ><button id="clear-chat" aria-label="Clear this conversation">
+          Reset ↺
+        </button>
+      </div>
       <p class="copilot-note">
-        A local portfolio guide. Matches topics to verified profile content; not
-        a live AI model.
+        Ask about my work. Every answer points back to the resume, project
+        brief, or publication behind it.
       </p>
       <div
         class="chat-log"
+        role="log"
         aria-live="polite"
         aria-relevant="additions"
-        role="log"
       >
-        <div class="chat-message">
-          Hi, explorer. I can help you find Kshitij’s AI work, research,
-          experience, or side quests. What brings you to this corner of the
-          universe?
+        <div class="chat-message welcome">
+          <span class="chat-avatar">✧</span
+          ><strong>A little context goes a long way.</strong>
+          <p>
+            I’m Orbit, Kshitij’s portfolio guide. Choose a starting point, or
+            ask about a role, project, or research topic.
+          </p>
         </div>
       </div>
       <div class="suggestions">
-        <button data-ask="Show me agentic AI projects">Agentic AI</button
-        ><button data-ask="What is your experience?">Experience</button
-        ><button data-ask="What do you do for fun?">Beyond work</button>
+        <button data-topic="experience">The 30-second introduction</button
+        ><button data-topic="eox">What’s he building at EOX?</button
+        ><button data-topic="weekend">What’s next?</button
+        ><button data-topic="research">Research & publications</button>
       </div>
       <form class="chat-form">
         <input
           aria-label="Ask about Kshitij"
           maxlength="300"
-          placeholder="Ask about my work…"
+          placeholder="e.g. What’s his experience with RAG?"
           required
         /><button aria-label="Send question">↑</button>
       </form>
+      <p class="copilot-note" id="copilot-footnote">
+        Portfolio questions only · Sources always included · This conversation
+        stays in this tab
+      </p>
     </dialog>
     <dialog id="hobby-dialog" aria-labelledby="hobby-title">
       <div class="dialog-top">
@@ -642,6 +1847,37 @@
         <button class="close" aria-label="Close side quest">×</button>
       </div>
       <div id="hobby-content"></div>
+    </dialog>
+    <dialog id="journal-dialog" aria-labelledby="journal-title">
+      <div class="dialog-top">
+        <div>
+          <p class="eyebrow" id="journal-type"></p>
+          <h2 id="journal-title"></h2>
+        </div>
+        <button class="close" aria-label="Close journal entry">×</button>
+      </div>
+      <p class="journal-meta" id="journal-meta"></p>
+      <div id="journal-body"></div>
+      <div id="journal-photo-viewer" hidden>
+        <div id="journal-photo-stage"></div>
+        <p id="journal-photo-caption"></p>
+        <div class="journal-photo-controls">
+          <button
+            class="btn"
+            id="journal-photo-prev"
+            aria-label="Previous photograph"
+          >
+            ← Previous</button
+          ><span id="journal-photo-position" role="status"></span
+          ><button
+            class="btn"
+            id="journal-photo-next"
+            aria-label="Next photograph"
+          >
+            Next →
+          </button>
+        </div>
+      </div>
     </dialog>
     <dialog id="game-dialog" aria-labelledby="game-title">
       <div class="dialog-top">
