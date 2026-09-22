@@ -1,0 +1,23 @@
+{
+  "events": [
+    {
+      "id": "cle-ai-data-2026",
+      "title": "CLE AI & Data Mega Meetup",
+      "date": "2026-09-28",
+      "location": "Cleveland Museum of Natural History · Cleveland, OH",
+      "role": "attending",
+      "description": "An evening with Northeast Ohio’s AI and data community. Talks, demos, and conversations with fellow builders. Starts at 5 PM EDT.",
+      "url": "https://www.meetup.com/cleveland-ai-data/events/315079903/"
+    },
+    {
+      "id": "aws-reinvent-2026",
+      "title": "AWS re:Invent 2026",
+      "date": "2026-11-29",
+      "endDate": "2026-12-04",
+      "location": "Las Vegas, NV",
+      "role": "attending",
+      "description": "I’ll be in Las Vegas from November 29 through December 4. Sunday kickoff activities begin November 29; the main conference runs November 30–December 4.",
+      "url": "https://aws.amazon.com/events/reinvent/"
+    }
+  ]
+}

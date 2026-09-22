@@ -35,6 +35,14 @@ Consumer Pro login sessions are not embedded or repurposed for public site traff
 
 The Field Notes section has photo, travel, and writing filters, full-entry readers, and a keyboard-accessible photo viewer. It shows explicitly labeled upcoming collections until the owner supplies real photos and posts. Add content to `assets/data/journal.json`; see [docs/journal-guide.md](docs/journal-guide.md) for the schema and photo folder. No trips or posts are invented.
 
+## Upcoming events
+
+“Next coordinates” lists confirmed attendance, with chronological cards, event links, and Upcoming / Past events views. Edit `assets/data/events.json`; see [docs/events-guide.md](docs/events-guide.md). Multi-day events remain upcoming through their final date, then move to the past view automatically. No backend or calendar account is needed.
+
+## Papers, articles, and blogs
+
+The Reading Radar includes 23 verified links: 13 foundational papers, seven September 2026 preprints, and three articles/blog posts. It supports text search, collection filters, and progressive disclosure. The curation date is explicit; this is a selected snapshot, not a live feed or citation ranking. Personal picks stay empty until Kshitij selects favorites. Edit `assets/data/reading.json`; see [docs/reading-guide.md](docs/reading-guide.md).
+
 ## Content updates
 
 1. Edit `assets/js/projects.js` for project titles, content, status, sources, and architecture flows.

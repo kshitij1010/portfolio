@@ -62,3 +62,16 @@ When a lab is implemented, update its evidence, link to the actual work, record 
 ## Public profile context
 
 The public search-indexed [LinkedIn profile](https://www.linkedin.com/in/kshitijjoshi10/) also lists volunteering at the Nirja Foundation (May 2021–June 2023), involving tree planting, plant care, and inventory coordination in Vadodara. The off-duty section summarizes that entry. No additional hobbies or athletic/music credentials are inferred from connections, likes, or third-party tags. An X handle has not been verified, so no X profile or inferred interests from it are published.
+
+## Event attendance (September 22, 2026 update)
+
+The owner supplied attendance plans for CLE AI & Data Mega Meetup on September 28, 2026 and AWS re:Invent November 29–December 4, 2026. Both are labeled Attending, without implying speaker or organizer roles.
+
+- [Meetup listing](https://www.meetup.com/cleveland-ai-data/events/315079903/) verifies the Cleveland Museum of Natural History location and 5 PM EDT start. The listing's end time conflicts with its detailed agenda, so no end time is displayed.
+- [AWS event page](https://aws.amazon.com/events/reinvent/) gives November 30–December 4 for the main conference. The [official agenda](https://aws.amazon.com/events/reinvent/agenda/) lists Sunday kickoff activities on November 29. The portfolio preserves the owner's November 29–December 4 attendance window and explicitly explains the difference.
+
+## Reading library (curated September 22, 2026)
+
+All 23 source links in `assets/data/reading.json` were opened and checked against arXiv records or the original author's/publisher's page. The latest discovery source was [arXiv's September 22 cs.AI feed](https://arxiv.org/list/cs.AI/recent). Five selected papers were submitted September 21 and announced September 22; two other September preprints broaden the reasoning coverage. Recent preprints are not presented as established breakthroughs. Foundational selections reflect relevance to AI engineering rather than a quantified impact ranking. Summaries are short original paraphrases; no article or abstract is reproduced.
+
+These are curated resources by other authors, not Kshitij’s publications. The owner requested impactful and current reading but has not selected personal favorites; all `favorite` flags remain false. No scheduled refresh, third-party script, or model call is added. See `docs/reading-guide.md` for maintenance and provenance rules.

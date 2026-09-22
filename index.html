@@ -20,13 +20,15 @@
     <meta property="og:type" content="website" />
     <link rel="icon" href="assets/images/orbit-mark.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/orbit.css" />
-    <link rel="stylesheet" href="assets/css/aurora.css" />
+    <link rel="stylesheet" href="assets/css/aurora.css?v=20260922-3" />
     <link rel="stylesheet" href="assets/css/arcade.css" />
     <script defer src="assets/js/projects.js"></script>
     <script defer src="assets/js/arcade.js"></script>
     <script defer src="assets/js/copilot.js"></script>
     <script defer src="assets/js/journal.js"></script>
-    <script defer src="assets/js/orbit.js"></script>
+    <script defer src="assets/js/events.js"></script>
+    <script defer src="assets/js/reading.js?v=20260922-3"></script>
+    <script defer src="assets/js/orbit.js?v=20260922-3"></script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -41,7 +43,8 @@
         <nav class="nav" aria-label="Main navigation">
           <a href="#missions">Missions</a><a href="#trajectory">Trajectory</a
           ><a href="#research">Research</a><a href="#off-duty">Off-duty</a
-          ><a href="#journal">Journal</a><a href="#contact">Contact ↗</a>
+          ><a href="#journal">Journal</a><a href="#events">Events</a
+          ><a href="#reading">Reading</a><a href="#contact">Contact ↗</a>
         </nav>
         <button class="command-trigger" aria-label="Open command palette">
           <span class="command-label">Jump to</span><kbd>⌘ K</kbd></button
@@ -1717,9 +1720,174 @@
           </div>
         </div>
       </section>
+      <section
+        class="section events-section"
+        id="events"
+        aria-labelledby="events-heading"
+      >
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <div class="section-index">06 / NEXT COORDINATES</div>
+              <h2 id="events-heading">Where our orbits cross.</h2>
+            </div>
+            <p>
+              Good conversations start somewhere.<br />Here’s where you can find
+              me next.
+            </p>
+          </div>
+          <div class="events-toolbar">
+            <div class="events-filters" aria-label="Filter events">
+              <button
+                class="filter"
+                data-events-view="upcoming"
+                aria-pressed="true"
+              >
+                Upcoming
+              </button>
+              <button
+                class="filter"
+                data-events-view="past"
+                aria-pressed="false"
+              >
+                Past events
+              </button>
+            </div>
+            <p class="project-count" id="events-status" role="status">
+              New coordinates coming soon.
+            </p>
+          </div>
+          <div id="events-list" class="events-list"></div>
+          <div class="events-empty" id="events-empty">
+            <div class="events-radar" aria-hidden="true">
+              <span>✦</span><i></i><b></b>
+            </div>
+            <div>
+              <span class="section-index">OPEN TO NEW CONNECTIONS</span>
+              <h3>See you somewhere interesting.</h3>
+              <p>
+                I’ll share the conferences, meetups, and community events I’m
+                heading to. My next stops will appear here once confirmed.
+              </p>
+              <a
+                class="event-link"
+                href="mailto:kshitijjoshi017@gmail.com?subject=Let%27s%20meet%20at%20an%20event"
+                >Have an event in mind? Let’s connect ↗</a
+              >
+            </div>
+          </div>
+          <noscript><p>Enable JavaScript to load the event list.</p></noscript>
+        </div>
+      </section>
+      <section
+        class="section reading-section"
+        id="reading"
+        aria-labelledby="reading-heading"
+      >
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <div class="section-index">07 / THE READING RADAR</div>
+              <h2 id="reading-heading">Ideas worth keeping<br />in orbit.</h2>
+            </div>
+            <p>
+              Foundational papers. Fresh questions.<br />Useful perspectives on
+              building AI.
+            </p>
+          </div>
+          <div class="reading-intro">
+            <div class="reading-symbol" aria-hidden="true">✳</div>
+            <div>
+              <p>
+                A curated shelf for understanding and building AI, from
+                Transformers and retrieval to reasoning and autonomous agents.
+              </p>
+              <span
+                >Last curated <time id="reading-updated">—</time> · A selected
+                snapshot, not a live feed.</span
+              >
+            </div>
+          </div>
+          <div class="reading-controls">
+            <div class="reading-filters" aria-label="Filter reading collection">
+              <button
+                class="filter"
+                data-reading-filter="all"
+                aria-pressed="true"
+              >
+                All readings
+              </button>
+              <button
+                class="filter"
+                data-reading-filter="foundations"
+                aria-pressed="false"
+              >
+                Foundations
+              </button>
+              <button
+                class="filter"
+                data-reading-filter="recent"
+                aria-pressed="false"
+              >
+                New research
+              </button>
+              <button
+                class="filter"
+                data-reading-filter="guides"
+                aria-pressed="false"
+              >
+                Articles &amp; blogs
+              </button>
+              <button
+                class="filter"
+                data-reading-filter="favorites"
+                aria-pressed="false"
+              >
+                Personal picks
+              </button>
+            </div>
+            <label class="reading-search"
+              ><span aria-hidden="true">⌕</span
+              ><input
+                id="reading-search"
+                type="search"
+                placeholder="Search a title, author, or topic…"
+                aria-label="Search reading library"
+                maxlength="150"
+            /></label>
+          </div>
+          <p class="project-count" id="reading-status" role="status">
+            Loading the reading shelf…
+          </p>
+          <div class="reading-grid" id="reading-grid"></div>
+          <p class="reading-empty" id="reading-empty" hidden></p>
+          <button class="btn reading-more" id="reading-more" hidden>
+            Show more readings ↓
+          </button>
+          <div class="reading-footnote">
+            <p>
+              Foundations are selected for their relevance to modern AI
+              engineering, not a numerical impact ranking. New research includes
+              preprints; inclusion is not an endorsement of their results.
+              Personal picks are reserved for favorites I explicitly select.
+            </p>
+            <a
+              href="https://arxiv.org/list/cs.AI/recent"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Browse the latest on arXiv ↗</a
+            >
+          </div>
+          <noscript
+            ><p>
+              Enable JavaScript to browse the curated reading library.
+            </p></noscript
+          >
+        </div>
+      </section>
       <section class="contact" id="contact">
         <div class="wrap">
-          <div class="section-index">06 / OPEN A CHANNEL</div>
+          <div class="section-index">08 / OPEN A CHANNEL</div>
           <h2>Great things start<br />with a <span>hello.</span></h2>
           <p>
             Have an interesting problem, a wild idea, or a really good playlist?

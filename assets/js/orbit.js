@@ -273,6 +273,16 @@
   });
   const commands = [
     {
+      title: "Favorite papers, articles & reading library",
+      type: "Reading radar",
+      run: () => navigate("#reading"),
+    },
+    {
+      title: "Upcoming events & meetups",
+      type: "Next coordinates",
+      run: () => navigate("#events"),
+    },
+    {
       title: "Photo journals, travel & personal blog",
       type: "Field notes",
       run: () => navigate("#journal"),
@@ -371,6 +381,8 @@
   window.OrbitCopilot.init({ openDialog, navigate, toast });
   window.OrbitArcade.init({ openDialog, toast, storage });
   window.OrbitJournal.init({ openDialog });
+  window.OrbitEvents.init();
+  window.OrbitReading.init();
   const themeButton = $("#theme-toggle");
   function setTheme(value) {
     document.documentElement.dataset.palette = value;
