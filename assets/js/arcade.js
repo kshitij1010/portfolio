@@ -34,8 +34,8 @@ window.OrbitArcade = (() => {
       gain = ctx.createGain();
     gain.connect(master);
     let source, duration;
-    if (["snare", "hat"].includes(kind)) {
-      duration = kind === "snare" ? 0.14 : 0.045;
+    if (["snare", "hat", "open-hat"].includes(kind)) {
+      duration = kind === "snare" ? 0.14 : kind === "open-hat" ? 0.45 : 0.045;
       const buffer = ctx.createBuffer(
         1,
         ctx.sampleRate * duration,
@@ -47,16 +47,17 @@ window.OrbitArcade = (() => {
       source.buffer = buffer;
       const filter = ctx.createBiquadFilter();
       filter.type = "highpass";
-      filter.frequency.value = kind === "snare" ? 1600 : 7500;
+      filter.frequency.value =
+        kind === "snare" ? 1600 : kind === "open-hat" ? 6000 : 7500;
       source.connect(filter);
       filter.connect(gain);
       gain.gain.setValueAtTime(kind === "snare" ? 0.6 : 0.32, now);
     } else {
-      duration = kind === "kick" ? 0.24 : kind === "tom" ? 0.2 : 0.08;
+      duration = kind === "kick" ? 0.24 : 0.08;
       source = ctx.createOscillator();
       source.type = kind === "tick" ? "triangle" : "sine";
       const frequency =
-        { kick: 155, tom: 250, tick: 950, signal: 640, shield: 430 }[kind] ||
+        { kick: 155, tick: 950, signal: 640, shield: 430 }[kind] ||
         440;
       source.frequency.setValueAtTime(frequency, now);
       source.frequency.exponentialRampToValueAtTime(
@@ -119,12 +120,16 @@ window.OrbitArcade = (() => {
         ["kick", "A", "01 / Foundation"],
         ["snare", "S", "02 / Backbeat"],
         ["hat", "D", "03 / Texture"],
-        ["tom", "F", "04 / Color"],
+        ["open-hat", "F", "04 / Open texture"],
       ]
         .map(
           ([kind, key, detail]) =>
-            `<button class="arcade-pad" data-sound="${kind}" aria-label="Play ${kind}, keyboard ${key}"><kbd>${key}</kbd><strong>${
-              kind === "hat" ? "HI-HAT" : kind.toUpperCase()
+            `<button class="arcade-pad" data-sound="${kind}" aria-label="Play ${kind === "open-hat" ? "open hi-hat" : kind}, keyboard ${key}"><kbd>${key}</kbd><strong>${
+              kind === "open-hat"
+                ? "OPEN HI-HAT"
+                : kind === "hat"
+                  ? "HI-HAT"
+                  : kind.toUpperCase()
             }</strong><small>${detail}</small></button>`
         )
         .join("")}</div>
@@ -1209,7 +1214,7 @@ window.OrbitArcade = (() => {
         /INPUT|SELECT|TEXTAREA/.test(event.target.tagName)
       )
         return;
-      const kind = { a: "kick", s: "snare", d: "hat", f: "tom" }[
+      const kind = { a: "kick", s: "snare", d: "hat", f: "open-hat" }[
         event.key.toLowerCase()
       ];
       if (kind) {
