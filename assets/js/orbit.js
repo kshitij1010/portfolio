@@ -136,20 +136,20 @@
     const ids = new Set(shown.map((p) => p.id));
     $$(".project").forEach((card) => (card.hidden = !ids.has(card.dataset.id)));
     $("#project-count").textContent = matching.length
-      ? `Showing ${shown.length} of ${matching.length} profiles${
+      ? `Showing ${shown.length} of ${matching.length} projects${
           activeFilter === "planned"
             ? " · Design concepts, not completed work"
             : ""
         }`
-      : "No matching profiles. Try another technology or clear your search.";
+      : "No matching projects. Try another technology or clear your search.";
     $("#more-projects").hidden = !(
       activeFilter === "all" &&
       !query &&
       matching.length > 6
     );
     $("#more-projects").textContent = expanded
-      ? "Show selected profiles ↑"
-      : `Browse all ${matching.length} profiles ↓`;
+      ? "Show selected projects ↑"
+      : `Browse all ${matching.length} projects ↓`;
   }
   $$(".filters .filter").forEach((button) =>
     button.addEventListener("click", () => {
@@ -173,6 +173,8 @@
     $("#project-title").textContent = project.title;
     $("#project-type").textContent = project.type;
     $("#project-description").textContent = project.detail;
+    $("#project-onepager").href = `briefs/${project.id}.html`;
+    window.PortfolioArchitecture.render($("#project-architecture"), project);
     const briefMeta = $("#project-brief-meta");
     briefMeta.replaceChildren();
     [
@@ -341,8 +343,8 @@
   });
   const commands = [
     {
-      title: "Recent missions & case studies",
-      type: "Mission logs",
+      title: "Project case studies",
+      type: "Case studies",
       run: () => navigate("#mission-log"),
     },
     {
@@ -361,13 +363,13 @@
       run: () => navigate("#journal"),
     },
     {
-      title: "Explore the agent registry",
+      title: "Explore the projects",
       type: "Destination",
       run: () => navigate("#missions"),
     },
     {
       title: "Experience & education",
-      type: "Operator history",
+      type: "Experience",
       run: () => navigate("#trajectory"),
     },
     {
@@ -457,21 +459,22 @@
   window.OrbitEvents.init();
   window.OrbitReading.init();
   window.CommandCenter.init({ projects, showProject, navigate });
+  window.NeuralPortfolio.init({ projects, showProject });
   const themeButton = $("#theme-toggle");
   function setTheme(value) {
     document.documentElement.dataset.palette = value;
     themeButton.setAttribute("aria-pressed", String(value === "aurora"));
     themeButton.querySelector("span").textContent =
-      value === "aurora" ? "GLACIER" : "PHOSPHOR";
+      value === "aurora" ? "EMERALD" : "CYAN";
   }
-  setTheme(storage.get("command-palette", "supernova"));
+  setTheme(storage.get("neural-palette", "supernova"));
   themeButton.addEventListener("click", () => {
     const next =
       document.documentElement.dataset.palette === "aurora"
         ? "supernova"
         : "aurora";
     setTheme(next);
-    storage.set("command-palette", next);
+    storage.set("neural-palette", next);
   });
   const deepLink = new URLSearchParams(location.search).get("mission");
   if (deepLink && projects.some((p) => p.id === deepLink))

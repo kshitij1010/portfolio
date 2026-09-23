@@ -3,39 +3,41 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#111410" />
-    <title>Kshitij Joshi — Agent Command Center</title>
+    <meta name="theme-color" content="#111329" />
+    <title>Kshitij Joshi — AI Engineer & Researcher</title>
     <meta
       name="description"
       content="Kshitij Joshi — AI Engineer at EOX Vantage, Johns Hopkins alumnus, and builder of agentic systems. Explore AI projects, research, and a few side quests."
     />
-    <meta property="og:title" content="Kshitij Joshi — Agent Command Center" />
+    <meta property="og:title" content="Kshitij Joshi — AI Engineer & Researcher" />
     <meta
       property="og:description"
-      content="AI engineering, agentic systems, research, and a few side quests. Welcome to the Agent Command Center."
+      content="AI engineering, agentic systems, research, and a few side quests. Explore the systems behind the work."
     />
     <meta property="og:type" content="website" />
     <link rel="icon" href="assets/images/orbit-mark.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/orbit.css?v=command-1" />
     <link rel="stylesheet" href="assets/css/aurora.css?v=20260922-3" />
     <link rel="stylesheet" href="assets/css/arcade.css?v=command-1" />
-    <link rel="stylesheet" href="assets/css/command.css?v=command-1" />
-    <script defer src="assets/js/projects.js?v=command-1"></script>
+    <link rel="stylesheet" href="assets/css/neural.css?v=neural-1" />
+    <script defer src="assets/js/projects.js?v=neural-1"></script>
+    <script defer src="assets/js/architecture.js?v=neural-1"></script>
+    <script defer src="assets/js/neural.js?v=neural-1"></script>
     <script defer src="assets/js/arcade.js?v=command-2"></script>
     <script defer src="assets/js/copilot.js"></script>
     <script defer src="assets/js/journal.js"></script>
     <script defer src="assets/js/events.js"></script>
     <script defer src="assets/js/reading.js?v=20260922-3"></script>
-    <script defer src="assets/js/command-center.js?v=command-1"></script>
-    <script defer src="assets/js/orbit.js?v=command-1"></script>
+    <script defer src="assets/js/command-center.js?v=neural-1"></script>
+    <script defer src="assets/js/orbit.js?v=neural-1"></script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="registry-sidebar">
       <div class="header-inner">
         <a class="brand" href="#home" aria-label="Kshitij Joshi home">
-          <span class="brand-symbol" aria-hidden="true">⌘</span>
-          <span>KJ / CONTROL<small>AGENT COMMAND CENTER</small></span>
+          <span class="brand-symbol" aria-hidden="true">∿</span>
+          <span>Kshitij Joshi<small>AI ENGINEER & RESEARCHER</small></span>
         </a>
         <button class="command-trigger" aria-label="Open command palette">
           <span>⌕ &nbsp; Find anything</span><kbd>⌘ K</kbd>
@@ -54,11 +56,11 @@
             ><span aria-hidden="true">▦</span> Overview <small>01</small></a
           >
           <a href="#missions"
-            ><span aria-hidden="true">◈</span> Agent registry
+            ><span aria-hidden="true">◈</span> Projects
             <small id="sidebar-project-count">14</small></a
           >
           <a href="#mission-log"
-            ><span aria-hidden="true">≡</span> Mission logs</a
+            ><span aria-hidden="true">≡</span> Case studies</a
           >
           <a href="#trajectory"><span aria-hidden="true">↗</span> Experience</a>
           <a href="#research"><span aria-hidden="true">⌕</span> Publications</a>
@@ -93,10 +95,10 @@
     <main id="main">
       <div class="console-topbar">
         <span
-          ><span class="topbar-root">Workspace</span
+          ><span class="topbar-root">Portfolio</span
           ><span aria-hidden="true"> / </span
           ><span id="current-section">Overview</span></span
-        ><span class="topbar-note">HUMAN-LED. AGENT-ASSISTED.</span
+        ><span class="topbar-note">ENGINEERING WITH CURIOSITY.</span
         ><a
           href="assets/Kshitij-Joshi-Resume.pdf"
           target="_blank"
@@ -107,7 +109,7 @@
       <section class="hero" id="home" aria-labelledby="hero-title">
         <div class="wrap">
           <div class="workspace-heading">
-            <span class="eyebrow"><i></i> THE OPERATOR / KSHITIJ JOSHI</span
+            <span class="eyebrow"><i></i> KSHITIJ JOSHI / AI ENGINEER</span
             ><span class="workspace-version">PORTFOLIO / 2026</span>
           </div>
           <div class="hero-grid">
@@ -124,66 +126,25 @@
               </p>
               <div class="actions">
                 <a class="btn primary" href="#missions"
-                  >Open agent registry <span>↗</span></a
-                ><a class="btn" href="#trajectory">Meet the operator</a>
+                  >Explore my work <span>↗</span></a
+                ><a class="btn" href="#trajectory">About me</a>
               </div>
               <div class="hero-stack">
                 <span>Python</span><span>LangGraph</span><span>RAG</span
                 ><span>MCP</span><span>PyTorch</span>
               </div>
             </div>
-            <div class="orchestrator" aria-labelledby="orchestrator-title">
-              <div class="panel-title">
-                <span><i></i> VISITOR ORCHESTRATOR</span
-                ><span class="sim-label">SIMULATION</span>
-              </div>
-              <div class="orchestrator-content">
-                <h2 id="orchestrator-title">What brings you here?</h2>
-                <p>Choose an intent. I’ll route you to the right work.</p>
-                <div class="route-options">
-                  <button data-route="agents">
-                    <span aria-hidden="true">⌘</span> Agent systems
-                    <span>↗</span>
-                  </button>
-                  <button data-route="retrieval">
-                    <span aria-hidden="true">⌕</span> RAG &amp; knowledge
-                    <span>↗</span>
-                  </button>
-                  <button data-route="research">
-                    <span aria-hidden="true">⌬</span> Research &amp; ML
-                    <span>↗</span>
-                  </button>
-                  <button data-route="planned">
-                    <span aria-hidden="true">＋</span> What’s next
-                    <span>↗</span>
-                  </button>
-                </div>
-                <div
-                  class="router-log"
-                  id="router-log"
-                  role="log"
-                  aria-live="polite"
-                  aria-label="Simulated routing log"
-                >
-                  <p>
-                    <span>system</span> Router ready. Awaiting visitor intent.<b
-                      class="terminal-cursor"
-                      aria-hidden="true"
-                      >▌</b
-                    >
-                  </p>
-                </div>
-                <div class="route-results" id="route-results"></div>
-              </div>
-              <div class="orchestrator-footer">
-                <span>Deterministic routing</span
-                ><span>No AI calls · No tokens</span>
-              </div>
+            <div class="neural-hero" aria-labelledby="network-heading">
+              <div class="network-caption"><span>01 / INPUT → CONNECTIONS</span><span class="network-live">Interactive map</span></div>
+              <h2 id="network-heading">Good ideas connect.</h2>
+              <p>Probe a node. Follow it into a project.</p>
+              <div class="neural-map" id="neural-map" role="group" aria-label="Explore projects by probing network nodes"></div>
+              <div class="neural-probe" id="neural-probe" aria-live="polite"></div>
             </div>
           </div>
           <div class="workspace-metrics" aria-label="Portfolio overview">
             <div>
-              <span>REGISTRY ENTRIES</span><strong id="metric-total">14</strong
+              <span>CONNECTED IDEAS</span><strong id="metric-total">14</strong
               ><small>Projects &amp; research</small>
             </div>
             <div>
@@ -191,195 +152,28 @@
               ><small>Resume &amp; source backed</small>
             </div>
             <div>
-              <span>IN THE QUEUE</span><strong id="metric-planned">03</strong
+              <span>EXPLORATIONS</span><strong id="metric-planned">03</strong
               ><small>Clearly labeled concepts</small>
             </div>
             <div class="workspace-mode">
-              <span>WORKSPACE DISPLAY</span
+              <span>COLOR ACCENT</span
               ><button
                 id="theme-toggle"
                 class="theme-toggle"
-                aria-label="Switch command center accent"
+                aria-label="Switch neural color accent"
                 aria-pressed="false"
               >
-                ◐ <span>PHOSPHOR</span></button
+                ◐ <span>CYAN</span></button
               ><small>Change the accent</small>
             </div>
           </div>
         </div>
       </section>
-      <section class="section wrap" id="missions">
-        <div class="section-head">
-          <div>
-            <div class="section-index">01 / AGENT REGISTRY</div>
-            <h2>Meet the agents.</h2>
-          </div>
-          <p>
-            A registry of my engineering work and research. Each profile opens a
-            detailed brief with methods, evidence, and resources.
-          </p>
-        </div>
-        <div class="project-toolbar">
-          <div class="filters" aria-label="Filter projects">
-            <button class="filter" data-filter="all" aria-pressed="true">
-              All profiles
-            </button>
-            <button class="filter" data-filter="eox" aria-pressed="false">
-              At EOX Vantage
-            </button>
-            <button class="filter" data-filter="agentic" aria-pressed="false">
-              Agentic AI
-            </button>
-            <button class="filter" data-filter="research" aria-pressed="false">
-              Research
-            </button>
-            <button class="filter" data-filter="planned" aria-pressed="false">
-              Weekend lab <span>Planned</span>
-            </button>
-          </div>
-          <label class="project-search"
-            >⌕
-            <input
-              id="project-search"
-              type="search"
-              placeholder="Search agents, capabilities, tools…"
-              aria-label="Search projects"
-          /></label>
-        </div>
-        <p class="project-count" id="project-count" role="status"></p>
-        <!-- PROJECTS:START -->
-<div class="projects"><article class="project" data-id="agents" data-category="agentic" data-lifecycle="built">
-    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">01</span><small>AGENT / 01</small></div><span class="agent-status ">Documented</span></div>
-    <div class="project-body"><div class="project-meta">EOX VANTAGE · 2026–PRESENT</div><h3>Enterprise AI agents</h3><p class="agent-role">Connect enterprise context with tool-driven workflows.</p><p>Enterprise knowledge meets tool use: agentic workflows designed around real business decisions.</p>
-    <div class="tags" aria-label="Capabilities"><span>Tool orchestration</span><span>Enterprise data</span><span>LLM evaluation</span></div>
-    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2026–present</span></div>
-    <button class="project-link" data-project="agents" aria-label="Explore Enterprise AI agents">Open project brief<span>↗</span></button></div></article>
-<article class="project" data-id="enterprise-rag" data-category="retrieval" data-lifecycle="built">
-    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">02</span><small>AGENT / 02</small></div><span class="agent-status ">Documented</span></div>
-    <div class="project-body"><div class="project-meta">EOX VANTAGE · 2026–PRESENT</div><h3>Enterprise knowledge engine</h3><p class="agent-role">Retrieve enterprise knowledge for grounded model responses.</p><p>A production retrieval platform that makes enterprise knowledge available to AI workflows.</p>
-    <div class="tags" aria-label="Capabilities"><span>Semantic retrieval</span><span>Knowledge bases</span><span>LLM pipelines</span></div>
-    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2026–present</span></div>
-    <button class="project-link" data-project="enterprise-rag" aria-label="Explore Enterprise knowledge engine">Open project brief<span>↗</span></button></div></article>
-<article class="project" data-id="documents" data-category="agentic" data-lifecycle="built">
-    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">03</span><small>AGENT / 03</small></div><span class="agent-status ">Documented</span></div>
-    <div class="project-body"><div class="project-meta">EOX VANTAGE · 2026–PRESENT</div><h3>Policy Quality Check</h3><p class="agent-role">Extract, verify, and reconcile insurance document information.</p><p>An insurance document review pipeline with extraction, verification, and reconciliation built in.</p>
-    <div class="tags" aria-label="Capabilities"><span>OCR</span><span>Structured extraction</span><span>Reconciliation</span></div>
-    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2026–present</span></div>
-    <button class="project-link" data-project="documents" aria-label="Explore Policy Quality Check">Open project brief<span>↗</span></button></div></article>
-<article class="project" data-id="local" data-category="agentic" data-lifecycle="built">
-    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">04</span><small>AGENT / 04</small></div><span class="agent-status ">Documented</span></div>
-    <div class="project-body"><div class="project-meta">PERSONAL PROJECT · 2026</div><h3>A more personal AI</h3><p class="agent-role">Personalize retrieval and responses with a local foundation model.</p><p>A local assistant exploring retrieval and model behavior that adapt to the person using them.</p>
-    <div class="tags" aria-label="Capabilities"><span>Llama 3.2</span><span>LoRA</span><span>Unsloth</span></div>
-    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2026</span></div>
-    <button class="project-link" data-project="local" aria-label="Explore A more personal AI">Open project brief<span>↗</span></button></div></article>
-<article class="project" data-id="financial" data-category="retrieval" data-lifecycle="built">
-    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">05</span><small>AGENT / 05</small></div><span class="agent-status ">Documented</span></div>
-    <div class="project-body"><div class="project-meta">PERSONAL PROJECT · FALL 2024</div><h3>Financial RAG, with context</h3><p class="agent-role">Preserve financial document context during retrieval and reasoning.</p><p>Financial answers that preserve the important part: the structure and context of the source documents.</p>
-    <div class="tags" aria-label="Capabilities"><span>Llama 3.2</span><span>LangChain</span><span>FAISS</span></div>
-    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Fall 2024</span></div>
-    <button class="project-link" data-project="financial" aria-label="Explore Financial RAG, with context">Open project brief<span>↗</span></button></div></article>
-<article class="project" data-id="evaluations" data-category="agentic" data-lifecycle="built">
-    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">06</span><small>AGENT / 06</small></div><span class="agent-status ">Documented</span></div>
-    <div class="project-body"><div class="project-meta">SCALE AI · 2025–26</div><h3>Understanding model behavior</h3><p class="agent-role">Analyze model reasoning failures and post-training behavior.</p><p>Model evaluation work connecting reasoning failures and behavioral patterns to better training decisions.</p>
-    <div class="tags" aria-label="Capabilities"><span>Code reasoning</span><span>Failure analysis</span><span>RL experiments</span></div>
-    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2025–2026</span></div>
-    <button class="project-link" data-project="evaluations" aria-label="Explore Understanding model behavior">Open project brief<span>↗</span></button></div></article>
-<article class="project" data-id="translation" data-category="research" data-lifecycle="built">
-    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">07</span><small>AGENT / 07</small></div><span class="agent-status ">Documented</span></div>
-    <div class="project-body"><div class="project-meta">JOHNS HOPKINS CLSP · 2024–25</div><h3>Language without barriers</h3><p class="agent-role">Study Gujarati–English translation in low-resource settings.</p><p>LLM-assisted translation research for a language pair with fewer resources and plenty of room to improve.</p>
-    <div class="tags" aria-label="Capabilities"><span>MarianMT</span><span>NLLB</span><span>Gujarati–English</span></div>
-    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2024–2025 research</span></div>
-    <button class="project-link" data-project="translation" aria-label="Explore Language without barriers">Open project brief<span>↗</span></button></div></article>
-<article class="project" data-id="legalease" data-category="research" data-lifecycle="built">
-    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">08</span><small>AGENT / 08</small></div><span class="agent-status ">Documented</span></div>
-    <div class="project-body"><div class="project-meta">PERSONAL PROJECT · SPRING 2024</div><h3>LegalEase</h3><p class="agent-role">Translate legal documents with domain-adapted models.</p><p>Legal document translation tuned for the domain, from model fine-tuning to an automated inference workflow.</p>
-    <div class="tags" aria-label="Capabilities"><span>IndicTrans</span><span>Fairseq</span><span>Legal NLP</span></div>
-    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Spring 2024</span></div>
-    <button class="project-link" data-project="legalease" aria-label="Explore LegalEase">Open project brief<span>↗</span></button></div></article>
-<article class="project" data-id="cognitive-load" data-category="research" data-lifecycle="built">
-    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">09</span><small>AGENT / 09</small></div><span class="agent-status ">Documented</span></div>
-    <div class="project-body"><div class="project-meta">JOHNS HOPKINS ARCADE · 2024–25</div><h3>Reading cognitive load</h3><p class="agent-role">Estimate cognitive load from pupil and gaze signals.</p><p>Physiological signals meet machine learning to estimate cognitive load during telerobotic surgery.</p>
-    <div class="tags" aria-label="Capabilities"><span>Pupillometry</span><span>Gaze entropy</span><span>Random Forest</span></div>
-    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2024–2025 research</span></div>
-    <button class="project-link" data-project="cognitive-load" aria-label="Explore Reading cognitive load">Open project brief<span>↗</span></button></div></article>
-<article class="project" data-id="chair" data-category="research" data-lifecycle="built">
-    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">10</span><small>AGENT / 10</small></div><span class="agent-status ">Documented</span></div>
-    <div class="project-body"><div class="project-meta">IEEE XPLORE · 2023</div><h3>Thought into movement</h3><p class="agent-role">Explore brain-sensing control for assistive mobility.</p><p>Cognitive-Chair: exploring brain-sensing interfaces to make assistive mobility more accessible.</p>
-    <div class="tags" aria-label="Capabilities"><span>Brain–computer interface</span><span>EEG</span><span>EOG</span></div>
-    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2023 publication</span></div>
-    <button class="project-link" data-project="chair" aria-label="Explore Thought into movement">Open project brief<span>↗</span></button></div></article>
-<article class="project" data-id="fracture" data-category="research" data-lifecycle="built">
-    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">11</span><small>AGENT / 11</small></div><span class="agent-status ">Documented</span></div>
-    <div class="project-body"><div class="project-meta">RESEARCH · UNDER REVIEW</div><h3>AI for fracture detection</h3><p class="agent-role">Evaluate AI methods for orthopedic X-ray analysis.</p><p>Research evaluating artificial intelligence methods for detecting fractures in orthopedic X-rays.</p>
-    <div class="tags" aria-label="Capabilities"><span>Computer vision</span><span>Orthopedic X-rays</span><span>Model evaluation</span></div>
-    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Under-review research</span></div>
-    <button class="project-link" data-project="fracture" aria-label="Explore AI for fracture detection">Open project brief<span>↗</span></button></div></article>
-<article class="project" data-id="agent-observatory" data-category="agentic" data-lifecycle="planned">
-    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">12</span><small>AGENT / 12</small></div><span class="agent-status lifecycle-badge">Planned</span></div>
-    <div class="project-body"><div class="project-meta">PLANNED / WEEKEND LAB</div><h3>Agent Observatory</h3><p class="agent-role">Planned: test agent behavior under controlled failures.</p><p>A planned weekend lab for testing how tool-using agents behave when their environment gets messy.</p>
-    <div class="tags" aria-label="Capabilities"><span>Trace replay</span><span>Tool-use evals</span><span>Budget controls</span></div>
-    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Planned</span></div>
-    <button class="project-link" data-project="agent-observatory" aria-label="Explore Agent Observatory">Inspect the blueprint<span>↗</span></button></div></article>
-<article class="project" data-id="incident-copilot" data-category="agentic" data-lifecycle="planned">
-    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">13</span><small>AGENT / 13</small></div><span class="agent-status lifecycle-badge">Planned</span></div>
-    <div class="project-body"><div class="project-meta">PLANNED / WEEKEND LAB</div><h3>Incident Flight Recorder</h3><p class="agent-role">Planned: assemble a cited incident investigation.</p><p>A planned incident triage copilot that would turn logs and runbooks into a cited investigation timeline.</p>
-    <div class="tags" aria-label="Capabilities"><span>Log retrieval</span><span>Read-only tools</span><span>Human approval</span></div>
-    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Planned</span></div>
-    <button class="project-link" data-project="incident-copilot" aria-label="Explore Incident Flight Recorder">Inspect the blueprint<span>↗</span></button></div></article>
-<article class="project" data-id="paper-to-experiment" data-category="agentic" data-lifecycle="planned">
-    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">14</span><small>AGENT / 14</small></div><span class="agent-status lifecycle-badge">Planned</span></div>
-    <div class="project-body"><div class="project-meta">PLANNED / WEEKEND LAB</div><h3>Paper → Experiment</h3><p class="agent-role">Planned: turn cited research claims into an experiment plan.</p><p>A planned research assistant that would turn an ML paper into a traceable, testable reproduction plan.</p>
-    <div class="tags" aria-label="Capabilities"><span>Citation grounding</span><span>Experiment planning</span><span>Reproducibility</span></div>
-    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Planned</span></div>
-    <button class="project-link" data-project="paper-to-experiment" aria-label="Explore Paper → Experiment">Inspect the blueprint<span>↗</span></button></div></article></div>
-<!-- PROJECTS:END -->
-        <p class="registry-note">
-          “Agent” is a way to explore the portfolio. Status and activity reflect
-          documented work, not live deployment telemetry.
-        </p>
-        <div class="more-projects">
-          <button class="btn" id="more-projects">
-            Browse the full registry ↓
-          </button>
-        </div>
-        <p class="journey-stamp" aria-live="polite">
-          REGISTRY PROGRESS &nbsp;
-          <span id="mission-progress">Ready to explore</span> &nbsp; · &nbsp;
-          Open a profile to inspect the work.
-        </p>
-      </section>
-      <section
-        class="section mission-log-section"
-        id="mission-log"
-        aria-labelledby="mission-log-heading"
-      >
-        <div class="wrap">
-          <div class="section-head">
-            <div>
-              <div class="section-index">ACTIVITY / CASE-STUDY LOG</div>
-              <h2 id="mission-log-heading">Recent missions.</h2>
-            </div>
-            <p>
-              Selected work, written as mission briefs.<br />Activity periods
-              come from documented experience.
-            </p>
-          </div>
-          <div class="mission-log-panel">
-            <div class="log-table-head">
-              <span>PERIOD</span><span>MISSION / OUTCOME</span
-              ><span>RECORD</span>
-            </div>
-            <div id="mission-log-list"></div>
-          </div>
-          <a class="log-journal-link" href="#journal"
-            >Personal stories, photos, and travel live in the journal ↗</a
-          >
-        </div>
-      </section>
+      <nav class="layer-path wrap" aria-label="Explore the network layers"><a href="#home"><span>01</span> Input</a><i>→</i><a href="#trajectory"><span>02</span> Embedding</a><i>→</i><a href="#missions"><span>03</span> Retrieval</a><i>→</i><a href="#mission-log"><span>04</span> Generation</a></nav>
       <section class="section split-section" id="trajectory">
         <div class="wrap about-grid">
           <div class="about-intro">
-            <div class="section-index">02 / OPERATOR HISTORY</div>
+            <div class="section-index">02 / EMBEDDING · EXPERIENCE</div>
             <h2>Grounded in research.<br />Driven to build.</h2>
             <p>
               I’m Kshitij, an AI engineer who likes taking an idea all the way
@@ -456,10 +250,224 @@
           </div>
         </div>
       </section>
+      <section class="section wrap" id="missions">
+        <div class="section-head">
+          <div>
+            <div class="section-index">03 / RETRIEVAL · SELECTED WORK</div>
+            <h2>Ideas, put into practice.</h2>
+          </div>
+          <p>
+            Explore the systems I’ve built and the questions I’ve studied. Open a project for its summary, interactive architecture, and sources.
+          </p>
+        </div>
+        <details class="interest-guide"><summary>Find a project by interest <span>＋</span></summary>            <div class="orchestrator" aria-labelledby="orchestrator-title">
+              <div class="panel-title">
+                <span><i></i> EXPLORE BY INTEREST</span
+                ><span class="sim-label">LOCAL GUIDE</span>
+              </div>
+              <div class="orchestrator-content">
+                <h2 id="orchestrator-title">What brings you here?</h2>
+                <p>Choose a topic to find relevant projects.</p>
+                <div class="route-options">
+                  <button data-route="agents">
+                    <span aria-hidden="true">⌘</span> Agent systems
+                    <span>↗</span>
+                  </button>
+                  <button data-route="retrieval">
+                    <span aria-hidden="true">⌕</span> RAG &amp; knowledge
+                    <span>↗</span>
+                  </button>
+                  <button data-route="research">
+                    <span aria-hidden="true">⌬</span> Research &amp; ML
+                    <span>↗</span>
+                  </button>
+                  <button data-route="planned">
+                    <span aria-hidden="true">＋</span> What’s next
+                    <span>↗</span>
+                  </button>
+                </div>
+                <div
+                  class="router-log"
+                  id="router-log"
+                  role="log"
+                  aria-live="polite"
+                  aria-label="Project recommendations"
+                >
+                  <p>
+                    <span>Explore</span> Choose an interest to see a few starting points.<b
+                      class="terminal-cursor"
+                      aria-hidden="true"
+                      >▌</b
+                    >
+                  </p>
+                </div>
+                <div class="route-results" id="route-results"></div>
+              </div>
+              <div class="orchestrator-footer">
+                <span>Curated connections</span
+                ><span>Choose → explore → connect</span>
+              </div>
+            </div></details>
+        <div class="project-toolbar">
+          <div class="filters" aria-label="Filter projects">
+            <button class="filter" data-filter="all" aria-pressed="true">
+              All projects
+            </button>
+            <button class="filter" data-filter="eox" aria-pressed="false">
+              At EOX Vantage
+            </button>
+            <button class="filter" data-filter="agentic" aria-pressed="false">
+              Agentic AI
+            </button>
+            <button class="filter" data-filter="research" aria-pressed="false">
+              Research
+            </button>
+            <button class="filter" data-filter="planned" aria-pressed="false">
+              Weekend lab <span>Planned</span>
+            </button>
+          </div>
+          <label class="project-search"
+            >⌕
+            <input
+              id="project-search"
+              type="search"
+              placeholder="Search agents, capabilities, tools…"
+              aria-label="Search projects"
+          /></label>
+        </div>
+        <p class="project-count" id="project-count" role="status"></p>
+        <!-- PROJECTS:START -->
+<div class="projects"><article class="project" data-id="agents" data-category="agentic" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">01</span><small>PROJECT / 01</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">EOX VANTAGE · 2026–PRESENT</div><h3>Enterprise AI agents</h3><p class="agent-role">Connect enterprise context with tool-driven workflows.</p><p>Enterprise knowledge meets tool use: agentic workflows designed around real business decisions.</p>
+    <div class="tags" aria-label="Technologies and methods"><span>Tool orchestration</span><span>Enterprise data</span><span>LLM evaluation</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2026–present</span></div>
+    <button class="project-link" data-project="agents" aria-label="Explore Enterprise AI agents">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="enterprise-rag" data-category="retrieval" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">02</span><small>PROJECT / 02</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">EOX VANTAGE · 2026–PRESENT</div><h3>Enterprise knowledge engine</h3><p class="agent-role">Retrieve enterprise knowledge for grounded model responses.</p><p>A production retrieval platform that makes enterprise knowledge available to AI workflows.</p>
+    <div class="tags" aria-label="Technologies and methods"><span>Semantic retrieval</span><span>Knowledge bases</span><span>LLM pipelines</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2026–present</span></div>
+    <button class="project-link" data-project="enterprise-rag" aria-label="Explore Enterprise knowledge engine">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="documents" data-category="agentic" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">03</span><small>PROJECT / 03</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">EOX VANTAGE · 2026–PRESENT</div><h3>Policy Quality Check</h3><p class="agent-role">Extract, verify, and reconcile insurance document information.</p><p>An insurance document review pipeline with extraction, verification, and reconciliation built in.</p>
+    <div class="tags" aria-label="Technologies and methods"><span>OCR</span><span>Structured extraction</span><span>Reconciliation</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2026–present</span></div>
+    <button class="project-link" data-project="documents" aria-label="Explore Policy Quality Check">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="local" data-category="agentic" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">04</span><small>PROJECT / 04</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">PERSONAL PROJECT · 2026</div><h3>A more personal AI</h3><p class="agent-role">Personalize retrieval and responses with a local foundation model.</p><p>A local assistant exploring retrieval and model behavior that adapt to the person using them.</p>
+    <div class="tags" aria-label="Technologies and methods"><span>Llama 3.2</span><span>LoRA</span><span>Unsloth</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2026</span></div>
+    <button class="project-link" data-project="local" aria-label="Explore A more personal AI">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="financial" data-category="retrieval" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">05</span><small>PROJECT / 05</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">PERSONAL PROJECT · FALL 2024</div><h3>Financial RAG, with context</h3><p class="agent-role">Preserve financial document context during retrieval and reasoning.</p><p>Financial answers that preserve the important part: the structure and context of the source documents.</p>
+    <div class="tags" aria-label="Technologies and methods"><span>Llama 3.2</span><span>LangChain</span><span>FAISS</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Fall 2024</span></div>
+    <button class="project-link" data-project="financial" aria-label="Explore Financial RAG, with context">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="evaluations" data-category="agentic" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">06</span><small>PROJECT / 06</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">SCALE AI · 2025–26</div><h3>Understanding model behavior</h3><p class="agent-role">Analyze model reasoning failures and post-training behavior.</p><p>Model evaluation work connecting reasoning failures and behavioral patterns to better training decisions.</p>
+    <div class="tags" aria-label="Technologies and methods"><span>Code reasoning</span><span>Failure analysis</span><span>RL experiments</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2025–2026</span></div>
+    <button class="project-link" data-project="evaluations" aria-label="Explore Understanding model behavior">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="translation" data-category="research" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">07</span><small>PROJECT / 07</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">JOHNS HOPKINS CLSP · 2024–25</div><h3>Language without barriers</h3><p class="agent-role">Study Gujarati–English translation in low-resource settings.</p><p>LLM-assisted translation research for a language pair with fewer resources and plenty of room to improve.</p>
+    <div class="tags" aria-label="Technologies and methods"><span>MarianMT</span><span>NLLB</span><span>Gujarati–English</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2024–2025 research</span></div>
+    <button class="project-link" data-project="translation" aria-label="Explore Language without barriers">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="legalease" data-category="research" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">08</span><small>PROJECT / 08</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">PERSONAL PROJECT · SPRING 2024</div><h3>LegalEase</h3><p class="agent-role">Translate legal documents with domain-adapted models.</p><p>Legal document translation tuned for the domain, from model fine-tuning to an automated inference workflow.</p>
+    <div class="tags" aria-label="Technologies and methods"><span>IndicTrans</span><span>Fairseq</span><span>Legal NLP</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Spring 2024</span></div>
+    <button class="project-link" data-project="legalease" aria-label="Explore LegalEase">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="cognitive-load" data-category="research" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">09</span><small>PROJECT / 09</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">JOHNS HOPKINS ARCADE · 2024–25</div><h3>Reading cognitive load</h3><p class="agent-role">Estimate cognitive load from pupil and gaze signals.</p><p>Physiological signals meet machine learning to estimate cognitive load during telerobotic surgery.</p>
+    <div class="tags" aria-label="Technologies and methods"><span>Pupillometry</span><span>Gaze entropy</span><span>Random Forest</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2024–2025 research</span></div>
+    <button class="project-link" data-project="cognitive-load" aria-label="Explore Reading cognitive load">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="chair" data-category="research" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">10</span><small>PROJECT / 10</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">IEEE XPLORE · 2023</div><h3>Thought into movement</h3><p class="agent-role">Explore brain-sensing control for assistive mobility.</p><p>Cognitive-Chair: exploring brain-sensing interfaces to make assistive mobility more accessible.</p>
+    <div class="tags" aria-label="Technologies and methods"><span>Brain–computer interface</span><span>EEG</span><span>EOG</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2023 publication</span></div>
+    <button class="project-link" data-project="chair" aria-label="Explore Thought into movement">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="fracture" data-category="research" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">11</span><small>PROJECT / 11</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">RESEARCH · UNDER REVIEW</div><h3>AI for fracture detection</h3><p class="agent-role">Evaluate AI methods for orthopedic X-ray analysis.</p><p>Research evaluating artificial intelligence methods for detecting fractures in orthopedic X-rays.</p>
+    <div class="tags" aria-label="Technologies and methods"><span>Computer vision</span><span>Orthopedic X-rays</span><span>Model evaluation</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Under-review research</span></div>
+    <button class="project-link" data-project="fracture" aria-label="Explore AI for fracture detection">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="agent-observatory" data-category="agentic" data-lifecycle="planned">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">12</span><small>PROJECT / 12</small></div><span class="agent-status lifecycle-badge">Planned</span></div>
+    <div class="project-body"><div class="project-meta">PLANNED / WEEKEND LAB</div><h3>Agent Observatory</h3><p class="agent-role">Planned: test agent behavior under controlled failures.</p><p>A planned weekend lab for testing how tool-using agents behave when their environment gets messy.</p>
+    <div class="tags" aria-label="Technologies and methods"><span>Trace replay</span><span>Tool-use evals</span><span>Budget controls</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Planned</span></div>
+    <button class="project-link" data-project="agent-observatory" aria-label="Explore Agent Observatory">Inspect the blueprint<span>↗</span></button></div></article>
+<article class="project" data-id="incident-copilot" data-category="agentic" data-lifecycle="planned">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">13</span><small>PROJECT / 13</small></div><span class="agent-status lifecycle-badge">Planned</span></div>
+    <div class="project-body"><div class="project-meta">PLANNED / WEEKEND LAB</div><h3>Incident Flight Recorder</h3><p class="agent-role">Planned: assemble a cited incident investigation.</p><p>A planned incident triage copilot that would turn logs and runbooks into a cited investigation timeline.</p>
+    <div class="tags" aria-label="Technologies and methods"><span>Log retrieval</span><span>Read-only tools</span><span>Human approval</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Planned</span></div>
+    <button class="project-link" data-project="incident-copilot" aria-label="Explore Incident Flight Recorder">Inspect the blueprint<span>↗</span></button></div></article>
+<article class="project" data-id="paper-to-experiment" data-category="agentic" data-lifecycle="planned">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">14</span><small>PROJECT / 14</small></div><span class="agent-status lifecycle-badge">Planned</span></div>
+    <div class="project-body"><div class="project-meta">PLANNED / WEEKEND LAB</div><h3>Paper → Experiment</h3><p class="agent-role">Planned: turn cited research claims into an experiment plan.</p><p>A planned research assistant that would turn an ML paper into a traceable, testable reproduction plan.</p>
+    <div class="tags" aria-label="Technologies and methods"><span>Citation grounding</span><span>Experiment planning</span><span>Reproducibility</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Planned</span></div>
+    <button class="project-link" data-project="paper-to-experiment" aria-label="Explore Paper → Experiment">Inspect the blueprint<span>↗</span></button></div></article></div>
+<!-- PROJECTS:END -->
+        <p class="registry-note">
+          Project summaries reflect documented work. Weekend concepts are clearly labeled as planned.
+        </p>
+        <div class="more-projects">
+          <button class="btn" id="more-projects">
+            Browse all projects ↓
+          </button>
+        </div>
+        <p class="journey-stamp" aria-live="polite">
+          EXPLORATION &nbsp;
+          <span id="mission-progress">Ready to explore</span> &nbsp; · &nbsp;
+          Open a project to explore the system.
+        </p>
+      </section>
+      <section
+        class="section mission-log-section"
+        id="mission-log"
+        aria-labelledby="mission-log-heading"
+      >
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <div class="section-index">04 / GENERATION · CASE STUDIES</div>
+              <h2 id="mission-log-heading">From idea to impact.</h2>
+            </div>
+            <p>
+              Selected work, explained in detail.<br />Activity periods
+              come from documented experience.
+            </p>
+          </div>
+          <div class="mission-log-panel">
+            <div class="log-table-head">
+              <span>PERIOD</span><span>PROJECT / OUTCOME</span
+              ><span>RECORD</span>
+            </div>
+            <div id="mission-log-list"></div>
+          </div>
+          <a class="log-journal-link" href="#journal"
+            >Personal stories, photos, and travel live in the journal ↗</a
+          >
+        </div>
+      </section>
       <section class="section wrap" id="research">
         <div class="section-head">
           <div>
-            <div class="section-index">03 / PUBLICATIONS</div>
+            <div class="section-index">05 / RESEARCH</div>
             <h2>Questions worth chasing.</h2>
           </div>
           <p>
@@ -515,7 +523,7 @@
         <div class="wrap">
           <div class="section-head">
             <div>
-              <div class="section-index">04 / PLAYGROUND</div>
+              <div class="section-index">06 / PLAYGROUND</div>
               <h2>There's life beyond the terminal.</h2>
             </div>
             <p>
@@ -588,7 +596,7 @@
         <div class="wrap">
           <div class="section-head">
             <div>
-              <div class="section-index">05 / PERSONAL LOGS</div>
+              <div class="section-index">07 / PERSONAL LOGS</div>
               <h2 id="journal-heading">Life, outside the viewport.</h2>
             </div>
             <p>
@@ -693,7 +701,7 @@
         <div class="wrap">
           <div class="section-head">
             <div>
-              <div class="section-index">06 / UPCOMING EVENTS</div>
+              <div class="section-index">08 / UPCOMING EVENTS</div>
               <h2 id="events-heading">Next on the calendar.</h2>
             </div>
             <p>
@@ -752,7 +760,7 @@
         <div class="wrap">
           <div class="section-head">
             <div>
-              <div class="section-index">07 / READING RADAR</div>
+              <div class="section-index">09 / INPUT · READING</div>
               <h2 id="reading-heading">Inputs worth exploring.</h2>
             </div>
             <p>
@@ -852,7 +860,7 @@
       </section>
       <section class="contact" id="contact">
         <div class="wrap">
-          <div class="section-index">08 / CONTACT</div>
+          <div class="section-index">10 / CONNECTIONS</div>
           <h2>Great things start<br />with a <span>hello.</span></h2>
           <p>
             Have an interesting problem, a wild idea, or a really good playlist?
@@ -899,9 +907,10 @@
       </div>
       <div class="brief-meta" id="project-brief-meta"></div>
       <p id="project-description"></p>
+      <a class="btn brief-page-link" id="project-onepager" href="briefs/agents.html">Open the one-page summary ↗</a>
+      <div id="project-architecture" class="project-architecture"></div>
       <div id="project-case-study" class="case-study-grid"></div>
-      <h3 class="brief-section-title">Workflow</h3>
-      <div class="detail-flow" id="project-flow"></div>
+      <div class="detail-flow" id="project-flow" hidden></div>
       <p id="project-outcome"></p>
       <ul id="project-highlights" class="project-highlights"></ul>
       <p id="project-source" class="source-note"></p>
@@ -919,7 +928,7 @@
         class="search-box"
         id="command-search"
         type="search"
-        placeholder="Find a profile, section, or playground…"
+        placeholder="Find a project, section, or playground…"
         aria-label="Search destinations"
       />
       <div class="command-list" id="command-results"></div>

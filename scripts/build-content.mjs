@@ -27,7 +27,7 @@ const cards = projects
     }">
     <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">${String(
       i + 1
-    ).padStart(2, "0")}</span><small>AGENT / ${String(i + 1).padStart(
+    ).padStart(2, "0")}</span><small>PROJECT / ${String(i + 1).padStart(
       2,
       "0"
     )}</small></div><span class="agent-status ${
@@ -38,7 +38,7 @@ const cards = projects
     )}</div><h3>${esc(p.title)}</h3><p class="agent-role">${esc(
       p.role || p.type
     )}</p><p>${esc(p.summary)}</p>
-    <div class="tags" aria-label="Capabilities">${p.tags
+    <div class="tags" aria-label="Technologies and methods">${p.tags
       .map((t) => `<span>${esc(t)}</span>`)
       .join("")}</div>
     <div class="agent-activity"><span>LAST DOCUMENTED</span><span>${esc(
@@ -365,3 +365,6 @@ writeFileSync(
 console.log(
   `Built ${projects.length} project cards and ${topics.length} source-backed topics.`
 );
+
+// Keep shareable summaries in sync with the project catalog.
+await import('./build-briefs.mjs');

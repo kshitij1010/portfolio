@@ -4,7 +4,7 @@ The catalog lives in `assets/js/projects.js` as `window.PORTFOLIO_PROJECTS`. It 
 
 ## What the UI represents
 
-“Agent” can be used as a navigation metaphor for a project’s focus or responsibility. It must not turn every entry into a claim about an autonomous, deployed agent. The catalog includes employer engineering, model evaluation, translation research, medical imaging research, a published assistive-mobility project, personal projects, and unimplemented ideas.
+The neural network and project nodes are a navigation metaphor for related areas of work. It must not turn every entry into a claim about an autonomous, deployed agent. The catalog includes employer engineering, model evaluation, translation research, medical imaging research, a published assistive-mobility project, personal projects, and unimplemented ideas.
 
 The `role` field is a short explanation of that focus, not a new employment title. Planned entries begin their role with “Planned:”. A `built` lifecycle means the supplied evidence describes work undertaken; it does not mean every system is finished, open source, clinically validated, or publicly reproducible.
 
@@ -75,6 +75,14 @@ The role and approach descriptions for legacy research summarize the owner’s s
 3. Keep employer implementation links private unless an approved public destination exists.
 4. Preserve stable IDs so filters, deep links, and saved exploration progress keep working.
 5. Run `node --check assets/js/projects.js`.
-6. Run the root project’s normal content-generation and verification workflow when integrating the change. This catalog update does not change the generator or renderer.
+6. Run the root project’s normal content-generation and verification workflow when integrating the change. The generator also rebuilds every standalone page in `briefs/`.
 
 No secret, customer data, internal endpoint, or private repository path belongs in this file or the public catalog.
+
+## Architecture and sharing
+
+Each project has a one-page summary at `briefs/<id>.html`. The page includes a print layout and the same interactive diagram as the project dialog. It is generated from the catalog; edit the data, not the generated HTML.
+
+`assets/js/architecture.js` contains component descriptions and trade-offs in the same order as each project’s `flow` array. Keep descriptions grounded in documented methods. Trade-offs are explicitly framed as design considerations, not claims about exact implementation. Proposed projects retain their planned status in every view.
+
+To publish a personal repository link, replace the appropriate null resource URL with its public HTTPS URL and set `status` to `available`, then run `node scripts/build-content.mjs`. This refreshes the cards, source catalog, and all 14 summary pages.

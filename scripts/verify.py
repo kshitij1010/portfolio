@@ -35,3 +35,23 @@ for legacy in ['experience', 'education', 'skills', 'project', 'publications']:
         errors.append(f'Missing legacy redirect: {legacy}')
 assert not errors, '\n'.join(errors)
 print(f'PASS: {len(page.links)} links/assets, {len(page.ids)} unique anchors, five legacy routes.')
+
+# Standalone briefs must be shareable from a GitHub Pages subdirectory too.
+brief_pages = sorted((ROOT / 'briefs').glob('*.html'))
+brief_links = 0
+for brief in brief_pages:
+    parsed = Page()
+    parsed.feed(brief.read_text())
+    assert not parsed.duplicates, f'Duplicate IDs in {brief.name}'
+    for link in parsed.links:
+        url = urlsplit(link)
+        if url.scheme or url.netloc:
+            continue
+        target = (brief.parent / unquote(url.path)).resolve() if url.path else brief
+        assert target.exists(), f'Missing brief asset: {brief.name}: {link}'
+        if url.fragment and target.suffix == '.html':
+            linked = Page()
+            linked.feed(target.read_text())
+            assert url.fragment in linked.ids, f'Missing brief anchor: {brief.name}: {link}'
+        brief_links += 1
+print(f'PASS: {len(brief_pages)} shareable briefs and {brief_links} relative links/assets.')

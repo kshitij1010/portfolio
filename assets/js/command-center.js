@@ -85,9 +85,9 @@ window.CommandCenter = (() => {
         const log = $("#router-log");
         log.replaceChildren();
         [
-          `Intent received: ${route.label}`,
+          `Exploring: ${route.label}`,
           route.reason,
-          `${matches.length} profiles ready. Select a brief below.`,
+          `${matches.length} projects found. Select a brief below.`,
         ].forEach((line, index) => {
           const p = make("p", "", "");
           p.append(

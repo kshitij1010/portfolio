@@ -1,6 +1,6 @@
-# Kshitij Joshi · Agent Command Center
+# Kshitij Joshi · Neural Portfolio
 
-An interactive, quietly themed agent command center portfolio for **https://kshitij1010.github.io/portfolio/**. The existing GitHub Pages main/root configuration stays in place.
+An interactive neural-network portfolio for **https://kshitij1010.github.io/portfolio/**. The existing GitHub Pages main/root configuration stays in place.
 
 ## Local preview
 
@@ -12,9 +12,9 @@ Open `http://127.0.0.1:5178`. The portfolio needs no build, API key, package ins
 
 ## Explore
 
-- Phosphor/Glacier accents over charcoal surfaces, Inter body type, Space Grotesk headings, and IBM Plex Mono labels.
-- A responsive registry sidebar, local visitor orchestrator, and case-study mission logs. Routing uses no AI calls.
-- Fourteen expanded agent profiles: eleven documented projects/research items and three explicitly **planned** weekend lab concepts. Each includes the problem, approach, contribution, evaluation, limitations, next steps, and resource slots.
+- Deep indigo/violet surfaces, cyan or emerald accents, 17 px body text, larger project descriptions, and readable Inter/Space Grotesk typography.
+- Conventional responsive navigation, a subtle 14-node interactive hero, Input → Embedding → Retrieval → Generation layers, and a collapsible interest guide. Node probes and recommendations use no AI calls.
+- Fourteen expanded project profiles: eleven documented projects/research items and three explicitly **planned** weekend lab concepts. Each includes the problem, approach, contribution, evaluation, limitations, next steps, and resource slots.
 - Activity labels show documented work periods, not live deployment telemetry. Missing code/demo links are clearly marked pending; see [docs/project-catalog-guide.md](docs/project-catalog-guide.md).
 - Three EOX Vantage workstreams: enterprise agent workflows, enterprise knowledge retrieval, and Policy Quality Check.
 - Project filters, text search, shareable `?mission=project-id` links, source citations, architecture flows, and a locally saved mission passport.
@@ -22,6 +22,14 @@ Open `http://127.0.0.1:5178`. The portfolio needs no build, API key, package ins
 - An expanded music/game deck: drumming, DJing, Jiu Jitsu flow decisions, soccer, and Orbit Runner.
 
 The planned labs (Agent Observatory, Incident Flight Recorder, and Paper → Experiment) are future designs, not accomplishments. Their cards, details, sources, and copilot topics preserve that distinction.
+
+## Interactive architecture and one-pagers
+
+Every project has a four-component interactive schematic with 56 original component explanations and design considerations across the catalog. Click a component or use arrow keys to inspect its role. These explain public, high-level workflows; they do not claim exact private production topologies. Planned diagrams remain labeled as proposals.
+
+Each project also has a static, shareable summary at `briefs/<project-id>.html`, with an interactive diagram and a Print / save PDF action. Text and the workflow remain available without JavaScript. `node scripts/build-content.mjs` regenerates all 14 summaries through `scripts/build-briefs.mjs`.
+
+Edit component explanations in `assets/js/architecture.js`. To add a personal GitHub or demo link, update its `resources` record in `assets/js/projects.js` with the real URL and `status: "available"`, then rerun the generator. Missing URLs remain explicitly pending.
 
 ## Orbit: source-first portfolio guide
 
@@ -52,7 +60,7 @@ The Reading Radar includes 23 verified links: 13 foundational papers, seven Sept
 3. Run `node scripts/build-content.mjs`. It refreshes static cards in `index.html` and the copilot catalog from the same project source.
 4. Review the visible status and source links, and rerun the checks below.
 
-Profile, timeline, publications, and section layout live in `index.html`. Base styles are in `assets/css/orbit.css`; the current palette and layout are in `assets/css/command.css`, loaded after the retained base styles. Arcade and copilot logic are separate modules.
+Profile, timeline, publications, and section layout live in `index.html`. Base styles are in `assets/css/orbit.css`; the current palette and layout are in `assets/css/neural.css`, loaded after the retained base styles. Arcade and copilot logic are separate modules.
 
 The four owner-supplied September 2026 resumes inform current facts. The public download is the Palantir variant. The local assistant is sourced from the Apple MIND variant and cites that distinction in [docs/content-sources.md](docs/content-sources.md). Metrics and awards are resume-reported. Enterprise descriptions stay at the public resume level: no customer data, private code, internal URLs, or credentials. LinkedIn's public profile supports the environmental volunteering summary; no unverified X handle is included.
 
@@ -64,6 +72,9 @@ The old top-level experience, education, project, publications, and skills URLs 
 python3 scripts/verify.py
 node --check assets/js/orbit.js
 node --check assets/js/command-center.js
+node --check assets/js/neural.js
+node --check assets/js/architecture.js
+node --check assets/js/brief.js
 node --check assets/js/copilot.js
 node --check assets/js/arcade.js
 node --test scripts/test-worker.mjs scripts/test-copilot.mjs
