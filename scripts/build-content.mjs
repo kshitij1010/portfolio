@@ -17,84 +17,38 @@ const esc = (s) =>
         c
       ])
   );
-const palettes = [
-  ["#ffac96", "#a571ec"],
-  ["#74f0dc", "#3c87d8"],
-  ["#c0a0ff", "#6175ed"],
-  ["#f8cd83", "#e870a4"],
-  ["#83ddff", "#7173e2"],
-  ["#ff9dcc", "#a269e4"],
-];
-function artwork(p, i) {
-  const [accent, second] = palettes[i % palettes.length];
-  const id = "g-" + p.id;
-  let inside = "";
-  const network = `<path d="M69 54L160 103L249 50M64 155L160 103L253 155" stroke="${accent}" stroke-width="2" stroke-dasharray="4 5"/><rect x="120" y="70" width="80" height="64" rx="16" fill="url(#${id})"/><path d="M142 102h36M160 84v36" stroke="#fff" stroke-opacity=".8" stroke-width="2"/>${[
-    [64, 47],
-    [247, 45],
-    [58, 149],
-    [250, 148],
-  ]
-    .map(
-      ([x, y], n) =>
-        `<rect x="${x - 18}" y="${
-          y - 16
-        }" width="36" height="32" rx="9" fill="#201936" stroke="${accent}"/><circle cx="${x}" cy="${y}" r="${
-          n % 2 ? 6 : 4
-        }" fill="${accent}"/>`
-    )
-    .join("")}`;
-  const papers = `<g transform="rotate(-13 125 99)"><rect x="80" y="35" width="92" height="124" rx="9" fill="#322e53" stroke="${accent}"/><path d="M98 60h52M98 76h39M98 93h51M98 110h32" stroke="${accent}" stroke-width="3" opacity=".7"/></g><g transform="rotate(10 195 105)"><rect x="150" y="47" width="88" height="118" rx="9" fill="url(#${id})"/><path d="M168 75h48M168 91h35M168 108h46M168 125h27" stroke="#fff" stroke-width="3" opacity=".7"/></g><rect x="177" y="135" width="87" height="28" rx="5" fill="#172a33" stroke="${accent}"/><path d="M186 148l5 5 9-12" stroke="${accent}" stroke-width="2" fill="none"/><text x="211" y="153" fill="${accent}" font-size="10" font-family="monospace">${
-    p.lifecycle === "planned" ? "DESIGN" : "CONTEXT"
-  }</text>`;
-  const eye = `<path d="M45 100q110-113 230 0-110 106-230 0Z" fill="#201831" stroke="${accent}" stroke-width="2"/><circle cx="160" cy="100" r="44" fill="url(#${id})"/><circle cx="160" cy="100" r="23" fill="#101129"/><circle cx="149" cy="86" r="7" fill="#fff" opacity=".9"/><path d="M48 169h45l12-20 10 33 14-20h39" fill="none" stroke="${accent}" stroke-width="2"/>`;
-  const waves = Array.from({ length: 25 }, (_, j) => {
-    const h = 20 + Math.abs(Math.sin(j * 0.7)) * 60 + Math.cos(j * 0.21) * 25;
-    return `<rect x="${55 + j * 9}" y="${
-      100 - h / 2
-    }" width="5" height="${h}" rx="2" fill="${j % 3 ? accent : second}"/>`;
-  }).join("");
-  const language = `<rect x="49" y="50" width="87" height="93" rx="15" fill="url(#${id})"/><rect x="191" y="60" width="81" height="90" rx="15" fill="#25213e" stroke="${accent}"/><text x="92" y="113" text-anchor="middle" font-family="sans-serif" font-size="49" fill="#fff">અ</text><text x="232" y="121" text-anchor="middle" font-family="sans-serif" font-size="50" fill="${accent}">A</text><path d="M145 83h36l-7-7m7 7-7 7M181 119h-36l7-7m-7 7 7 7" stroke="${accent}" stroke-width="2" fill="none"/>`;
-  const scope = `<circle cx="160" cy="100" r="67" fill="#21203c" stroke="${accent}" stroke-opacity=".5"/><circle cx="160" cy="100" r="45" fill="none" stroke="${accent}" stroke-opacity=".4"/><circle cx="160" cy="100" r="24" fill="url(#${id})"/><path d="M160 22v24M160 156v24M80 100h25M216 100h24" stroke="${accent}" stroke-width="2"/><path d="M160 100l42-45" stroke="#fff" stroke-width="2"/><circle cx="202" cy="55" r="6" fill="${accent}"/>`;
-  if (/chair/.test(p.id))
-    inside = `<circle cx="121" cy="48" r="13" fill="url(#${id})"/><path d="M120 70v45h49l22 38h30M120 90h45" fill="none" stroke="${accent}" stroke-width="5" stroke-linecap="round"/><path d="M101 94a37 37 0 1 0 52 43" fill="none" stroke="${accent}" stroke-width="5"/><path d="M179 44h12l7-15 10 33 9-18h25" fill="none" stroke="${second}" stroke-width="3"/>`;
-  else if (/translation|legal/.test(p.id)) inside = language;
-  else if (/cognitive|load|robot/.test(p.id)) inside = eye;
-  else if (/music|synth/.test(p.id)) inside = waves;
-  else if (/eval|cricket|research-scout/.test(p.id)) inside = scope;
-  else if (/document|financial|rag|report/.test(p.id)) inside = papers;
-  else inside = network;
-  return `<div class="project-art" aria-hidden="true"><span class="art-index">MISSION / ${String(
-    i + 1
-  ).padStart(2, "0")}</span>${
-    p.lifecycle === "planned"
-      ? '<span class="lifecycle-badge">PLANNED</span>'
-      : ""
-  }<svg viewBox="0 0 320 200"><defs><linearGradient id="${id}" x2="1" y2="1"><stop stop-color="${accent}"/><stop offset="1" stop-color="${second}"/></linearGradient></defs>${inside}</svg><span class="art-type">${esc(
-    p.type
-  )}</span></div>`;
-}
 const cards = projects
   .map((p, i) => {
-    const [accent, glow] = palettes[i % palettes.length];
+    const planned = p.lifecycle === "planned";
     return `<article class="project" data-id="${esc(
       p.id
     )}" data-category="${esc(p.category)}" data-lifecycle="${
       p.lifecycle || "built"
-    }" style="--card-accent:${accent};--card-glow:${glow}44">${artwork(
-      p,
-      i
-    )}<div class="project-body"><div class="project-meta">${esc(
+    }">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">${String(
+      i + 1
+    ).padStart(2, "0")}</span><small>AGENT / ${String(i + 1).padStart(
+      2,
+      "0"
+    )}</small></div><span class="agent-status ${
+      planned ? "lifecycle-badge" : ""
+    }">${planned ? "Planned" : "Documented"}</span></div>
+    <div class="project-body"><div class="project-meta">${esc(
       p.status
-    )}</div><h3>${esc(p.title)}</h3><p>${esc(
-      p.summary
-    )}</p><div class="tags">${p.tags
+    )}</div><h3>${esc(p.title)}</h3><p class="agent-role">${esc(
+      p.role || p.type
+    )}</p><p>${esc(p.summary)}</p>
+    <div class="tags" aria-label="Capabilities">${p.tags
       .map((t) => `<span>${esc(t)}</span>`)
-      .join("")}</div><button class="project-link" data-project="${esc(
+      .join("")}</div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>${esc(
+      p.activityLabel || p.year
+    )}</span></div>
+    <button class="project-link" data-project="${esc(
       p.id
     )}" aria-label="Explore ${esc(p.title)}">${
-      p.lifecycle === "planned" ? "View the blueprint" : "Explore mission"
-    } <span>↗</span></button></div></article>`;
+      planned ? "Inspect the blueprint" : "Open project brief"
+    }<span>↗</span></button></div></article>`;
   })
   .join("\n");
 const indexPath = resolve(root, "index.html");
@@ -332,12 +286,15 @@ const topics = [
     title: p.title,
     text: `${
       p.lifecycle === "planned" ? "PLANNED CONCEPT. Not implemented. " : ""
-    }${p.detail}\n${p.outcome}\n${(p.highlights || []).join(" ")}`,
+    }${p.detail}\n${p.outcome}\n${(p.highlights || []).join(" ")}\n${
+      p.evaluation || ""
+    }`,
     sources: [
       {
         label: p.sourceLabel || "Project brief",
-        url: p.sourceUrl || `?mission=${p.id}#missions`,
+        url: p.sourceUrl || `./?mission=${p.id}#missions`,
       },
+      { label: "Detailed project brief", url: `./?mission=${p.id}#missions` },
     ],
     related: [
       p.lifecycle === "planned"

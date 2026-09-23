@@ -112,9 +112,9 @@ window.OrbitArcade = (() => {
   }
   function drums() {
     shell(
-      "The zero-gravity pocket.",
+      "Find your pocket.",
       "A two-bar rhythm lab. Play the pads, record a groove, then loop it at a new tempo. A / S / D / F work while this window is open.",
-      `<div class="arcade-console"><div class="arcade-console-top"><span>ORBIT / RHYTHM LAB</span><span class="arcade-badge">16 steps · 2 bars</span></div>
+      `<div class="arcade-console"><div class="arcade-console-top"><span>OFF-DUTY / RHYTHM LAB</span><span class="arcade-badge">16 steps · 2 bars</span></div>
       <div class="arcade-pads">${[
         ["kick", "A", "01 / Foundation"],
         ["snare", "S", "02 / Backbeat"],
@@ -304,10 +304,10 @@ window.OrbitArcade = (() => {
   };
   function dj() {
     shell(
-      "A tiny club. Your universe.",
+      "Build a groove.",
       "Sculpt a 16-step loop across three tracks. Each column is a sixteenth note; brighter boundaries mark the beat. Switch grooves, add swing, and save your own pattern.",
-      `<div class="arcade-console"><div class="arcade-console-top"><span>DEEP SPACE / MIXER</span><span class="arcade-badge" id="dj-position">STANDBY</span></div>
-      <div class="dj-presets"><label for="dj-preset">Launch a groove</label><select id="dj-preset"><option value="house">Lunar house</option><option value="broken">Broken orbit</option><option value="gravity">Zero gravity</option></select><button class="btn arcade-small" id="dj-load">Load preset</button></div>
+      `<div class="arcade-console"><div class="arcade-console-top"><span>OFF-DUTY / STEP SEQUENCER</span><span class="arcade-badge" id="dj-position">STANDBY</span></div>
+      <div class="dj-presets"><label for="dj-preset">Launch a groove</label><select id="dj-preset"><option value="house">Four-on-the-floor</option><option value="broken">Broken beat</option><option value="gravity">Syncopated</option></select><button class="btn arcade-small" id="dj-load">Load preset</button></div>
       <div class="dj-tracks">${["kick", "snare", "hat"]
         .map(
           (kind) =>
@@ -448,7 +448,10 @@ window.OrbitArcade = (() => {
       swing = Number(event.target.value);
       $("#dj-swing-value").textContent = swing;
     });
-    hobbyCleanup = stop;
+    hobbyCleanup = () => {
+      clearTimeout(timer);
+      playing = false;
+    };
   }
   function jiu() {
     const decisions = [
@@ -565,9 +568,9 @@ window.OrbitArcade = (() => {
   }
   function soccer() {
     shell(
-      "Five shots. One constellation.",
-      "Pick a corner, watch the keeper, and shoot when your power reaches the teal zone. A goal needs good power and a clear path past the keeper.",
-      `<div class="arcade-console"><div class="arcade-console-top"><span>STELLAR / SHOOTOUT</span><span class="arcade-badge" id="soccer-round">SHOT 1 / 5</span></div>
+      "Five shots. Make them count.",
+      "Pick a corner, watch the keeper, and shoot when your power reaches the highlighted zone. A goal needs good power and a clear path past the keeper.",
+      `<div class="arcade-console"><div class="arcade-console-top"><span>OFF-DUTY / SHOOTOUT</span><span class="arcade-badge" id="soccer-round">SHOT 1 / 5</span></div>
       <div class="soccer-pitch"><div class="soccer-goal"><span class="soccer-net"></span><span class="soccer-keeper" id="soccer-keeper" aria-hidden="true">✦</span></div><div class="soccer-targets" role="group" aria-label="Aim your shot">${[
         "Left corner",
         "Center",
@@ -639,7 +642,7 @@ window.OrbitArcade = (() => {
       $("#penalty").textContent = round === 5 ? "New shootout" : "Line up shot";
       $("#penalty-result").textContent = precision()
         ? "Precision mode: set your power, then aim away from the stationary keeper."
-        : "Timing mode: line up your shot and shoot in the teal zone.";
+        : "Timing mode: line up your shot and shoot in the highlighted zone.";
     });
     $("#soccer-manual").addEventListener("input", (event) => {
       power = Number(event.target.value);
@@ -663,7 +666,6 @@ window.OrbitArcade = (() => {
         keeper = [50, 20, 80, 50, 20][round];
         power = precision() ? Number($("#soccer-manual").value) : 0;
         $("#penalty").textContent = "Shoot!";
-        $("#soccer-precision").disabled = true;
         $("#penalty-result").textContent = precision()
           ? `Keeper: ${
               keeper === 20 ? "left" : keeper === 80 ? "right" : "center"
@@ -706,7 +708,7 @@ window.OrbitArcade = (() => {
           power
         )}% power. Shootout complete: ${goals} out of 5. ${
           goals === 5
-            ? "A perfect constellation."
+            ? "A perfect score."
             : "There is always another match."
         }`;
         $("#penalty").textContent = "New shootout";
@@ -748,9 +750,9 @@ window.OrbitArcade = (() => {
       };
     canvas.setAttribute(
       "aria-label",
-      "Orbit Runner. Collect teal diamonds, dodge coral asteroids, and recover lavender shield rings. Steer with arrow keys or A and D. Space activates a shield pulse; P pauses. The score and mission are announced below."
+      "Orbit Runner. Collect diamonds, dodge asteroids, and recover shield rings. Steer with arrow keys or A and D. Space activates a shield pulse; P pauses. The score and mission are announced below."
     );
-    $("#game-title").textContent = "Signals from the unknown.";
+    $("#game-title").textContent = "Signal recovery simulator.";
     const settings = document.createElement("div");
     settings.className = "runner-settings";
     settings.innerHTML =
@@ -769,7 +771,7 @@ window.OrbitArcade = (() => {
     pulseButton.disabled = true;
     $(".touch-controls", dialog).append(pulseButton);
     $(".game-help", dialog).textContent =
-      "← → / A D to steer · drag the ship on touch screens · Space for a 1-second shield pulse · P to pause. Teal diamonds = signals. Lavender rings = shield repair. Keep a collection streak for bonus points. Three shields per flight; a new sector every 8 signals.";
+      "← → / A D to steer · drag the ship on touch screens · Space for a 1-second shield pulse · P to pause. Diamonds = signals. Rings = shield repair. Keep a collection streak for bonus points. Three shields per flight; a new sector every 8 signals.";
     let playing = false,
       paused = false,
       frame,
@@ -794,11 +796,22 @@ window.OrbitArcade = (() => {
         Number(api.storage.get("orbit-runner-v2-best", 0)) || 0
       ),
       speedScale = 0.85;
-    const stars = Array.from({ length: 58 }, (_, i) => ({
-      x: (i * 137.51) % 720,
-      y: (i * 71.31) % 400,
-      size: i % 3 === 0 ? 1.5 : 0.8,
-    }));
+    let palette;
+    function refreshPalette() {
+      const styles = getComputedStyle(dialog);
+      const color = (token, fallback) => styles.getPropertyValue(token).trim() || fallback;
+      palette = {
+        background: color("--bg", "#101210"),
+        panel: color("--panel", "#191c19"),
+        line: color("--line", "#333b32"),
+        text: color("--text", "#edf1e8"),
+        muted: color("--muted", "#a0aa9b"),
+        signal: color("--lime", "#b9f66e"),
+        shield: color("--teal", "#9bd7b6"),
+        hazard: color("--orange", "#e2b57a"),
+      };
+    }
+    refreshPalette();
     function status() {
       $("#game-score").textContent = `${score} pts · ${shields} shields · ${
         combo ? `×${Math.min(combo, 5)} combo` : "find your streak"
@@ -810,41 +823,27 @@ window.OrbitArcade = (() => {
       )} / ${
         [
           "Recover the lost signals",
-          "Map the nebula",
-          "Chart a new constellation",
+          "Recover the data stream",
+          "Complete the signal map",
         ][(stage - 1) % 3]
       } · ${signals % 8} / 8 signals`;
     }
     function draw(message, subline) {
-      ctx.fillStyle = "#071126";
+      ctx.fillStyle = palette.background;
       ctx.fillRect(0, 0, 720, 400);
-      const nebula = ctx.createRadialGradient(560, 90, 0, 560, 90, 310);
-      nebula.addColorStop(0, "#7060a529");
-      nebula.addColorStop(1, "#07112600");
-      ctx.fillStyle = nebula;
-      ctx.fillRect(0, 0, 720, 400);
-      for (const star of stars) {
-        ctx.fillStyle = "#7890b0";
-        ctx.fillRect(
-          star.x,
-          (star.y + (reducedMotion.matches ? 0 : elapsed * 14)) % 400,
-          star.size,
-          star.size
-        );
-      }
-      ctx.strokeStyle = "#79b7c81c";
+      // A quiet instrument grid keeps the play field clear and theme-aware.
+      ctx.strokeStyle = palette.line;
       ctx.lineWidth = 1;
+      ctx.globalAlpha = 0.35;
       ctx.beginPath();
-      ctx.ellipse(565, 100, 115, 30, -0.28, 0, Math.PI * 2);
+      for (let x = 40; x < 720; x += 40) { ctx.moveTo(x, 40); ctx.lineTo(x, 400); }
+      for (let y = 40; y < 400; y += 40) { ctx.moveTo(0, y); ctx.lineTo(720, y); }
       ctx.stroke();
-      ctx.fillStyle = "#243b66";
-      ctx.beginPath();
-      ctx.arc(565, 100, 49, 0, Math.PI * 2);
-      ctx.fill();
+      ctx.globalAlpha = 1;
       for (const object of objects) {
         ctx.beginPath();
         if (object.kind === "signal") {
-          ctx.fillStyle = "#65ead5";
+          ctx.fillStyle = palette.signal;
           ctx.moveTo(object.x, object.y - 10);
           ctx.lineTo(object.x + 7, object.y);
           ctx.lineTo(object.x, object.y + 10);
@@ -852,15 +851,15 @@ window.OrbitArcade = (() => {
           ctx.closePath();
           ctx.fill();
         } else if (object.kind === "shield") {
-          ctx.strokeStyle = "#b3a3ff";
+          ctx.strokeStyle = palette.shield;
           ctx.lineWidth = 3;
           ctx.arc(object.x, object.y, 11, 0, Math.PI * 2);
           ctx.stroke();
-          ctx.fillStyle = "#d9d0ff";
+          ctx.fillStyle = palette.text;
           ctx.fillRect(object.x - 5, object.y - 1, 10, 2);
           ctx.fillRect(object.x - 1, object.y - 5, 2, 10);
         } else {
-          ctx.fillStyle = "#fa947f";
+          ctx.fillStyle = palette.hazard;
           for (let i = 0; i < 7; i++) {
             const angle = (i / 7) * Math.PI * 2 + object.spin,
               radius = object.radius * (i % 2 ? 0.8 : 1),
@@ -870,7 +869,7 @@ window.OrbitArcade = (() => {
           }
           ctx.closePath();
           ctx.fill();
-          ctx.fillStyle = "#a85355";
+          ctx.fillStyle = palette.background;
           ctx.beginPath();
           ctx.arc(
             object.x + 3,
@@ -883,13 +882,13 @@ window.OrbitArcade = (() => {
         }
       }
       if (invincible > 0 || pulseActive > 0) {
-        ctx.strokeStyle = "#b3a3ff";
+        ctx.strokeStyle = palette.shield;
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.arc(ship, 350, pulseActive > 0 ? 33 : 25, 0, Math.PI * 2);
         ctx.stroke();
       }
-      ctx.fillStyle = "#d8e8ff";
+      ctx.fillStyle = palette.text;
       ctx.beginPath();
       ctx.moveTo(ship, 330);
       ctx.lineTo(ship + 16, 365);
@@ -897,20 +896,20 @@ window.OrbitArcade = (() => {
       ctx.lineTo(ship - 16, 365);
       ctx.closePath();
       ctx.fill();
-      ctx.fillStyle = "#65ead5";
+      ctx.fillStyle = palette.signal;
       ctx.fillRect(ship - 3, 342, 6, 10);
-      ctx.fillStyle = "#ff907e";
+      ctx.fillStyle = palette.hazard;
       ctx.beginPath();
       ctx.moveTo(ship - 5, 364);
       ctx.lineTo(
         ship,
-        playing && !paused ? 377 + Math.sin(elapsed * 24) * 4 : 371
+        playing && !paused && !reducedMotion.matches ? 377 + Math.sin(elapsed * 24) * 4 : 371
       );
       ctx.lineTo(ship + 5, 364);
       ctx.fill();
       ctx.font = "12px monospace";
       ctx.textAlign = "left";
-      ctx.fillStyle = "#bbc7dc";
+      ctx.fillStyle = palette.muted;
       ctx.fillText(
         `SECTOR ${stage}    SHIELDS ${"●".repeat(shields)}${"○".repeat(
           3 - shields
@@ -919,16 +918,16 @@ window.OrbitArcade = (() => {
         27
       );
       ctx.textAlign = "right";
-      ctx.fillStyle = "#65ead5";
+      ctx.fillStyle = palette.signal;
       ctx.fillText(`${score} PTS`, 700, 27);
       if (message) {
-        ctx.fillStyle = "#071126df";
+        ctx.fillStyle = palette.panel;
         ctx.fillRect(0, 138, 720, 108);
         ctx.textAlign = "center";
-        ctx.fillStyle = "#eef1ff";
+        ctx.fillStyle = palette.text;
         ctx.font = "bold 23px sans-serif";
         ctx.fillText(message, 360, 180);
-        ctx.fillStyle = "#b7c6dc";
+        ctx.fillStyle = palette.muted;
         ctx.font = "12px monospace";
         ctx.fillText(
           subline || "COLLECT SIGNALS · REPAIR SHIELDS · CHART THE UNKNOWN",
@@ -957,11 +956,13 @@ window.OrbitArcade = (() => {
       );
     }
     function updatePulse() {
-      pulseButton.disabled = !playing || paused || pulseCooldown > 0;
-      pulseButton.textContent =
-        pulseCooldown > 0
-          ? `Pulse recharging · ${Math.ceil(pulseCooldown)}s`
-          : "Shield pulse · SPACE";
+      const disabled = !playing || paused || pulseCooldown > 0;
+      const label = pulseCooldown > 0
+        ? `Pulse recharging · ${Math.ceil(pulseCooldown)}s`
+        : "Shield pulse · SPACE";
+      // Avoid replacing a focused control's text on every animation frame.
+      if (pulseButton.disabled !== disabled) pulseButton.disabled = disabled;
+      if (pulseButton.textContent !== label) pulseButton.textContent = label;
     }
     function pulse() {
       if (!playing || paused || pulseCooldown > 0) return;
@@ -1041,6 +1042,7 @@ window.OrbitArcade = (() => {
       frame = requestAnimationFrame(tick);
     }
     function startGame() {
+      refreshPalette();
       cancelAnimationFrame(frame);
       playing = true;
       paused = false;
@@ -1082,6 +1084,7 @@ window.OrbitArcade = (() => {
         silence();
       } else {
         last = performance.now();
+        canvas.focus({ preventScroll: true });
         frame = requestAnimationFrame(tick);
       }
     }
@@ -1174,6 +1177,7 @@ window.OrbitArcade = (() => {
     draw("YOUR NEXT MISSION AWAITS");
     return {
       launch() {
+        refreshPalette();
         api.openDialog("#game-dialog");
         draw("YOUR NEXT MISSION AWAITS");
       },
@@ -1190,7 +1194,9 @@ window.OrbitArcade = (() => {
     $$("[data-hobby]").forEach((button) =>
       button.addEventListener("click", () => showHobby(button.dataset.hobby))
     );
-    $("#hobby-dialog").addEventListener("close", cleanHobby);
+    $("#hobby-dialog").addEventListener("close", () => {
+      if (!$("#hobby-dialog").open) cleanHobby();
+    });
     document.addEventListener("keydown", (event) => {
       if (
         !$("#hobby-dialog").open ||
@@ -1213,18 +1219,20 @@ window.OrbitArcade = (() => {
     });
     runner = initRunner();
     $("#play-game").addEventListener("click", launchGame);
-    document.addEventListener("visibilitychange", () => {
-      if (document.hidden) {
-        runner.pause();
-        if ($("#hobby-dialog").open) $("#hobby-dialog").close();
-        silence();
-      }
-    });
-    window.addEventListener("blur", () => {
+    function suspendActivities() {
       runner.pause();
-      if ($("#hobby-dialog").open) $("#hobby-dialog").close();
+      const hobby = $("#hobby-dialog");
+      // This dialog also hosts research details; only close an active lab.
+      if (hobby.open && ["drums", "dj", "jiu", "soccer"].includes(hobby.dataset.kind)) {
+        cleanHobby();
+        hobby.close();
+      }
       silence();
+    }
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) suspendActivities();
     });
+    window.addEventListener("blur", suspendActivities);
   }
   function launchGame() {
     runner?.launch();

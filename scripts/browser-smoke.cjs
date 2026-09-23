@@ -27,7 +27,7 @@ const base = process.env.PORTFOLIO_URL || "http://127.0.0.1:5178/";
       await page.evaluate(
         () => getComputedStyle(document.body).backgroundColor
       ),
-      "rgb(11, 12, 33)"
+      "rgb(19, 21, 19)"
     );
     assert.equal(
       await page.evaluate(
@@ -147,7 +147,7 @@ const base = process.env.PORTFOLIO_URL || "http://127.0.0.1:5178/";
     );
     await page
       .getByRole("navigation")
-      .getByRole("link", { name: "Missions", exact: true })
+      .getByRole("link", { name: /Agent registry/ })
       .click();
     assert.equal(
       await page.locator(".mobile-menu").getAttribute("aria-expanded"),

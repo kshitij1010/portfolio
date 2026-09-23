@@ -34,8 +34,8 @@ No customer names, customer data, internal URLs, private repository paths, crede
 
 ## Existing public links
 
-- [Financial document RAG repository](https://github.com/kshitij1010/rag): retained from the existing portfolio; detailed project claims are supported by the supplied resume.
-- [Machine translation repository](https://github.com/kshitij1010/machine-translation): retained from the existing portfolio; detailed CLSP claims are supported by the supplied resume.
+- [Related NLP repository](https://github.com/kshitij1010/rag): its README describes NLP assignments, so it is not presented as implementation evidence for the financial RAG project. Detailed project claims come from the supplied resume.
+- [Machine translation repository scaffold](https://github.com/kshitij1010/machine-translation): the public repository is empty as reviewed. CLSP research claims are supported by the supplied resume, not this scaffold.
 - [Cognitive-Chair on IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/10065338): retained publication reference.
 - [LegalEase historical project page](../legalease.html) and [fracture detection historical project page](../fracture-detection.html): retained as background; the current catalog uses the newer resume for claims and publication status.
 

@@ -329,11 +329,15 @@
     {
       "id": "agents",
       "title": "Enterprise AI agents",
-      "text": "At EOX Vantage, I develop agentic AI workflows connecting distributed enterprise data, contextual retrieval, and tool orchestration. I build backend services and model inference workflows, and work with stakeholders to translate business requirements into usable AI systems.\nCurrent work: contextual search and decision support over distributed enterprise information.\nConnect enterprise data with tool orchestration and contextual retrieval. Build backend services for agent workflows and low-latency inference. Translate stakeholder requirements into workflows with LLM evaluation.",
+      "text": "At EOX Vantage, I develop agentic AI workflows connecting distributed enterprise data, contextual retrieval, and tool orchestration. I build backend services and model inference workflows, and work with stakeholders to translate business requirements into usable AI systems.\nCurrent work: contextual search and decision support over distributed enterprise information.\nConnect enterprise data with tool orchestration and contextual retrieval. Build backend services for agent workflows and low-latency inference. Translate stakeholder requirements into workflows with LLM evaluation.\nThe supplied resumes document contextual search, tool orchestration, and LLM evaluation. No public task-success benchmark, latency figure, or autonomous-action rate is supplied.",
       "sources": [
         {
           "label": "Public resume · EOX Vantage",
           "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=agents#missions"
         }
       ],
       "related": [
@@ -356,11 +360,15 @@
     {
       "id": "enterprise-rag",
       "title": "Enterprise knowledge engine",
-      "text": "At EOX Vantage, I built and deployed a production RAG platform combining proprietary knowledge bases, semantic retrieval, and scalable LLM inference pipelines. This is the retrieval foundation of enterprise AI: connecting the right information to a model before it responds.\nBuilt and deployed for enterprise workflows; implementation and customer data remain private.\nIntegrate enterprise knowledge bases with semantic retrieval. Connect retrieved context to scalable LLM inference pipelines. Deliver a production retrieval foundation for enterprise AI applications.",
+      "text": "At EOX Vantage, I built and deployed a production RAG platform combining proprietary knowledge bases, semantic retrieval, and scalable LLM inference pipelines. This is the retrieval foundation of enterprise AI: connecting the right information to a model before it responds.\nBuilt and deployed for enterprise workflows; implementation and customer data remain private.\nIntegrate enterprise knowledge bases with semantic retrieval. Connect retrieved context to scalable LLM inference pipelines. Deliver a production retrieval foundation for enterprise AI applications.\nProduction deployment is documented in the supplied resumes. Corpus size, retrieval benchmarks, traffic, and latency are not public, so no quantitative outcome is claimed.",
       "sources": [
         {
           "label": "Public resume · EOX Vantage",
           "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=enterprise-rag#missions"
         }
       ],
       "related": [
@@ -383,11 +391,15 @@
     {
       "id": "documents",
       "title": "Policy Quality Check",
-      "text": "I architected an end-to-end multi-model LLM pipeline at EOX Vantage for insurance document quality validation. Policy Quality Check brings OCR, structured extraction, verification, and reconciliation into one document review workflow.\nCurrent work: automating complex insurance document review through explicit validation stages.\nOrchestrate OCR and multiple models across a document processing workflow. Extract structured information from complex insurance documents. Combine verification and reconciliation for quality validation.",
+      "text": "I architected an end-to-end multi-model LLM pipeline at EOX Vantage for insurance document quality validation. Policy Quality Check brings OCR, structured extraction, verification, and reconciliation into one document review workflow.\nCurrent work: automating complex insurance document review through explicit validation stages.\nOrchestrate OCR and multiple models across a document processing workflow. Extract structured information from complex insurance documents. Combine verification and reconciliation for quality validation.\nThe resumes describe an implemented pipeline for automating insurance document quality validation. They do not provide public extraction accuracy, reconciliation precision, or time-saved measurements.",
       "sources": [
         {
           "label": "Public resume · document intelligence",
           "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=documents#missions"
         }
       ],
       "related": [
@@ -411,11 +423,15 @@
     {
       "id": "local",
       "title": "A more personal AI",
-      "text": "A personal AI assistant built around a local Llama 3.2 3B model, fine-tuned using LoRA and Unsloth. The project brings together training and inference workflows with personalized retrieval, ranking, local model serving, and preference learning.\nFocus: personalized retrieval and local model serving.\nFine-tune Llama 3.2 3B locally with LoRA and Unsloth. Connect personalized retrieval and ranking with model inference. Explore preference learning within a personal assistant workflow.",
+      "text": "A personal AI assistant built around a local Llama 3.2 3B model, fine-tuned using LoRA and Unsloth. The project brings together training and inference workflows with personalized retrieval, ranking, local model serving, and preference learning.\nFocus: personalized retrieval and local model serving.\nFine-tune Llama 3.2 3B locally with LoRA and Unsloth. Connect personalized retrieval and ranking with model inference. Explore preference learning within a personal assistant workflow.\nThe Apple MIND resume documents the model and workflow. No public comparison against the base model, hardware profile, latency measurements, or preference-learning benchmark is provided.",
       "sources": [
         {
           "label": "Author-supplied resume · source notes",
           "url": "docs/content-sources.md#local-foundation-models"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=local#missions"
         }
       ],
       "related": [
@@ -439,11 +455,15 @@
     {
       "id": "financial",
       "title": "Financial RAG, with context",
-      "text": "Built an end-to-end financial document intelligence and evaluation pipeline with Llama 3.2, LangChain, and FAISS. Query rewriting, hybrid retrieval, and maximal marginal relevance improve document selection. A custom HTMLTableAwareTextSplitter preserves table structure instead of flattening away relationships.\nResume-reported result: 35% improvement in retrieval accuracy on financial reports.\nPreserve tabular context with a custom HTMLTableAwareTextSplitter. Combine query rewriting, hybrid retrieval, and MMR selection. Build retrieval, document reasoning, and evaluation into one pipeline.",
+      "text": "Built an end-to-end financial document intelligence and evaluation pipeline with Llama 3.2, LangChain, and FAISS. Query rewriting, hybrid retrieval, and maximal marginal relevance improve document selection. A custom HTMLTableAwareTextSplitter preserves table structure instead of flattening away relationships.\nResume-reported result: 35% improvement in retrieval accuracy on financial reports.\nPreserve tabular context with a custom HTMLTableAwareTextSplitter. Combine query rewriting, hybrid retrieval, and MMR selection. Build retrieval, document reasoning, and evaluation into one pipeline.\nThe resumes report a 35% improvement in retrieval accuracy. The public source does not specify the baseline, evaluation set, or statistical uncertainty; this result has not been independently reproduced here.",
       "sources": [
         {
           "label": "Public resume · financial document intelligence",
           "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=financial#missions"
         }
       ],
       "related": [
@@ -467,11 +487,15 @@
     {
       "id": "evaluations",
       "title": "Understanding model behavior",
-      "text": "As a Machine Learning Engineer in Gen AI at Scale AI, I evaluated frontier LLMs for code reasoning, studied failure modes and model outputs, and designed experiments on reinforcement learning and post-training interventions. The work informed evaluation reliability and training decisions.\nWork experience: improving model evaluation reliability through behavioral analysis and experimentation.\nEvaluate large-scale language models on code reasoning. Analyze model failures and behavioral trends to inform evaluation quality. Study reinforcement learning and post-training interventions through experiments.",
+      "text": "As a Machine Learning Engineer in Gen AI at Scale AI, I evaluated frontier LLMs for code reasoning, studied failure modes and model outputs, and designed experiments on reinforcement learning and post-training interventions. The work informed evaluation reliability and training decisions.\nWork experience: improving model evaluation reliability through behavioral analysis and experimentation.\nEvaluate large-scale language models on code reasoning. Analyze model failures and behavioral trends to inform evaluation quality. Study reinforcement learning and post-training interventions through experiments.\nThe resumes support the evaluation and experimentation responsibilities. They do not disclose model identities, dataset sizes, intervention-specific gains, or public benchmark results.",
       "sources": [
         {
           "label": "Public resume · Scale AI",
           "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=evaluations#missions"
         }
       ],
       "related": [
@@ -495,11 +519,15 @@
     {
       "id": "translation",
       "title": "Language without barriers",
-      "text": "At the Johns Hopkins Center for Language and Speech Processing, I researched Gujarati-to-English neural machine translation using LLM-assisted methods. I optimized MarianMT and NLLB through training and error analysis, with evaluation on Flores200.\nResume-reported results: 15% improvement on Flores200 and 20% reduction in translation errors.\nResearch LLM-assisted approaches to low-resource translation. Optimize MarianMT and NLLB training and evaluation workflows. Use benchmark performance and error analysis to guide improvements.",
+      "text": "At the Johns Hopkins Center for Language and Speech Processing, I researched Gujarati-to-English neural machine translation using LLM-assisted methods. I optimized MarianMT and NLLB through training and error analysis, with evaluation on Flores200.\nResume-reported results: 15% improvement on Flores200 and 20% reduction in translation errors.\nResearch LLM-assisted approaches to low-resource translation. Optimize MarianMT and NLLB training and evaluation workflows. Use benchmark performance and error analysis to guide improvements.\nThe resumes report 15% improvement on Flores200 and 20% fewer translation errors. Exact baseline configurations, metric definitions, and evaluation split sizes are not supplied in the public resume.",
       "sources": [
         {
           "label": "Public resume · JHU CLSP",
           "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=translation#missions"
         }
       ],
       "related": [
@@ -523,11 +551,15 @@
     {
       "id": "legalease",
       "title": "LegalEase",
-      "text": "Fine-tuned and evaluated IndicTrans using Fairseq for domain-specific legal translation. I built an NLP inference and document processing pipeline to automate translation and reduce manual work. LegalEase is a separate project from my Gujarati–English research at Johns Hopkins.\nResume-reported results: BLEU score of 0.58 and 40% reduction in manual translation effort.\nFine-tune IndicTrans for domain-specific legal documents. Train and evaluate with Fairseq. Connect translation to an automated document processing pipeline.",
+      "text": "Fine-tuned and evaluated IndicTrans using Fairseq for domain-specific legal translation. I built an NLP inference and document processing pipeline to automate translation and reduce manual work. LegalEase is a separate project from my Gujarati–English research at Johns Hopkins.\nResume-reported results: BLEU score of 0.58 and 40% reduction in manual translation effort.\nFine-tune IndicTrans for domain-specific legal documents. Train and evaluate with Fairseq. Connect translation to an automated document processing pipeline.\nThe resumes report BLEU 0.58 and a 40% reduction in manual translation effort. The BLEU value is preserved exactly as supplied; the metric scale, test corpus, and effort measurement method are not publicly documented.",
       "sources": [
         {
           "label": "Public resume · LegalEase",
           "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=legalease#missions"
         }
       ],
       "related": [
@@ -550,11 +582,15 @@
     {
       "id": "cognitive-load",
       "title": "Reading cognitive load",
-      "text": "At the Johns Hopkins ARCADE Lab, I developed personalized machine learning models for real-time cognitive load estimation in telerobotic surgery. The work combined pupillometry, gaze entropy, and brightness-aware feature engineering with Random Forest models to improve classification robustness.\nResume-reported result: 20% reduction in cognitive load misclassification.\nDevelop personalized models using pupillometry signals. Engineer brightness-aware features and gaze entropy measures. Apply Random Forest to real-time cognitive load estimation.",
+      "text": "At the Johns Hopkins ARCADE Lab, I developed personalized machine learning models for real-time cognitive load estimation in telerobotic surgery. The work combined pupillometry, gaze entropy, and brightness-aware feature engineering with Random Forest models to improve classification robustness.\nResume-reported result: 20% reduction in cognitive load misclassification.\nDevelop personalized models using pupillometry signals. Engineer brightness-aware features and gaze entropy measures. Apply Random Forest to real-time cognitive load estimation.\nThe resumes report a 20% reduction in cognitive load misclassification. Participant counts, experimental protocol, latency, and validation splits are not disclosed in the supplied public material.",
       "sources": [
         {
           "label": "Public resume · JHU ARCADE Lab",
           "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=cognitive-load#missions"
         }
       ],
       "related": [
@@ -578,11 +614,15 @@
     {
       "id": "chair",
       "title": "Thought into movement",
-      "text": "Co-authored Cognitive-Chair, a brain-sensing wheelchair research project for paraplegic and quadriplegic people. The work explores brain–computer interfaces, EEG, and EOG for assistive mobility. Published in IEEE Xplore in 2023.\nBest Paper Award, AIST 2022, as reported in my resume.\nExplore brain-sensing interfaces for assistive wheelchair control. Work with EEG and EOG signals for human–machine interaction. Co-author research published in IEEE Xplore in 2023.",
+      "text": "Co-authored Cognitive-Chair, a brain-sensing wheelchair research project for paraplegic and quadriplegic people. The work explores brain–computer interfaces, EEG, and EOG for assistive mobility. Published in IEEE Xplore in 2023.\nBest Paper Award, AIST 2022, as reported in my resume.\nExplore brain-sensing interfaces for assistive wheelchair control. Work with EEG and EOG signals for human–machine interaction. Co-author research published in IEEE Xplore in 2023.\nThe resume lists IEEE Xplore publication in 2023 and a Best Paper Award at AIST 2022. Signal-classification accuracy, user-study results, and safety-validation metrics are not supplied here.",
       "sources": [
         {
           "label": "IEEE Xplore · Cognitive-Chair",
           "url": "https://ieeexplore.ieee.org/abstract/document/10065338"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=chair#missions"
         }
       ],
       "related": [
@@ -606,11 +646,15 @@
     {
       "id": "fracture",
       "title": "AI for fracture detection",
-      "text": "Co-authored research titled Evaluation of Artificial Intelligence Methods for Fracture Detection in Orthopedic X-Rays. The supplied resume lists the manuscript as under review and reports a Rapid Fire Presentation Award from the Clinical Orthopedic Society. Publication acceptance is not claimed.\nManuscript under review; Rapid Fire Presentation Award reported in the supplied resume.\nContribute to research on AI methods for orthopedic X-ray analysis. Study fracture detection as a medical imaging evaluation problem. Co-author a manuscript currently listed as under review.",
+      "text": "Co-authored research titled Evaluation of Artificial Intelligence Methods for Fracture Detection in Orthopedic X-Rays. The supplied resume lists the manuscript as under review and reports a Rapid Fire Presentation Award from the Clinical Orthopedic Society. Publication acceptance is not claimed.\nManuscript under review; Rapid Fire Presentation Award reported in the supplied resume.\nContribute to research on AI methods for orthopedic X-ray analysis. Study fracture detection as a medical imaging evaluation problem. Co-author a manuscript currently listed as under review.\nThe resume reports a Clinical Orthopedic Society Rapid Fire Presentation Award and under-review manuscript status. It does not provide sensitivity, specificity, sample sizes, or external validation results.",
       "sources": [
         {
           "label": "Public resume · publications",
           "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=fracture#missions"
         }
       ],
       "related": [
@@ -632,11 +676,15 @@
     {
       "id": "agent-observatory",
       "title": "Agent Observatory",
-      "text": "PLANNED CONCEPT. Not implemented. Planned concept, not yet implemented. I want to build an evaluation harness that replays agent traces against synthetic tool failures, misleading retrieved text, and strict token budgets. The first milestone would be a small reproducible task suite with a dashboard comparing task success, tool calls, latency, and cost.\nPlanned first milestone: a reproducible agent evaluation suite. No implementation or benchmark results yet.\nPlan: evaluate tool selection, recovery behavior, and evidence use. Plan: test synthetic prompt injection and tool failure scenarios. Plan: compare task success against token, latency, and cost budgets.",
+      "text": "PLANNED CONCEPT. Not implemented. Planned concept, not yet implemented. I want to build an evaluation harness that replays agent traces against synthetic tool failures, misleading retrieved text, and strict token budgets. The first milestone would be a small reproducible task suite with a dashboard comparing task success, tool calls, latency, and cost.\nPlanned first milestone: a reproducible agent evaluation suite. No implementation or benchmark results yet.\nPlan: evaluate tool selection, recovery behavior, and evidence use. Plan: test synthetic prompt injection and tool failure scenarios. Plan: compare task success against token, latency, and cost budgets.\nProposed evaluation only: task completion, evidence use, recovery behavior, and budget adherence. No benchmark has been run and no performance result exists.",
       "sources": [
         {
           "label": "Planned concept · scope and milestones",
           "url": "docs/content-sources.md#planned-weekend-labs"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=agent-observatory#missions"
         }
       ],
       "related": [
@@ -657,11 +705,15 @@
     {
       "id": "incident-copilot",
       "title": "Incident Flight Recorder",
-      "text": "PLANNED CONCEPT. Not implemented. Planned concept, not yet implemented. I want to build an agent that investigates a simulated service incident using read-only log tools and retrieved runbooks, then assembles an evidence-linked timeline and suggested next steps. Any proposed change would stop at a human approval gate. The weekend scope would use a local demo service and synthetic incidents.\nPlanned first milestone: one simulated incident investigated end to end. No deployment or operational claims yet.\nPlan: investigate synthetic incidents with read-only diagnostic tools. Plan: cite log evidence and runbook passages for each recommendation. Plan: enforce bounded tool calls and human approval for proposed changes.",
+      "text": "PLANNED CONCEPT. Not implemented. Planned concept, not yet implemented. I want to build an agent that investigates a simulated service incident using read-only log tools and retrieved runbooks, then assembles an evidence-linked timeline and suggested next steps. Any proposed change would stop at a human approval gate. The weekend scope would use a local demo service and synthetic incidents.\nPlanned first milestone: one simulated incident investigated end to end. No deployment or operational claims yet.\nPlan: investigate synthetic incidents with read-only diagnostic tools. Plan: cite log evidence and runbook passages for each recommendation. Plan: enforce bounded tool calls and human approval for proposed changes.\nProposed evaluation only: whether the timeline matches the synthetic incident, recommendations cite the correct evidence, and the workflow respects read-only tools and call limits.",
       "sources": [
         {
           "label": "Planned concept · scope and milestones",
           "url": "docs/content-sources.md#planned-weekend-labs"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=incident-copilot#missions"
         }
       ],
       "related": [
@@ -682,11 +734,15 @@
     {
       "id": "paper-to-experiment",
       "title": "Paper → Experiment",
-      "text": "PLANNED CONCEPT. Not implemented. Planned concept, not yet implemented. I want to build a small agent workflow that extracts a paper's claims, links them to supporting passages, proposes a minimal reproduction experiment, and critiques missing assumptions. The initial scope would produce an experiment specification from one open-access paper, with human review before code execution.\nPlanned first milestone: a cited reproduction plan for one paper. No completed experiments or results yet.\nPlan: map research claims to their exact supporting passages. Plan: produce a minimal experiment specification and evaluation checklist. Plan: flag missing assumptions and require review before code execution.",
+      "text": "PLANNED CONCEPT. Not implemented. Planned concept, not yet implemented. I want to build a small agent workflow that extracts a paper's claims, links them to supporting passages, proposes a minimal reproduction experiment, and critiques missing assumptions. The initial scope would produce an experiment specification from one open-access paper, with human review before code execution.\nPlanned first milestone: a cited reproduction plan for one paper. No completed experiments or results yet.\nPlan: map research claims to their exact supporting passages. Plan: produce a minimal experiment specification and evaluation checklist. Plan: flag missing assumptions and require review before code execution.\nProposed evaluation only: claim-to-passage accuracy, completeness of the experiment specification, and whether missing assumptions are surfaced. No completed experiments or measurements exist.",
       "sources": [
         {
           "label": "Planned concept · scope and milestones",
           "url": "docs/content-sources.md#planned-weekend-labs"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=paper-to-experiment#missions"
         }
       ],
       "related": [

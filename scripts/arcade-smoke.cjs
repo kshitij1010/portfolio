@@ -50,7 +50,8 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || "playwright");
       await page.locator('[data-mute="hat"]').getAttribute("aria-pressed"),
       "true"
     );
-    await close();
+    await page.evaluate(() => window.dispatchEvent(new Event("blur")));
+    assert.equal(await page.locator("#hobby-dialog").evaluate(dialog => dialog.open), false);
     await open("dj");
     assert.equal(
       await page.locator('[data-track="kick"][aria-pressed="true"]').count(),
@@ -78,6 +79,11 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || "playwright");
     await close();
     await open("soccer");
     assert.equal(await page.locator("#soccer-precision").isChecked(), true);
+    await page.locator("#penalty").click();
+    assert.equal(await page.locator("#soccer-precision").isDisabled(), false);
+    await page.locator("#soccer-precision").uncheck();
+    await page.locator("#soccer-precision").check();
+    assert.match(await page.locator("#penalty").textContent(), /Line up/);
     for (const aim of [20, 80, 20, 20, 80]) {
       await page.locator("#penalty").click();
       await page.locator(`[data-aim="${aim}"]`).click();
@@ -100,6 +106,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || "playwright");
     assert.equal(await page.locator("#pause-game").textContent(), "Resume");
     await page.locator("#pause-game").click();
     assert.equal(await page.locator("#pause-game").textContent(), "Pause");
+    assert.equal(await page.locator("#game").evaluate(canvas => document.activeElement === canvas), true);
     await page.evaluate(() => window.dispatchEvent(new Event("blur")));
     assert.equal(await page.locator("#pause-game").textContent(), "Resume");
     await close();

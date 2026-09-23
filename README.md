@@ -1,6 +1,6 @@
-# Kshitij Joshi · Mission Control
+# Kshitij Joshi · Agent Command Center
 
-An interactive space-themed portfolio for **https://kshitij1010.github.io/portfolio/**. The existing GitHub Pages main/root configuration stays in place.
+An interactive, quietly themed agent command center portfolio for **https://kshitij1010.github.io/portfolio/**. The existing GitHub Pages main/root configuration stays in place.
 
 ## Local preview
 
@@ -12,8 +12,10 @@ Open `http://127.0.0.1:5178`. The portfolio needs no build, API key, package ins
 
 ## Explore
 
-- Supernova/Aurora accent palettes, Syne headings, Manrope body type, IBM Plex Mono labels, and original colorful SVG artwork.
-- Fourteen mission briefs: eleven documented projects/research items and three explicitly **planned** weekend lab concepts.
+- Phosphor/Glacier accents over charcoal surfaces, Inter body type, Space Grotesk headings, and IBM Plex Mono labels.
+- A responsive registry sidebar, local visitor orchestrator, and case-study mission logs. Routing uses no AI calls.
+- Fourteen expanded agent profiles: eleven documented projects/research items and three explicitly **planned** weekend lab concepts. Each includes the problem, approach, contribution, evaluation, limitations, next steps, and resource slots.
+- Activity labels show documented work periods, not live deployment telemetry. Missing code/demo links are clearly marked pending; see [docs/project-catalog-guide.md](docs/project-catalog-guide.md).
 - Three EOX Vantage workstreams: enterprise agent workflows, enterprise knowledge retrieval, and Policy Quality Check.
 - Project filters, text search, shareable `?mission=project-id` links, source citations, architecture flows, and a locally saved mission passport.
 - Keyboard command palette (`⌘K` / `Ctrl+K`), responsive navigation, reduced-motion support, and accessible native dialogs.
@@ -37,7 +39,7 @@ The Field Notes section has photo, travel, and writing filters, full-entry reade
 
 ## Upcoming events
 
-“Next coordinates” lists confirmed attendance, with chronological cards, event links, and Upcoming / Past events views. Edit `assets/data/events.json`; see [docs/events-guide.md](docs/events-guide.md). Multi-day events remain upcoming through their final date, then move to the past view automatically. No backend or calendar account is needed.
+“Next on the calendar” lists confirmed attendance, with chronological cards, event links, and Upcoming / Past events views. Edit `assets/data/events.json`; see [docs/events-guide.md](docs/events-guide.md). Multi-day events remain upcoming through their final date, then move to the past view automatically. No backend or calendar account is needed.
 
 ## Papers, articles, and blogs
 
@@ -46,11 +48,11 @@ The Reading Radar includes 23 verified links: 13 foundational papers, seven Sept
 ## Content updates
 
 1. Edit `assets/js/projects.js` for project titles, content, status, sources, and architecture flows.
-2. Edit the profile topics/artwork in `scripts/build-content.mjs` when profile facts change.
+2. Edit the profile topics in `scripts/build-content.mjs` when profile facts change.
 3. Run `node scripts/build-content.mjs`. It refreshes static cards in `index.html` and the copilot catalog from the same project source.
 4. Review the visible status and source links, and rerun the checks below.
 
-Profile, timeline, publications, and section layout live in `index.html`. Base styles are in `assets/css/orbit.css`; the updated palette and layout are in `assets/css/aurora.css`. Arcade and copilot logic are separate modules.
+Profile, timeline, publications, and section layout live in `index.html`. Base styles are in `assets/css/orbit.css`; the current palette and layout are in `assets/css/command.css`, loaded after the retained base styles. Arcade and copilot logic are separate modules.
 
 The four owner-supplied September 2026 resumes inform current facts. The public download is the Palantir variant. The local assistant is sourced from the Apple MIND variant and cites that distinction in [docs/content-sources.md](docs/content-sources.md). Metrics and awards are resume-reported. Enterprise descriptions stay at the public resume level: no customer data, private code, internal URLs, or credentials. LinkedIn's public profile supports the environmental volunteering summary; no unverified X handle is included.
 
@@ -61,6 +63,7 @@ The old top-level experience, education, project, publications, and skills URLs 
 ```sh
 python3 scripts/verify.py
 node --check assets/js/orbit.js
+node --check assets/js/command-center.js
 node --check assets/js/copilot.js
 node --check assets/js/arcade.js
 node --test scripts/test-worker.mjs scripts/test-copilot.mjs

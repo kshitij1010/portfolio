@@ -136,20 +136,20 @@
     const ids = new Set(shown.map((p) => p.id));
     $$(".project").forEach((card) => (card.hidden = !ids.has(card.dataset.id)));
     $("#project-count").textContent = matching.length
-      ? `Showing ${shown.length} of ${matching.length} missions${
+      ? `Showing ${shown.length} of ${matching.length} profiles${
           activeFilter === "planned"
             ? " · Design concepts, not completed work"
             : ""
         }`
-      : "No matching missions. Try another technology or clear your search.";
+      : "No matching profiles. Try another technology or clear your search.";
     $("#more-projects").hidden = !(
       activeFilter === "all" &&
       !query &&
       matching.length > 6
     );
     $("#more-projects").textContent = expanded
-      ? "Show selected missions ↑"
-      : `Explore all ${matching.length} missions ↓`;
+      ? "Show selected profiles ↑"
+      : `Browse all ${matching.length} profiles ↓`;
   }
   $$(".filters .filter").forEach((button) =>
     button.addEventListener("click", () => {
@@ -171,9 +171,77 @@
     const project = projects.find((p) => p.id === id);
     if (!project) return;
     $("#project-title").textContent = project.title;
-    $("#project-type").textContent =
-      (project.lifecycle === "planned" ? "PLANNED / " : "") + project.type;
+    $("#project-type").textContent = project.type;
     $("#project-description").textContent = project.detail;
+    const briefMeta = $("#project-brief-meta");
+    briefMeta.replaceChildren();
+    [
+      project.lifecycle === "planned"
+        ? "Planned concept · Not implemented"
+        : "Documented work",
+      `Activity documented: ${project.activityLabel || project.year}`,
+    ].forEach((text) => {
+      const span = document.createElement("span");
+      span.textContent = text;
+      briefMeta.append(span);
+    });
+    const caseStudy = $("#project-case-study");
+    caseStudy.replaceChildren();
+    const sections = [
+      ["The problem", project.problem],
+      [
+        project.lifecycle === "planned" ? "Proposed approach" : "Approach",
+        project.approach,
+      ],
+      [
+        project.lifecycle === "planned"
+          ? "Planned contribution"
+          : "My contribution",
+        project.contribution,
+      ],
+      ["Evaluation & evidence", project.evaluation],
+      ["Scope & constraints", project.constraints],
+      ["Future directions", project.nextSteps],
+    ];
+    sections.forEach(([title, content]) => {
+      if (!content || (Array.isArray(content) && !content.length)) return;
+      const section = document.createElement("section"),
+        heading = document.createElement("h3");
+      heading.textContent = title;
+      section.append(heading);
+      if (Array.isArray(content)) {
+        const list = document.createElement("ul");
+        content.forEach((text) => {
+          const li = document.createElement("li");
+          li.textContent = text;
+          list.append(li);
+        });
+        section.append(list);
+      } else {
+        const p = document.createElement("p");
+        p.textContent = content;
+        section.append(p);
+      }
+      caseStudy.append(section);
+    });
+    const resources = $("#project-resources");
+    resources.replaceChildren();
+    (project.resources || []).forEach((resource) => {
+      const available = resource.status === "available" && resource.url;
+      const node = document.createElement(available ? "a" : "div");
+      node.className = `resource-link${available ? "" : " pending"}`;
+      if (available) {
+        node.href = resource.url;
+        node.target = "_blank";
+        node.rel = "noopener noreferrer";
+      }
+      const name = document.createElement("span"),
+        status = document.createElement("small");
+      name.textContent = resource.label;
+      status.textContent = available ? "Open ↗" : "Link pending";
+      node.append(name, status);
+      resources.append(node);
+    });
     $("#project-outcome").textContent = project.outcome;
     $("#project-dialog").dataset.lifecycle = project.lifecycle || "built";
     $("#project-highlights").replaceChildren();
@@ -273,6 +341,11 @@
   });
   const commands = [
     {
+      title: "Recent missions & case studies",
+      type: "Mission logs",
+      run: () => navigate("#mission-log"),
+    },
+    {
       title: "Favorite papers, articles & reading library",
       type: "Reading radar",
       run: () => navigate("#reading"),
@@ -288,13 +361,13 @@
       run: () => navigate("#journal"),
     },
     {
-      title: "Explore all missions",
+      title: "Explore the agent registry",
       type: "Destination",
       run: () => navigate("#missions"),
     },
     {
       title: "Experience & education",
-      type: "Flight path",
+      type: "Operator history",
       run: () => navigate("#trajectory"),
     },
     {
@@ -383,21 +456,22 @@
   window.OrbitJournal.init({ openDialog });
   window.OrbitEvents.init();
   window.OrbitReading.init();
+  window.CommandCenter.init({ projects, showProject, navigate });
   const themeButton = $("#theme-toggle");
   function setTheme(value) {
     document.documentElement.dataset.palette = value;
     themeButton.setAttribute("aria-pressed", String(value === "aurora"));
     themeButton.querySelector("span").textContent =
-      value === "aurora" ? "AURORA" : "SUPERNOVA";
+      value === "aurora" ? "GLACIER" : "PHOSPHOR";
   }
-  setTheme(storage.get("orbit-palette", "supernova"));
+  setTheme(storage.get("command-palette", "supernova"));
   themeButton.addEventListener("click", () => {
     const next =
       document.documentElement.dataset.palette === "aurora"
         ? "supernova"
         : "aurora";
     setTheme(next);
-    storage.set("orbit-palette", next);
+    storage.set("command-palette", next);
   });
   const deepLink = new URLSearchParams(location.search).get("mission");
   if (deepLink && projects.some((p) => p.id === deepLink))

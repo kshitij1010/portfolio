@@ -3,161 +3,226 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#0b0c21" />
-    <title>Kshitij Joshi — AI Engineer & Curious Explorer</title>
+    <meta name="theme-color" content="#111410" />
+    <title>Kshitij Joshi — Agent Command Center</title>
     <meta
       name="description"
       content="Kshitij Joshi — AI Engineer at EOX Vantage, Johns Hopkins alumnus, and builder of agentic systems. Explore AI projects, research, and a few side quests."
     />
-    <meta
-      property="og:title"
-      content="Kshitij Joshi — A universe of possibilities"
-    />
+    <meta property="og:title" content="Kshitij Joshi — Agent Command Center" />
     <meta
       property="og:description"
-      content="AI engineering, agentic systems, research, and a few side quests. Welcome to my orbit."
+      content="AI engineering, agentic systems, research, and a few side quests. Welcome to the Agent Command Center."
     />
     <meta property="og:type" content="website" />
     <link rel="icon" href="assets/images/orbit-mark.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="assets/css/orbit.css" />
+    <link rel="stylesheet" href="assets/css/orbit.css?v=command-1" />
     <link rel="stylesheet" href="assets/css/aurora.css?v=20260922-3" />
-    <link rel="stylesheet" href="assets/css/arcade.css" />
-    <script defer src="assets/js/projects.js"></script>
-    <script defer src="assets/js/arcade.js"></script>
+    <link rel="stylesheet" href="assets/css/arcade.css?v=command-1" />
+    <link rel="stylesheet" href="assets/css/command.css?v=command-1" />
+    <script defer src="assets/js/projects.js?v=command-1"></script>
+    <script defer src="assets/js/arcade.js?v=command-1"></script>
     <script defer src="assets/js/copilot.js"></script>
     <script defer src="assets/js/journal.js"></script>
     <script defer src="assets/js/events.js"></script>
     <script defer src="assets/js/reading.js?v=20260922-3"></script>
-    <script defer src="assets/js/orbit.js?v=20260922-3"></script>
+    <script defer src="assets/js/command-center.js?v=command-1"></script>
+    <script defer src="assets/js/orbit.js?v=command-1"></script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    <header>
-      <div class="wrap header-inner">
-        <a class="brand" href="#home" aria-label="Kshitij Joshi home"
-          ><span class="brand-symbol">✳</span
-          ><span
-            >Kshitij Joshi<small>ENGINEER. EXPLORER. HUMAN.</small></span
-          ></a
-        >
-        <nav class="nav" aria-label="Main navigation">
-          <a href="#missions">Missions</a><a href="#trajectory">Trajectory</a
-          ><a href="#research">Research</a><a href="#off-duty">Off-duty</a
-          ><a href="#journal">Journal</a><a href="#events">Events</a
-          ><a href="#reading">Reading</a><a href="#contact">Contact ↗</a>
-        </nav>
+    <header class="registry-sidebar">
+      <div class="header-inner">
+        <a class="brand" href="#home" aria-label="Kshitij Joshi home">
+          <span class="brand-symbol" aria-hidden="true">⌘</span>
+          <span>KJ / CONTROL<small>AGENT COMMAND CENTER</small></span>
+        </a>
         <button class="command-trigger" aria-label="Open command palette">
-          <span class="command-label">Jump to</span><kbd>⌘ K</kbd></button
-        ><button
+          <span>⌕ &nbsp; Find anything</span><kbd>⌘ K</kbd>
+        </button>
+        <button
           class="mobile-menu"
           aria-label="Toggle navigation"
           aria-expanded="false"
+          aria-controls="registry-nav"
         >
           ☰
         </button>
+        <nav class="nav" id="registry-nav" aria-label="Main navigation">
+          <span class="sidebar-label">WORKSPACE</span>
+          <a href="#home"
+            ><span aria-hidden="true">▦</span> Overview <small>01</small></a
+          >
+          <a href="#missions"
+            ><span aria-hidden="true">◈</span> Agent registry
+            <small id="sidebar-project-count">14</small></a
+          >
+          <a href="#mission-log"
+            ><span aria-hidden="true">≡</span> Mission logs</a
+          >
+          <a href="#trajectory"><span aria-hidden="true">↗</span> Experience</a>
+          <a href="#research"><span aria-hidden="true">⌕</span> Publications</a>
+          <span class="sidebar-label second">BEYOND THE WORK</span>
+          <a href="#off-duty"><span aria-hidden="true">⌁</span> Playground</a>
+          <a href="#journal"><span aria-hidden="true">▤</span> Journal</a>
+          <a href="#events"><span aria-hidden="true">□</span> Events</a>
+          <a href="#reading"><span aria-hidden="true">▥</span> Reading radar</a>
+          <a href="#contact"><span aria-hidden="true">↗</span> Get in touch</a>
+        </nav>
+        <div class="sidebar-registry">
+          <div class="sidebar-label">PINNED PROFILES</div>
+          <div id="sidebar-agents"></div>
+        </div>
+        <div class="sidebar-bottom">
+          <span class="sidebar-label">THE HUMAN IN THE LOOP</span>
+          <a href="#trajectory" class="operator-mini"
+            ><img
+              src="assets/images/kj/kshitij.jpeg"
+              alt=""
+              width="34"
+              height="34"
+            /><span>Kshitij Joshi<small>AI Engineer · EOX Vantage</small></span
+            ><span aria-hidden="true">↗</span></a
+          >
+          <div class="sidebar-footer">
+            <span><i></i> Portfolio workspace</span><span>v3.0</span>
+          </div>
+        </div>
       </div>
     </header>
     <main id="main">
+      <div class="console-topbar">
+        <span
+          ><span class="topbar-root">Workspace</span
+          ><span aria-hidden="true"> / </span
+          ><span id="current-section">Overview</span></span
+        ><span class="topbar-note">HUMAN-LED. AGENT-ASSISTED.</span
+        ><a
+          href="assets/Kshitij-Joshi-Resume.pdf"
+          target="_blank"
+          rel="noopener"
+          >Resume ↗</a
+        >
+      </div>
       <section class="hero" id="home" aria-labelledby="hero-title">
-        <div class="starfield" aria-hidden="true"></div>
         <div class="wrap">
-          <div class="hero-top mono">
-            <span class="live">TRANSMITTING FROM PLANET EARTH</span
-            ><span class="coordinates"
-              >EST. ON EARTH &nbsp; / &nbsp; BUILT FOR WHAT'S NEXT</span
-            >
+          <div class="workspace-heading">
+            <span class="eyebrow"><i></i> THE OPERATOR / KSHITIJ JOSHI</span
+            ><span class="workspace-version">PORTFOLIO / 2026</span>
           </div>
           <div class="hero-grid">
             <div class="hero-copy">
-              <p class="eyebrow">HELLO, WORLD. I'M KSHITIJ.</p>
               <h1 id="hero-title">
-                A curious mind.<br />A universe of<br /><span
-                  >possibilities.</span
-                >
+                AI systems,<br /><span>built to be useful.</span>
               </h1>
               <p class="hero-description">
-                I build AI that goes beyond the prompt.<br /><strong
-                  >Agentic systems. Real-world impact.</strong
-                ><br />Currently engineering intelligent things at EOX Vantage.
+                I build AI systems that connect knowledge to action. Agents,
+                retrieval, and the engineering that makes them useful.
+              </p>
+              <p class="operator-byline">
+                AI Engineer at EOX Vantage <span>·</span> Johns Hopkins alum
               </p>
               <div class="actions">
                 <a class="btn primary" href="#missions"
-                  >Explore my work <span>↗</span></a
-                ><a
-                  class="btn"
-                  href="assets/Kshitij-Joshi-Resume.pdf"
-                  target="_blank"
-                  rel="noopener"
-                  >Flight log / Resume <span>↓</span></a
-                >
+                  >Open agent registry <span>↗</span></a
+                ><a class="btn" href="#trajectory">Meet the operator</a>
               </div>
-              <div class="hero-note">
-                <span class="tiny-cross">✧</span> AI engineer · Johns Hopkins
-                alum · Perpetually curious
+              <div class="hero-stack">
+                <span>Python</span><span>LangGraph</span><span>RAG</span
+                ><span>MCP</span><span>PyTorch</span>
               </div>
             </div>
-            <div class="cosmos" aria-label="Interactive orbital navigation">
-              <div class="orbit"></div>
-              <div class="orbit two"></div>
-              <div class="orbit three"></div>
-              <div class="planet" aria-hidden="true">
-                <img
-                  src="assets/images/aurora-planet.svg"
-                  alt=""
-                  width="440"
-                  height="440"
-                  fetchpriority="high"
-                />
+            <div class="orchestrator" aria-labelledby="orchestrator-title">
+              <div class="panel-title">
+                <span><i></i> VISITOR ORCHESTRATOR</span
+                ><span class="sim-label">SIMULATION</span>
               </div>
-              <div class="moon" aria-hidden="true"></div>
-              <span class="crosshair c1" aria-hidden="true">+</span
-              ><span class="crosshair c2" aria-hidden="true">+</span
-              ><span class="orbital-marker" aria-hidden="true"></span
-              ><a class="planet-node n1" href="#missions"
-                ><span>⌘</span> AGENTIC SYSTEMS ↗</a
-              ><a class="planet-node n2" href="#research"
-                ><span>✧</span> RESEARCH ↗</a
-              ><a class="planet-node n3" href="#off-duty"
-                ><span>♫</span> SIDE QUESTS ↗</a
-              >
-              <div class="planet-label">
-                <span>OBJECT: KJ–01<br />CLASS: LIMITLESS CURIOSITY</span
-                ><span><b>∞</b> POSSIBILITIES<br />01 HOME PLANET</span>
+              <div class="orchestrator-content">
+                <h2 id="orchestrator-title">What brings you here?</h2>
+                <p>Choose an intent. I’ll route you to the right work.</p>
+                <div class="route-options">
+                  <button data-route="agents">
+                    <span aria-hidden="true">⌘</span> Agent systems
+                    <span>↗</span>
+                  </button>
+                  <button data-route="retrieval">
+                    <span aria-hidden="true">⌕</span> RAG &amp; knowledge
+                    <span>↗</span>
+                  </button>
+                  <button data-route="research">
+                    <span aria-hidden="true">⌬</span> Research &amp; ML
+                    <span>↗</span>
+                  </button>
+                  <button data-route="planned">
+                    <span aria-hidden="true">＋</span> What’s next
+                    <span>↗</span>
+                  </button>
+                </div>
+                <div
+                  class="router-log"
+                  id="router-log"
+                  role="log"
+                  aria-live="polite"
+                  aria-label="Simulated routing log"
+                >
+                  <p>
+                    <span>system</span> Router ready. Awaiting visitor intent.<b
+                      class="terminal-cursor"
+                      aria-hidden="true"
+                      >▌</b
+                    >
+                  </p>
+                </div>
+                <div class="route-results" id="route-results"></div>
+              </div>
+              <div class="orchestrator-footer">
+                <span>Deterministic routing</span
+                ><span>No AI calls · No tokens</span>
               </div>
             </div>
           </div>
-          <div class="hero-bottom">
-            <button
-              class="theme-toggle"
-              id="theme-toggle"
-              aria-label="Switch cosmic color palette"
-              aria-pressed="false"
-            >
-              ◐ <span>SUPERNOVA</span>
-            </button>
-            <div class="stack">
-              <span>PYTHON</span><span>LLMs & AGENTS</span><span>RAG</span
-              ><span>MCP</span><span>HUMAN CURIOSITY</span>
+          <div class="workspace-metrics" aria-label="Portfolio overview">
+            <div>
+              <span>REGISTRY ENTRIES</span><strong id="metric-total">14</strong
+              ><small>Projects &amp; research</small>
             </div>
-            <a class="scroll-cue" href="#missions">SCROLL TO EXPLORE ↓</a>
+            <div>
+              <span>DOCUMENTED WORK</span><strong id="metric-built">11</strong
+              ><small>Resume &amp; source backed</small>
+            </div>
+            <div>
+              <span>IN THE QUEUE</span><strong id="metric-planned">03</strong
+              ><small>Clearly labeled concepts</small>
+            </div>
+            <div class="workspace-mode">
+              <span>WORKSPACE DISPLAY</span
+              ><button
+                id="theme-toggle"
+                class="theme-toggle"
+                aria-label="Switch command center accent"
+                aria-pressed="false"
+              >
+                ◐ <span>PHOSPHOR</span></button
+              ><small>Change the accent</small>
+            </div>
           </div>
         </div>
       </section>
       <section class="section wrap" id="missions">
         <div class="section-head">
           <div>
-            <div class="section-index">01 / MISSION CONTROL</div>
-            <h2>Ideas sent into orbit.</h2>
+            <div class="section-index">01 / AGENT REGISTRY</div>
+            <h2>Meet the agents.</h2>
           </div>
           <p>
-            A selection of systems I've built, questions I've explored, and
-            problems worth solving.
+            A registry of my engineering work and research. Each profile opens a
+            detailed brief with methods, evidence, and resources.
           </p>
         </div>
         <div class="project-toolbar">
           <div class="filters" aria-label="Filter projects">
             <button class="filter" data-filter="all" aria-pressed="true">
-              All missions
+              All profiles
             </button>
             <button class="filter" data-filter="eox" aria-pressed="false">
               At EOX Vantage
@@ -177,1244 +242,144 @@
             <input
               id="project-search"
               type="search"
-              placeholder="Find a mission or technology…"
+              placeholder="Search agents, capabilities, tools…"
               aria-label="Search projects"
           /></label>
         </div>
         <p class="project-count" id="project-count" role="status"></p>
         <!-- PROJECTS:START -->
-        <div class="projects">
-          <article
-            class="project"
-            data-id="agents"
-            data-category="agentic"
-            data-lifecycle="built"
-            style="--card-accent: #ffac96; --card-glow: #a571ec44"
-          >
-            <div class="project-art" aria-hidden="true">
-              <span class="art-index">MISSION / 01</span
-              ><svg viewBox="0 0 320 200">
-                <defs>
-                  <linearGradient id="g-agents" x2="1" y2="1">
-                    <stop stop-color="#ffac96" />
-                    <stop offset="1" stop-color="#a571ec" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M69 54L160 103L249 50M64 155L160 103L253 155"
-                  stroke="#ffac96"
-                  stroke-width="2"
-                  stroke-dasharray="4 5"
-                />
-                <rect
-                  x="120"
-                  y="70"
-                  width="80"
-                  height="64"
-                  rx="16"
-                  fill="url(#g-agents)"
-                />
-                <path
-                  d="M142 102h36M160 84v36"
-                  stroke="#fff"
-                  stroke-opacity=".8"
-                  stroke-width="2"
-                />
-                <rect
-                  x="46"
-                  y="31"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#ffac96"
-                />
-                <circle cx="64" cy="47" r="4" fill="#ffac96" />
-                <rect
-                  x="229"
-                  y="29"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#ffac96"
-                />
-                <circle cx="247" cy="45" r="6" fill="#ffac96" />
-                <rect
-                  x="40"
-                  y="133"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#ffac96"
-                />
-                <circle cx="58" cy="149" r="4" fill="#ffac96" />
-                <rect
-                  x="232"
-                  y="132"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#ffac96"
-                />
-                <circle cx="250" cy="148" r="6" fill="#ffac96" /></svg
-              ><span class="art-type">AGENTIC SYSTEMS</span>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">EOX VANTAGE · 2026–PRESENT</div>
-              <h3>Enterprise AI agents</h3>
-              <p>
-                Enterprise knowledge meets tool use: agentic workflows designed
-                around real business decisions.
-              </p>
-              <div class="tags">
-                <span>Tool orchestration</span><span>Enterprise data</span
-                ><span>LLM evaluation</span>
-              </div>
-              <button
-                class="project-link"
-                data-project="agents"
-                aria-label="Explore Enterprise AI agents"
-              >
-                Explore mission <span>↗</span>
-              </button>
-            </div>
-          </article>
-          <article
-            class="project"
-            data-id="enterprise-rag"
-            data-category="retrieval"
-            data-lifecycle="built"
-            style="--card-accent: #74f0dc; --card-glow: #3c87d844"
-          >
-            <div class="project-art" aria-hidden="true">
-              <span class="art-index">MISSION / 02</span
-              ><svg viewBox="0 0 320 200">
-                <defs>
-                  <linearGradient id="g-enterprise-rag" x2="1" y2="1">
-                    <stop stop-color="#74f0dc" />
-                    <stop offset="1" stop-color="#3c87d8" />
-                  </linearGradient>
-                </defs>
-                <g transform="rotate(-13 125 99)">
-                  <rect
-                    x="80"
-                    y="35"
-                    width="92"
-                    height="124"
-                    rx="9"
-                    fill="#322e53"
-                    stroke="#74f0dc"
-                  />
-                  <path
-                    d="M98 60h52M98 76h39M98 93h51M98 110h32"
-                    stroke="#74f0dc"
-                    stroke-width="3"
-                    opacity=".7"
-                  />
-                </g>
-                <g transform="rotate(10 195 105)">
-                  <rect
-                    x="150"
-                    y="47"
-                    width="88"
-                    height="118"
-                    rx="9"
-                    fill="url(#g-enterprise-rag)"
-                  />
-                  <path
-                    d="M168 75h48M168 91h35M168 108h46M168 125h27"
-                    stroke="#fff"
-                    stroke-width="3"
-                    opacity=".7"
-                  />
-                </g>
-                <rect
-                  x="177"
-                  y="135"
-                  width="87"
-                  height="28"
-                  rx="5"
-                  fill="#172a33"
-                  stroke="#74f0dc"
-                />
-                <path
-                  d="M186 148l5 5 9-12"
-                  stroke="#74f0dc"
-                  stroke-width="2"
-                  fill="none"
-                />
-                <text
-                  x="211"
-                  y="153"
-                  fill="#74f0dc"
-                  font-size="10"
-                  font-family="monospace"
-                >
-                  CONTEXT
-                </text></svg
-              ><span class="art-type">PRODUCTION RAG</span>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">EOX VANTAGE · 2026–PRESENT</div>
-              <h3>Enterprise knowledge engine</h3>
-              <p>
-                A production retrieval platform that makes enterprise knowledge
-                available to AI workflows.
-              </p>
-              <div class="tags">
-                <span>Semantic retrieval</span><span>Knowledge bases</span
-                ><span>LLM pipelines</span>
-              </div>
-              <button
-                class="project-link"
-                data-project="enterprise-rag"
-                aria-label="Explore Enterprise knowledge engine"
-              >
-                Explore mission <span>↗</span>
-              </button>
-            </div>
-          </article>
-          <article
-            class="project"
-            data-id="documents"
-            data-category="agentic"
-            data-lifecycle="built"
-            style="--card-accent: #c0a0ff; --card-glow: #6175ed44"
-          >
-            <div class="project-art" aria-hidden="true">
-              <span class="art-index">MISSION / 03</span
-              ><svg viewBox="0 0 320 200">
-                <defs>
-                  <linearGradient id="g-documents" x2="1" y2="1">
-                    <stop stop-color="#c0a0ff" />
-                    <stop offset="1" stop-color="#6175ed" />
-                  </linearGradient>
-                </defs>
-                <g transform="rotate(-13 125 99)">
-                  <rect
-                    x="80"
-                    y="35"
-                    width="92"
-                    height="124"
-                    rx="9"
-                    fill="#322e53"
-                    stroke="#c0a0ff"
-                  />
-                  <path
-                    d="M98 60h52M98 76h39M98 93h51M98 110h32"
-                    stroke="#c0a0ff"
-                    stroke-width="3"
-                    opacity=".7"
-                  />
-                </g>
-                <g transform="rotate(10 195 105)">
-                  <rect
-                    x="150"
-                    y="47"
-                    width="88"
-                    height="118"
-                    rx="9"
-                    fill="url(#g-documents)"
-                  />
-                  <path
-                    d="M168 75h48M168 91h35M168 108h46M168 125h27"
-                    stroke="#fff"
-                    stroke-width="3"
-                    opacity=".7"
-                  />
-                </g>
-                <rect
-                  x="177"
-                  y="135"
-                  width="87"
-                  height="28"
-                  rx="5"
-                  fill="#172a33"
-                  stroke="#c0a0ff"
-                />
-                <path
-                  d="M186 148l5 5 9-12"
-                  stroke="#c0a0ff"
-                  stroke-width="2"
-                  fill="none"
-                />
-                <text
-                  x="211"
-                  y="153"
-                  fill="#c0a0ff"
-                  font-size="10"
-                  font-family="monospace"
-                >
-                  CONTEXT
-                </text></svg
-              ><span class="art-type">MULTI-MODEL DOCUMENT AI</span>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">EOX VANTAGE · 2026–PRESENT</div>
-              <h3>Policy Quality Check</h3>
-              <p>
-                An insurance document review pipeline with extraction,
-                verification, and reconciliation built in.
-              </p>
-              <div class="tags">
-                <span>OCR</span><span>Structured extraction</span
-                ><span>Reconciliation</span>
-              </div>
-              <button
-                class="project-link"
-                data-project="documents"
-                aria-label="Explore Policy Quality Check"
-              >
-                Explore mission <span>↗</span>
-              </button>
-            </div>
-          </article>
-          <article
-            class="project"
-            data-id="local"
-            data-category="agentic"
-            data-lifecycle="built"
-            style="--card-accent: #f8cd83; --card-glow: #e870a444"
-          >
-            <div class="project-art" aria-hidden="true">
-              <span class="art-index">MISSION / 04</span
-              ><svg viewBox="0 0 320 200">
-                <defs>
-                  <linearGradient id="g-local" x2="1" y2="1">
-                    <stop stop-color="#f8cd83" />
-                    <stop offset="1" stop-color="#e870a4" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M69 54L160 103L249 50M64 155L160 103L253 155"
-                  stroke="#f8cd83"
-                  stroke-width="2"
-                  stroke-dasharray="4 5"
-                />
-                <rect
-                  x="120"
-                  y="70"
-                  width="80"
-                  height="64"
-                  rx="16"
-                  fill="url(#g-local)"
-                />
-                <path
-                  d="M142 102h36M160 84v36"
-                  stroke="#fff"
-                  stroke-opacity=".8"
-                  stroke-width="2"
-                />
-                <rect
-                  x="46"
-                  y="31"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#f8cd83"
-                />
-                <circle cx="64" cy="47" r="4" fill="#f8cd83" />
-                <rect
-                  x="229"
-                  y="29"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#f8cd83"
-                />
-                <circle cx="247" cy="45" r="6" fill="#f8cd83" />
-                <rect
-                  x="40"
-                  y="133"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#f8cd83"
-                />
-                <circle cx="58" cy="149" r="4" fill="#f8cd83" />
-                <rect
-                  x="232"
-                  y="132"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#f8cd83"
-                />
-                <circle cx="250" cy="148" r="6" fill="#f8cd83" /></svg
-              ><span class="art-type">LOCAL FOUNDATION MODELS</span>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">PERSONAL PROJECT · 2026</div>
-              <h3>A more personal AI</h3>
-              <p>
-                A local assistant exploring retrieval and model behavior that
-                adapt to the person using them.
-              </p>
-              <div class="tags">
-                <span>Llama 3.2</span><span>LoRA</span><span>Unsloth</span>
-              </div>
-              <button
-                class="project-link"
-                data-project="local"
-                aria-label="Explore A more personal AI"
-              >
-                Explore mission <span>↗</span>
-              </button>
-            </div>
-          </article>
-          <article
-            class="project"
-            data-id="financial"
-            data-category="retrieval"
-            data-lifecycle="built"
-            style="--card-accent: #83ddff; --card-glow: #7173e244"
-          >
-            <div class="project-art" aria-hidden="true">
-              <span class="art-index">MISSION / 05</span
-              ><svg viewBox="0 0 320 200">
-                <defs>
-                  <linearGradient id="g-financial" x2="1" y2="1">
-                    <stop stop-color="#83ddff" />
-                    <stop offset="1" stop-color="#7173e2" />
-                  </linearGradient>
-                </defs>
-                <g transform="rotate(-13 125 99)">
-                  <rect
-                    x="80"
-                    y="35"
-                    width="92"
-                    height="124"
-                    rx="9"
-                    fill="#322e53"
-                    stroke="#83ddff"
-                  />
-                  <path
-                    d="M98 60h52M98 76h39M98 93h51M98 110h32"
-                    stroke="#83ddff"
-                    stroke-width="3"
-                    opacity=".7"
-                  />
-                </g>
-                <g transform="rotate(10 195 105)">
-                  <rect
-                    x="150"
-                    y="47"
-                    width="88"
-                    height="118"
-                    rx="9"
-                    fill="url(#g-financial)"
-                  />
-                  <path
-                    d="M168 75h48M168 91h35M168 108h46M168 125h27"
-                    stroke="#fff"
-                    stroke-width="3"
-                    opacity=".7"
-                  />
-                </g>
-                <rect
-                  x="177"
-                  y="135"
-                  width="87"
-                  height="28"
-                  rx="5"
-                  fill="#172a33"
-                  stroke="#83ddff"
-                />
-                <path
-                  d="M186 148l5 5 9-12"
-                  stroke="#83ddff"
-                  stroke-width="2"
-                  fill="none"
-                />
-                <text
-                  x="211"
-                  y="153"
-                  fill="#83ddff"
-                  font-size="10"
-                  font-family="monospace"
-                >
-                  CONTEXT
-                </text></svg
-              ><span class="art-type">RETRIEVAL &amp; REASONING</span>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">PERSONAL PROJECT · FALL 2024</div>
-              <h3>Financial RAG, with context</h3>
-              <p>
-                Financial answers that preserve the important part: the
-                structure and context of the source documents.
-              </p>
-              <div class="tags">
-                <span>Llama 3.2</span><span>LangChain</span><span>FAISS</span>
-              </div>
-              <button
-                class="project-link"
-                data-project="financial"
-                aria-label="Explore Financial RAG, with context"
-              >
-                Explore mission <span>↗</span>
-              </button>
-            </div>
-          </article>
-          <article
-            class="project"
-            data-id="evaluations"
-            data-category="agentic"
-            data-lifecycle="built"
-            style="--card-accent: #ff9dcc; --card-glow: #a269e444"
-          >
-            <div class="project-art" aria-hidden="true">
-              <span class="art-index">MISSION / 06</span
-              ><svg viewBox="0 0 320 200">
-                <defs>
-                  <linearGradient id="g-evaluations" x2="1" y2="1">
-                    <stop stop-color="#ff9dcc" />
-                    <stop offset="1" stop-color="#a269e4" />
-                  </linearGradient>
-                </defs>
-                <circle
-                  cx="160"
-                  cy="100"
-                  r="67"
-                  fill="#21203c"
-                  stroke="#ff9dcc"
-                  stroke-opacity=".5"
-                />
-                <circle
-                  cx="160"
-                  cy="100"
-                  r="45"
-                  fill="none"
-                  stroke="#ff9dcc"
-                  stroke-opacity=".4"
-                />
-                <circle cx="160" cy="100" r="24" fill="url(#g-evaluations)" />
-                <path
-                  d="M160 22v24M160 156v24M80 100h25M216 100h24"
-                  stroke="#ff9dcc"
-                  stroke-width="2"
-                />
-                <path d="M160 100l42-45" stroke="#fff" stroke-width="2" />
-                <circle cx="202" cy="55" r="6" fill="#ff9dcc" /></svg
-              ><span class="art-type">LLM EVALUATION &amp; POST-TRAINING</span>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">SCALE AI · 2025–26</div>
-              <h3>Understanding model behavior</h3>
-              <p>
-                Model evaluation work connecting reasoning failures and
-                behavioral patterns to better training decisions.
-              </p>
-              <div class="tags">
-                <span>Code reasoning</span><span>Failure analysis</span
-                ><span>RL experiments</span>
-              </div>
-              <button
-                class="project-link"
-                data-project="evaluations"
-                aria-label="Explore Understanding model behavior"
-              >
-                Explore mission <span>↗</span>
-              </button>
-            </div>
-          </article>
-          <article
-            class="project"
-            data-id="translation"
-            data-category="research"
-            data-lifecycle="built"
-            style="--card-accent: #ffac96; --card-glow: #a571ec44"
-          >
-            <div class="project-art" aria-hidden="true">
-              <span class="art-index">MISSION / 07</span
-              ><svg viewBox="0 0 320 200">
-                <defs>
-                  <linearGradient id="g-translation" x2="1" y2="1">
-                    <stop stop-color="#ffac96" />
-                    <stop offset="1" stop-color="#a571ec" />
-                  </linearGradient>
-                </defs>
-                <rect
-                  x="49"
-                  y="50"
-                  width="87"
-                  height="93"
-                  rx="15"
-                  fill="url(#g-translation)"
-                />
-                <rect
-                  x="191"
-                  y="60"
-                  width="81"
-                  height="90"
-                  rx="15"
-                  fill="#25213e"
-                  stroke="#ffac96"
-                />
-                <text
-                  x="92"
-                  y="113"
-                  text-anchor="middle"
-                  font-family="sans-serif"
-                  font-size="49"
-                  fill="#fff"
-                >
-                  અ
-                </text>
-                <text
-                  x="232"
-                  y="121"
-                  text-anchor="middle"
-                  font-family="sans-serif"
-                  font-size="50"
-                  fill="#ffac96"
-                >
-                  A
-                </text>
-                <path
-                  d="M145 83h36l-7-7m7 7-7 7M181 119h-36l7-7m-7 7 7 7"
-                  stroke="#ffac96"
-                  stroke-width="2"
-                  fill="none"
-                /></svg
-              ><span class="art-type">LOW-RESOURCE NLP</span>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">JOHNS HOPKINS CLSP · 2024–25</div>
-              <h3>Language without barriers</h3>
-              <p>
-                LLM-assisted translation research for a language pair with fewer
-                resources and plenty of room to improve.
-              </p>
-              <div class="tags">
-                <span>MarianMT</span><span>NLLB</span
-                ><span>Gujarati–English</span>
-              </div>
-              <button
-                class="project-link"
-                data-project="translation"
-                aria-label="Explore Language without barriers"
-              >
-                Explore mission <span>↗</span>
-              </button>
-            </div>
-          </article>
-          <article
-            class="project"
-            data-id="legalease"
-            data-category="research"
-            data-lifecycle="built"
-            style="--card-accent: #74f0dc; --card-glow: #3c87d844"
-          >
-            <div class="project-art" aria-hidden="true">
-              <span class="art-index">MISSION / 08</span
-              ><svg viewBox="0 0 320 200">
-                <defs>
-                  <linearGradient id="g-legalease" x2="1" y2="1">
-                    <stop stop-color="#74f0dc" />
-                    <stop offset="1" stop-color="#3c87d8" />
-                  </linearGradient>
-                </defs>
-                <rect
-                  x="49"
-                  y="50"
-                  width="87"
-                  height="93"
-                  rx="15"
-                  fill="url(#g-legalease)"
-                />
-                <rect
-                  x="191"
-                  y="60"
-                  width="81"
-                  height="90"
-                  rx="15"
-                  fill="#25213e"
-                  stroke="#74f0dc"
-                />
-                <text
-                  x="92"
-                  y="113"
-                  text-anchor="middle"
-                  font-family="sans-serif"
-                  font-size="49"
-                  fill="#fff"
-                >
-                  અ
-                </text>
-                <text
-                  x="232"
-                  y="121"
-                  text-anchor="middle"
-                  font-family="sans-serif"
-                  font-size="50"
-                  fill="#74f0dc"
-                >
-                  A
-                </text>
-                <path
-                  d="M145 83h36l-7-7m7 7-7 7M181 119h-36l7-7m-7 7 7 7"
-                  stroke="#74f0dc"
-                  stroke-width="2"
-                  fill="none"
-                /></svg
-              ><span class="art-type">DOMAIN-ADAPTED TRANSLATION</span>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">PERSONAL PROJECT · SPRING 2024</div>
-              <h3>LegalEase</h3>
-              <p>
-                Legal document translation tuned for the domain, from model
-                fine-tuning to an automated inference workflow.
-              </p>
-              <div class="tags">
-                <span>IndicTrans</span><span>Fairseq</span
-                ><span>Legal NLP</span>
-              </div>
-              <button
-                class="project-link"
-                data-project="legalease"
-                aria-label="Explore LegalEase"
-              >
-                Explore mission <span>↗</span>
-              </button>
-            </div>
-          </article>
-          <article
-            class="project"
-            data-id="cognitive-load"
-            data-category="research"
-            data-lifecycle="built"
-            style="--card-accent: #c0a0ff; --card-glow: #6175ed44"
-          >
-            <div class="project-art" aria-hidden="true">
-              <span class="art-index">MISSION / 09</span
-              ><svg viewBox="0 0 320 200">
-                <defs>
-                  <linearGradient id="g-cognitive-load" x2="1" y2="1">
-                    <stop stop-color="#c0a0ff" />
-                    <stop offset="1" stop-color="#6175ed" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M45 100q110-113 230 0-110 106-230 0Z"
-                  fill="#201831"
-                  stroke="#c0a0ff"
-                  stroke-width="2"
-                />
-                <circle
-                  cx="160"
-                  cy="100"
-                  r="44"
-                  fill="url(#g-cognitive-load)"
-                />
-                <circle cx="160" cy="100" r="23" fill="#101129" />
-                <circle cx="149" cy="86" r="7" fill="#fff" opacity=".9" />
-                <path
-                  d="M48 169h45l12-20 10 33 14-20h39"
-                  fill="none"
-                  stroke="#c0a0ff"
-                  stroke-width="2"
-                /></svg
-              ><span class="art-type">HUMAN–ROBOT INTERACTION</span>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">JOHNS HOPKINS ARCADE · 2024–25</div>
-              <h3>Reading cognitive load</h3>
-              <p>
-                Physiological signals meet machine learning to estimate
-                cognitive load during telerobotic surgery.
-              </p>
-              <div class="tags">
-                <span>Pupillometry</span><span>Gaze entropy</span
-                ><span>Random Forest</span>
-              </div>
-              <button
-                class="project-link"
-                data-project="cognitive-load"
-                aria-label="Explore Reading cognitive load"
-              >
-                Explore mission <span>↗</span>
-              </button>
-            </div>
-          </article>
-          <article
-            class="project"
-            data-id="chair"
-            data-category="research"
-            data-lifecycle="built"
-            style="--card-accent: #f8cd83; --card-glow: #e870a444"
-          >
-            <div class="project-art" aria-hidden="true">
-              <span class="art-index">MISSION / 10</span
-              ><svg viewBox="0 0 320 200">
-                <defs>
-                  <linearGradient id="g-chair" x2="1" y2="1">
-                    <stop stop-color="#f8cd83" />
-                    <stop offset="1" stop-color="#e870a4" />
-                  </linearGradient>
-                </defs>
-                <circle cx="121" cy="48" r="13" fill="url(#g-chair)" />
-                <path
-                  d="M120 70v45h49l22 38h30M120 90h45"
-                  fill="none"
-                  stroke="#f8cd83"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M101 94a37 37 0 1 0 52 43"
-                  fill="none"
-                  stroke="#f8cd83"
-                  stroke-width="5"
-                />
-                <path
-                  d="M179 44h12l7-15 10 33 9-18h25"
-                  fill="none"
-                  stroke="#e870a4"
-                  stroke-width="3"
-                /></svg
-              ><span class="art-type">HUMAN-CENTERED AI</span>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">IEEE XPLORE · 2023</div>
-              <h3>Thought into movement</h3>
-              <p>
-                Cognitive-Chair: exploring brain-sensing interfaces to make
-                assistive mobility more accessible.
-              </p>
-              <div class="tags">
-                <span>Brain–computer interface</span><span>EEG</span
-                ><span>EOG</span>
-              </div>
-              <button
-                class="project-link"
-                data-project="chair"
-                aria-label="Explore Thought into movement"
-              >
-                Explore mission <span>↗</span>
-              </button>
-            </div>
-          </article>
-          <article
-            class="project"
-            data-id="fracture"
-            data-category="research"
-            data-lifecycle="built"
-            style="--card-accent: #83ddff; --card-glow: #7173e244"
-          >
-            <div class="project-art" aria-hidden="true">
-              <span class="art-index">MISSION / 11</span
-              ><svg viewBox="0 0 320 200">
-                <defs>
-                  <linearGradient id="g-fracture" x2="1" y2="1">
-                    <stop stop-color="#83ddff" />
-                    <stop offset="1" stop-color="#7173e2" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M69 54L160 103L249 50M64 155L160 103L253 155"
-                  stroke="#83ddff"
-                  stroke-width="2"
-                  stroke-dasharray="4 5"
-                />
-                <rect
-                  x="120"
-                  y="70"
-                  width="80"
-                  height="64"
-                  rx="16"
-                  fill="url(#g-fracture)"
-                />
-                <path
-                  d="M142 102h36M160 84v36"
-                  stroke="#fff"
-                  stroke-opacity=".8"
-                  stroke-width="2"
-                />
-                <rect
-                  x="46"
-                  y="31"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#83ddff"
-                />
-                <circle cx="64" cy="47" r="4" fill="#83ddff" />
-                <rect
-                  x="229"
-                  y="29"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#83ddff"
-                />
-                <circle cx="247" cy="45" r="6" fill="#83ddff" />
-                <rect
-                  x="40"
-                  y="133"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#83ddff"
-                />
-                <circle cx="58" cy="149" r="4" fill="#83ddff" />
-                <rect
-                  x="232"
-                  y="132"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#83ddff"
-                />
-                <circle cx="250" cy="148" r="6" fill="#83ddff" /></svg
-              ><span class="art-type">MEDICAL IMAGING RESEARCH</span>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">RESEARCH · UNDER REVIEW</div>
-              <h3>AI for fracture detection</h3>
-              <p>
-                Research evaluating artificial intelligence methods for
-                detecting fractures in orthopedic X-rays.
-              </p>
-              <div class="tags">
-                <span>Computer vision</span><span>Orthopedic X-rays</span
-                ><span>Model evaluation</span>
-              </div>
-              <button
-                class="project-link"
-                data-project="fracture"
-                aria-label="Explore AI for fracture detection"
-              >
-                Explore mission <span>↗</span>
-              </button>
-            </div>
-          </article>
-          <article
-            class="project"
-            data-id="agent-observatory"
-            data-category="agentic"
-            data-lifecycle="planned"
-            style="--card-accent: #ff9dcc; --card-glow: #a269e444"
-          >
-            <div class="project-art" aria-hidden="true">
-              <span class="art-index">MISSION / 12</span
-              ><span class="lifecycle-badge">PLANNED</span
-              ><svg viewBox="0 0 320 200">
-                <defs>
-                  <linearGradient id="g-agent-observatory" x2="1" y2="1">
-                    <stop stop-color="#ff9dcc" />
-                    <stop offset="1" stop-color="#a269e4" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M69 54L160 103L249 50M64 155L160 103L253 155"
-                  stroke="#ff9dcc"
-                  stroke-width="2"
-                  stroke-dasharray="4 5"
-                />
-                <rect
-                  x="120"
-                  y="70"
-                  width="80"
-                  height="64"
-                  rx="16"
-                  fill="url(#g-agent-observatory)"
-                />
-                <path
-                  d="M142 102h36M160 84v36"
-                  stroke="#fff"
-                  stroke-opacity=".8"
-                  stroke-width="2"
-                />
-                <rect
-                  x="46"
-                  y="31"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#ff9dcc"
-                />
-                <circle cx="64" cy="47" r="4" fill="#ff9dcc" />
-                <rect
-                  x="229"
-                  y="29"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#ff9dcc"
-                />
-                <circle cx="247" cy="45" r="6" fill="#ff9dcc" />
-                <rect
-                  x="40"
-                  y="133"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#ff9dcc"
-                />
-                <circle cx="58" cy="149" r="4" fill="#ff9dcc" />
-                <rect
-                  x="232"
-                  y="132"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#ff9dcc"
-                />
-                <circle cx="250" cy="148" r="6" fill="#ff9dcc" /></svg
-              ><span class="art-type">PLANNED · AGENT EVALUATION</span>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">PLANNED / WEEKEND LAB</div>
-              <h3>Agent Observatory</h3>
-              <p>
-                A planned weekend lab for testing how tool-using agents behave
-                when their environment gets messy.
-              </p>
-              <div class="tags">
-                <span>Trace replay</span><span>Tool-use evals</span
-                ><span>Budget controls</span>
-              </div>
-              <button
-                class="project-link"
-                data-project="agent-observatory"
-                aria-label="Explore Agent Observatory"
-              >
-                View the blueprint <span>↗</span>
-              </button>
-            </div>
-          </article>
-          <article
-            class="project"
-            data-id="incident-copilot"
-            data-category="agentic"
-            data-lifecycle="planned"
-            style="--card-accent: #ffac96; --card-glow: #a571ec44"
-          >
-            <div class="project-art" aria-hidden="true">
-              <span class="art-index">MISSION / 13</span
-              ><span class="lifecycle-badge">PLANNED</span
-              ><svg viewBox="0 0 320 200">
-                <defs>
-                  <linearGradient id="g-incident-copilot" x2="1" y2="1">
-                    <stop stop-color="#ffac96" />
-                    <stop offset="1" stop-color="#a571ec" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M69 54L160 103L249 50M64 155L160 103L253 155"
-                  stroke="#ffac96"
-                  stroke-width="2"
-                  stroke-dasharray="4 5"
-                />
-                <rect
-                  x="120"
-                  y="70"
-                  width="80"
-                  height="64"
-                  rx="16"
-                  fill="url(#g-incident-copilot)"
-                />
-                <path
-                  d="M142 102h36M160 84v36"
-                  stroke="#fff"
-                  stroke-opacity=".8"
-                  stroke-width="2"
-                />
-                <rect
-                  x="46"
-                  y="31"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#ffac96"
-                />
-                <circle cx="64" cy="47" r="4" fill="#ffac96" />
-                <rect
-                  x="229"
-                  y="29"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#ffac96"
-                />
-                <circle cx="247" cy="45" r="6" fill="#ffac96" />
-                <rect
-                  x="40"
-                  y="133"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#ffac96"
-                />
-                <circle cx="58" cy="149" r="4" fill="#ffac96" />
-                <rect
-                  x="232"
-                  y="132"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#ffac96"
-                />
-                <circle cx="250" cy="148" r="6" fill="#ffac96" /></svg
-              ><span class="art-type">PLANNED · OPERATIONS AGENT</span>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">PLANNED / WEEKEND LAB</div>
-              <h3>Incident Flight Recorder</h3>
-              <p>
-                A planned incident triage copilot that would turn logs and
-                runbooks into a cited investigation timeline.
-              </p>
-              <div class="tags">
-                <span>Log retrieval</span><span>Read-only tools</span
-                ><span>Human approval</span>
-              </div>
-              <button
-                class="project-link"
-                data-project="incident-copilot"
-                aria-label="Explore Incident Flight Recorder"
-              >
-                View the blueprint <span>↗</span>
-              </button>
-            </div>
-          </article>
-          <article
-            class="project"
-            data-id="paper-to-experiment"
-            data-category="agentic"
-            data-lifecycle="planned"
-            style="--card-accent: #74f0dc; --card-glow: #3c87d844"
-          >
-            <div class="project-art" aria-hidden="true">
-              <span class="art-index">MISSION / 14</span
-              ><span class="lifecycle-badge">PLANNED</span
-              ><svg viewBox="0 0 320 200">
-                <defs>
-                  <linearGradient id="g-paper-to-experiment" x2="1" y2="1">
-                    <stop stop-color="#74f0dc" />
-                    <stop offset="1" stop-color="#3c87d8" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M69 54L160 103L249 50M64 155L160 103L253 155"
-                  stroke="#74f0dc"
-                  stroke-width="2"
-                  stroke-dasharray="4 5"
-                />
-                <rect
-                  x="120"
-                  y="70"
-                  width="80"
-                  height="64"
-                  rx="16"
-                  fill="url(#g-paper-to-experiment)"
-                />
-                <path
-                  d="M142 102h36M160 84v36"
-                  stroke="#fff"
-                  stroke-opacity=".8"
-                  stroke-width="2"
-                />
-                <rect
-                  x="46"
-                  y="31"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#74f0dc"
-                />
-                <circle cx="64" cy="47" r="4" fill="#74f0dc" />
-                <rect
-                  x="229"
-                  y="29"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#74f0dc"
-                />
-                <circle cx="247" cy="45" r="6" fill="#74f0dc" />
-                <rect
-                  x="40"
-                  y="133"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#74f0dc"
-                />
-                <circle cx="58" cy="149" r="4" fill="#74f0dc" />
-                <rect
-                  x="232"
-                  y="132"
-                  width="36"
-                  height="32"
-                  rx="9"
-                  fill="#201936"
-                  stroke="#74f0dc"
-                />
-                <circle cx="250" cy="148" r="6" fill="#74f0dc" /></svg
-              ><span class="art-type">PLANNED · RESEARCH AGENT</span>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">PLANNED / WEEKEND LAB</div>
-              <h3>Paper → Experiment</h3>
-              <p>
-                A planned research assistant that would turn an ML paper into a
-                traceable, testable reproduction plan.
-              </p>
-              <div class="tags">
-                <span>Citation grounding</span><span>Experiment planning</span
-                ><span>Reproducibility</span>
-              </div>
-              <button
-                class="project-link"
-                data-project="paper-to-experiment"
-                aria-label="Explore Paper → Experiment"
-              >
-                View the blueprint <span>↗</span>
-              </button>
-            </div>
-          </article>
-        </div>
-        <!-- PROJECTS:END -->
+<div class="projects"><article class="project" data-id="agents" data-category="agentic" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">01</span><small>AGENT / 01</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">EOX VANTAGE · 2026–PRESENT</div><h3>Enterprise AI agents</h3><p class="agent-role">Connect enterprise context with tool-driven workflows.</p><p>Enterprise knowledge meets tool use: agentic workflows designed around real business decisions.</p>
+    <div class="tags" aria-label="Capabilities"><span>Tool orchestration</span><span>Enterprise data</span><span>LLM evaluation</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2026–present</span></div>
+    <button class="project-link" data-project="agents" aria-label="Explore Enterprise AI agents">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="enterprise-rag" data-category="retrieval" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">02</span><small>AGENT / 02</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">EOX VANTAGE · 2026–PRESENT</div><h3>Enterprise knowledge engine</h3><p class="agent-role">Retrieve enterprise knowledge for grounded model responses.</p><p>A production retrieval platform that makes enterprise knowledge available to AI workflows.</p>
+    <div class="tags" aria-label="Capabilities"><span>Semantic retrieval</span><span>Knowledge bases</span><span>LLM pipelines</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2026–present</span></div>
+    <button class="project-link" data-project="enterprise-rag" aria-label="Explore Enterprise knowledge engine">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="documents" data-category="agentic" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">03</span><small>AGENT / 03</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">EOX VANTAGE · 2026–PRESENT</div><h3>Policy Quality Check</h3><p class="agent-role">Extract, verify, and reconcile insurance document information.</p><p>An insurance document review pipeline with extraction, verification, and reconciliation built in.</p>
+    <div class="tags" aria-label="Capabilities"><span>OCR</span><span>Structured extraction</span><span>Reconciliation</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2026–present</span></div>
+    <button class="project-link" data-project="documents" aria-label="Explore Policy Quality Check">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="local" data-category="agentic" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">04</span><small>AGENT / 04</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">PERSONAL PROJECT · 2026</div><h3>A more personal AI</h3><p class="agent-role">Personalize retrieval and responses with a local foundation model.</p><p>A local assistant exploring retrieval and model behavior that adapt to the person using them.</p>
+    <div class="tags" aria-label="Capabilities"><span>Llama 3.2</span><span>LoRA</span><span>Unsloth</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2026</span></div>
+    <button class="project-link" data-project="local" aria-label="Explore A more personal AI">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="financial" data-category="retrieval" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">05</span><small>AGENT / 05</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">PERSONAL PROJECT · FALL 2024</div><h3>Financial RAG, with context</h3><p class="agent-role">Preserve financial document context during retrieval and reasoning.</p><p>Financial answers that preserve the important part: the structure and context of the source documents.</p>
+    <div class="tags" aria-label="Capabilities"><span>Llama 3.2</span><span>LangChain</span><span>FAISS</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Fall 2024</span></div>
+    <button class="project-link" data-project="financial" aria-label="Explore Financial RAG, with context">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="evaluations" data-category="agentic" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">06</span><small>AGENT / 06</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">SCALE AI · 2025–26</div><h3>Understanding model behavior</h3><p class="agent-role">Analyze model reasoning failures and post-training behavior.</p><p>Model evaluation work connecting reasoning failures and behavioral patterns to better training decisions.</p>
+    <div class="tags" aria-label="Capabilities"><span>Code reasoning</span><span>Failure analysis</span><span>RL experiments</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2025–2026</span></div>
+    <button class="project-link" data-project="evaluations" aria-label="Explore Understanding model behavior">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="translation" data-category="research" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">07</span><small>AGENT / 07</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">JOHNS HOPKINS CLSP · 2024–25</div><h3>Language without barriers</h3><p class="agent-role">Study Gujarati–English translation in low-resource settings.</p><p>LLM-assisted translation research for a language pair with fewer resources and plenty of room to improve.</p>
+    <div class="tags" aria-label="Capabilities"><span>MarianMT</span><span>NLLB</span><span>Gujarati–English</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2024–2025 research</span></div>
+    <button class="project-link" data-project="translation" aria-label="Explore Language without barriers">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="legalease" data-category="research" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">08</span><small>AGENT / 08</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">PERSONAL PROJECT · SPRING 2024</div><h3>LegalEase</h3><p class="agent-role">Translate legal documents with domain-adapted models.</p><p>Legal document translation tuned for the domain, from model fine-tuning to an automated inference workflow.</p>
+    <div class="tags" aria-label="Capabilities"><span>IndicTrans</span><span>Fairseq</span><span>Legal NLP</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Spring 2024</span></div>
+    <button class="project-link" data-project="legalease" aria-label="Explore LegalEase">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="cognitive-load" data-category="research" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">09</span><small>AGENT / 09</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">JOHNS HOPKINS ARCADE · 2024–25</div><h3>Reading cognitive load</h3><p class="agent-role">Estimate cognitive load from pupil and gaze signals.</p><p>Physiological signals meet machine learning to estimate cognitive load during telerobotic surgery.</p>
+    <div class="tags" aria-label="Capabilities"><span>Pupillometry</span><span>Gaze entropy</span><span>Random Forest</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2024–2025 research</span></div>
+    <button class="project-link" data-project="cognitive-load" aria-label="Explore Reading cognitive load">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="chair" data-category="research" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">10</span><small>AGENT / 10</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">IEEE XPLORE · 2023</div><h3>Thought into movement</h3><p class="agent-role">Explore brain-sensing control for assistive mobility.</p><p>Cognitive-Chair: exploring brain-sensing interfaces to make assistive mobility more accessible.</p>
+    <div class="tags" aria-label="Capabilities"><span>Brain–computer interface</span><span>EEG</span><span>EOG</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>2023 publication</span></div>
+    <button class="project-link" data-project="chair" aria-label="Explore Thought into movement">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="fracture" data-category="research" data-lifecycle="built">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">11</span><small>AGENT / 11</small></div><span class="agent-status ">Documented</span></div>
+    <div class="project-body"><div class="project-meta">RESEARCH · UNDER REVIEW</div><h3>AI for fracture detection</h3><p class="agent-role">Evaluate AI methods for orthopedic X-ray analysis.</p><p>Research evaluating artificial intelligence methods for detecting fractures in orthopedic X-rays.</p>
+    <div class="tags" aria-label="Capabilities"><span>Computer vision</span><span>Orthopedic X-rays</span><span>Model evaluation</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Under-review research</span></div>
+    <button class="project-link" data-project="fracture" aria-label="Explore AI for fracture detection">Open project brief<span>↗</span></button></div></article>
+<article class="project" data-id="agent-observatory" data-category="agentic" data-lifecycle="planned">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">12</span><small>AGENT / 12</small></div><span class="agent-status lifecycle-badge">Planned</span></div>
+    <div class="project-body"><div class="project-meta">PLANNED / WEEKEND LAB</div><h3>Agent Observatory</h3><p class="agent-role">Planned: test agent behavior under controlled failures.</p><p>A planned weekend lab for testing how tool-using agents behave when their environment gets messy.</p>
+    <div class="tags" aria-label="Capabilities"><span>Trace replay</span><span>Tool-use evals</span><span>Budget controls</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Planned</span></div>
+    <button class="project-link" data-project="agent-observatory" aria-label="Explore Agent Observatory">Inspect the blueprint<span>↗</span></button></div></article>
+<article class="project" data-id="incident-copilot" data-category="agentic" data-lifecycle="planned">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">13</span><small>AGENT / 13</small></div><span class="agent-status lifecycle-badge">Planned</span></div>
+    <div class="project-body"><div class="project-meta">PLANNED / WEEKEND LAB</div><h3>Incident Flight Recorder</h3><p class="agent-role">Planned: assemble a cited incident investigation.</p><p>A planned incident triage copilot that would turn logs and runbooks into a cited investigation timeline.</p>
+    <div class="tags" aria-label="Capabilities"><span>Log retrieval</span><span>Read-only tools</span><span>Human approval</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Planned</span></div>
+    <button class="project-link" data-project="incident-copilot" aria-label="Explore Incident Flight Recorder">Inspect the blueprint<span>↗</span></button></div></article>
+<article class="project" data-id="paper-to-experiment" data-category="agentic" data-lifecycle="planned">
+    <div class="agent-card-top"><div class="agent-ident"><span class="agent-avatar" aria-hidden="true">14</span><small>AGENT / 14</small></div><span class="agent-status lifecycle-badge">Planned</span></div>
+    <div class="project-body"><div class="project-meta">PLANNED / WEEKEND LAB</div><h3>Paper → Experiment</h3><p class="agent-role">Planned: turn cited research claims into an experiment plan.</p><p>A planned research assistant that would turn an ML paper into a traceable, testable reproduction plan.</p>
+    <div class="tags" aria-label="Capabilities"><span>Citation grounding</span><span>Experiment planning</span><span>Reproducibility</span></div>
+    <div class="agent-activity"><span>LAST DOCUMENTED</span><span>Planned</span></div>
+    <button class="project-link" data-project="paper-to-experiment" aria-label="Explore Paper → Experiment">Inspect the blueprint<span>↗</span></button></div></article></div>
+<!-- PROJECTS:END -->
+        <p class="registry-note">
+          “Agent” is a way to explore the portfolio. Status and activity reflect
+          documented work, not live deployment telemetry.
+        </p>
         <div class="more-projects">
           <button class="btn" id="more-projects">
-            Explore the full mission archive ↓
+            Browse the full registry ↓
           </button>
         </div>
         <p class="journey-stamp" aria-live="polite">
-          MISSION PASSPORT &nbsp;
-          <span id="mission-progress">Mission passport ready</span> &nbsp; ·
-          &nbsp; Every good journey starts with curiosity.
+          REGISTRY PROGRESS &nbsp;
+          <span id="mission-progress">Ready to explore</span> &nbsp; · &nbsp;
+          Open a profile to inspect the work.
         </p>
+      </section>
+      <section
+        class="section mission-log-section"
+        id="mission-log"
+        aria-labelledby="mission-log-heading"
+      >
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <div class="section-index">ACTIVITY / CASE-STUDY LOG</div>
+              <h2 id="mission-log-heading">Recent missions.</h2>
+            </div>
+            <p>
+              Selected work, written as mission briefs.<br />Activity periods
+              come from documented experience.
+            </p>
+          </div>
+          <div class="mission-log-panel">
+            <div class="log-table-head">
+              <span>PERIOD</span><span>MISSION / OUTCOME</span
+              ><span>RECORD</span>
+            </div>
+            <div id="mission-log-list"></div>
+          </div>
+          <a class="log-journal-link" href="#journal"
+            >Personal stories, photos, and travel live in the journal ↗</a
+          >
+        </div>
       </section>
       <section class="section split-section" id="trajectory">
         <div class="wrap about-grid">
           <div class="about-intro">
-            <div class="section-index">02 / FLIGHT PATH</div>
+            <div class="section-index">02 / OPERATOR HISTORY</div>
             <h2>Grounded in research.<br />Driven to build.</h2>
             <p>
               I’m Kshitij, an AI engineer who likes taking an idea all the way
@@ -1494,7 +459,7 @@
       <section class="section wrap" id="research">
         <div class="section-head">
           <div>
-            <div class="section-index">03 / RESEARCH SIGNALS</div>
+            <div class="section-index">03 / PUBLICATIONS</div>
             <h2>Questions worth chasing.</h2>
           </div>
           <p>
@@ -1550,7 +515,7 @@
         <div class="wrap">
           <div class="section-head">
             <div>
-              <div class="section-index">04 / SIDE QUESTS</div>
+              <div class="section-index">04 / PLAYGROUND</div>
               <h2>There's life beyond the terminal.</h2>
             </div>
             <p>
@@ -1603,14 +568,14 @@
           <div class="arcade-banner">
             <span class="icon" aria-hidden="true">♧</span>
             <div>
-              <h3>A small detour through the asteroid belt?</h3>
+              <h3>Run a different kind of simulation.</h3>
               <p>
                 Take the controls. Collect signals. See how long you can stay in
                 orbit.
               </p>
             </div>
             <button class="btn primary" id="play-game">
-              Launch flight mode <span>↗</span>
+              Open flight simulator <span>↗</span>
             </button>
           </div>
         </div>
@@ -1623,7 +588,7 @@
         <div class="wrap">
           <div class="section-head">
             <div>
-              <div class="section-index">05 / FIELD NOTES</div>
+              <div class="section-index">05 / PERSONAL LOGS</div>
               <h2 id="journal-heading">Life, outside the viewport.</h2>
             </div>
             <p>
@@ -1728,8 +693,8 @@
         <div class="wrap">
           <div class="section-head">
             <div>
-              <div class="section-index">06 / NEXT COORDINATES</div>
-              <h2 id="events-heading">Where our orbits cross.</h2>
+              <div class="section-index">06 / UPCOMING EVENTS</div>
+              <h2 id="events-heading">Next on the calendar.</h2>
             </div>
             <p>
               Good conversations start somewhere.<br />Here’s where you can find
@@ -1754,7 +719,7 @@
               </button>
             </div>
             <p class="project-count" id="events-status" role="status">
-              New coordinates coming soon.
+              Next events coming soon.
             </p>
           </div>
           <div id="events-list" class="events-list"></div>
@@ -1787,8 +752,8 @@
         <div class="wrap">
           <div class="section-head">
             <div>
-              <div class="section-index">07 / THE READING RADAR</div>
-              <h2 id="reading-heading">Ideas worth keeping<br />in orbit.</h2>
+              <div class="section-index">07 / READING RADAR</div>
+              <h2 id="reading-heading">Inputs worth exploring.</h2>
             </div>
             <p>
               Foundational papers. Fresh questions.<br />Useful perspectives on
@@ -1887,7 +852,7 @@
       </section>
       <section class="contact" id="contact">
         <div class="wrap">
-          <div class="section-index">08 / OPEN A CHANNEL</div>
+          <div class="section-index">08 / CONTACT</div>
           <h2>Great things start<br />with a <span>hello.</span></h2>
           <p>
             Have an interesting problem, a wild idea, or a really good playlist?
@@ -1915,9 +880,9 @@
     <footer class="wrap footer">
       <span
         >© <span id="year">2026</span> KSHITIJ JOSHI &nbsp; / &nbsp; MADE OF
-        CURIOSITY & STARDUST.</span
+        CURIOSITY & CODE.</span
       ><span class="live"
-        >ALL SYSTEMS CURIOUS &nbsp; <a href="#home">BACK TO ORBIT ↑</a></span
+        >HUMAN IN THE LOOP &nbsp; <a href="#home">BACK TO OVERVIEW ↑</a></span
       >
     </footer>
     <button class="copilot-launch" id="open-copilot">
@@ -1932,24 +897,29 @@
         </div>
         <button class="close" aria-label="Close project">×</button>
       </div>
+      <div class="brief-meta" id="project-brief-meta"></div>
       <p id="project-description"></p>
+      <div id="project-case-study" class="case-study-grid"></div>
+      <h3 class="brief-section-title">Workflow</h3>
       <div class="detail-flow" id="project-flow"></div>
       <p id="project-outcome"></p>
       <ul id="project-highlights" class="project-highlights"></ul>
       <p id="project-source" class="source-note"></p>
       <div class="tags" id="project-tags"></div>
+      <h3 class="brief-section-title">Resources &amp; links</h3>
+      <div id="project-resources" class="project-resources"></div>
       <div class="dialog-actions" id="project-actions"></div>
     </dialog>
     <dialog id="command-dialog" aria-labelledby="command-title">
       <div class="dialog-top">
-        <h2 id="command-title">Where to, explorer?</h2>
+        <h2 id="command-title">Open a destination.</h2>
         <button class="close" aria-label="Close command palette">×</button>
       </div>
       <input
         class="search-box"
         id="command-search"
         type="search"
-        placeholder="Find a project, destination, or side quest…"
+        placeholder="Find a profile, section, or playground…"
         aria-label="Search destinations"
       />
       <div class="command-list" id="command-results"></div>
@@ -1960,7 +930,7 @@
     <dialog id="copilot" aria-labelledby="copilot-title">
       <div class="dialog-top">
         <div>
-          <p class="eyebrow">YOUR FLIGHT COMPANION</p>
+          <p class="eyebrow">PORTFOLIO KNOWLEDGE ASSISTANT</p>
           <h2 id="copilot-title">Meet Orbit.</h2>
         </div>
         <button class="close" aria-label="Close copilot">×</button>

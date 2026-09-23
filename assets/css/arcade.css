@@ -1,9 +1,9 @@
 /* The off-duty labs share the portfolio palette; all controls remain local. */
 #hobby-dialog,
 #game-dialog {
-  --arc-teal: #65ead5;
-  --arc-lavender: #b3a3ff;
-  --arc-coral: #ff907e;
+  --arc-teal: var(--teal, var(--lime));
+  --arc-lavender: var(--violet, var(--lime));
+  --arc-coral: var(--lime);
 }
 #hobby-dialog {
   width: min(780px, calc(100vw - 28px));
@@ -18,8 +18,8 @@
 .arcade-console {
   padding: 22px;
   border: 1px solid var(--line);
-  border-radius: 16px;
-  background: linear-gradient(135deg, #15203bcc, #0a1429);
+  border-radius: 8px;
+  background: var(--panel);
 }
 .arcade-console-top {
   display: flex;
@@ -35,7 +35,7 @@
 .arcade-badge {
   color: var(--arc-teal);
   padding: 6px 9px;
-  border: 1px solid #65ead533;
+  border: 1px solid color-mix(in srgb, var(--arc-teal) 20%, transparent);
   border-radius: 5px;
   font-size: 9px;
 }
@@ -102,13 +102,13 @@
   margin-left: auto;
 }
 .arcade-console button:disabled:not(.jiu-choice) {
-  opacity: 0.45;
+  opacity: 0.6;
   cursor: default;
 }
 .arcade-console button[aria-pressed="true"].btn {
   border-color: var(--arc-teal);
   color: var(--arc-teal);
-  background: #65ead515;
+  background: color-mix(in srgb, var(--arc-teal) 8%, transparent);
 }
 .arcade-pads {
   display: grid;
@@ -120,32 +120,32 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 14px;
-  min-height: 143px;
+  min-height: 128px;
   padding: 16px;
-  background: linear-gradient(155deg, #263655, #15223c);
-  border: 1px solid #5f7a9b69;
-  border-radius: 12px;
-  box-shadow: 0 4px 0 #030a18;
+  background: var(--bg);
+  border: 1px solid color-mix(in srgb, var(--line) 41%, transparent);
+  border-radius: 7px;
+  box-shadow: 0 2px 0 var(--line);
   color: var(--text);
   cursor: pointer;
   text-align: left;
 }
 .arcade-pad:nth-child(2) {
-  background: linear-gradient(155deg, #403045, #221c35);
-  border-color: #ff907e50;
+  background: var(--bg);
+  border-color: var(--line);
 }
 .arcade-pad:nth-child(3) {
-  background: linear-gradient(155deg, #19403f, #112936);
-  border-color: #65ead550;
+  background: var(--bg);
+  border-color: var(--line);
 }
 .arcade-pad:nth-child(4) {
-  background: linear-gradient(155deg, #3c345d, #211c38);
-  border-color: #b3a3ff50;
+  background: var(--bg);
+  border-color: var(--line);
 }
 .arcade-pad kbd {
   color: var(--muted);
   font: 10px var(--mono);
-  border: 1px solid #ffffff25;
+  border: 1px solid color-mix(in srgb, var(--text) 15%, transparent);
   border-radius: 4px;
   padding: 3px 6px;
 }
@@ -158,8 +158,8 @@
   font: 9px var(--mono);
 }
 .arcade-pad:active {
-  transform: translateY(3px);
-  box-shadow: 0 1px 0 #030a18;
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--bg);
 }
 .arcade-pad.hit {
   animation: pad-hit 0.24s ease-out;
@@ -183,21 +183,21 @@
   display: grid;
   place-items: center;
   height: 28px;
-  color: #899ebc;
-  border: 1px solid #354564;
+  color: var(--muted);
+  border: 1px solid var(--line);
   border-radius: 3px;
   font: 9px var(--mono);
 }
 .drum-timeline span:nth-child(8n + 1) {
-  border-left: 2px solid #b3a3ff;
+  border-left: 2px solid var(--arc-lavender);
 }
 .drum-timeline span.recorded {
-  background: #65ead533;
+  background: color-mix(in srgb, var(--arc-teal) 20%, transparent);
   color: var(--arc-teal);
-  border-color: #65ead569;
+  border-color: color-mix(in srgb, var(--arc-teal) 41%, transparent);
 }
 .drum-timeline span.current {
-  outline: 2px solid #ff907e;
+  outline: 2px solid var(--arc-coral);
   outline-offset: 1px;
 }
 .dj-presets {
@@ -214,8 +214,8 @@
 .dj-presets select,
 .runner-settings select {
   color: var(--text);
-  background: #101d33;
-  border: 1px solid #354766;
+  background: var(--panel);
+  border: 1px solid var(--line);
   padding: 9px 28px 9px 10px;
   border-radius: 6px;
   min-height: 39px;
@@ -263,19 +263,19 @@
   min-width: 0;
   min-height: 42px;
   padding: 0;
-  border: 1px solid #35435f;
+  border: 1px solid var(--line);
   border-radius: 5px;
-  background: #142138;
-  color: #a6b5ce;
+  background: var(--panel);
+  color: var(--muted);
   font: 8px var(--mono);
   cursor: pointer;
 }
 .dj-step:nth-child(4n + 1) {
-  border-left: 2px solid #9c99c7;
+  border-left: 2px solid var(--line);
 }
 .dj-step[aria-pressed="true"] {
   background: var(--arc-coral);
-  color: #1e1420;
+  color: var(--bg);
   border-color: var(--arc-coral);
 }
 .dj-track:nth-child(2) .dj-step[aria-pressed="true"] {
@@ -287,7 +287,7 @@
   border-color: var(--arc-teal);
 }
 .dj-step.current {
-  outline: 2px solid #f6f2ff;
+  outline: 2px solid var(--text);
   outline-offset: 2px;
 }
 .jiu-flow {
@@ -311,11 +311,11 @@
 .jiu-orbit {
   width: 110px;
   height: 110px;
-  border: 1px solid #b3a3ff70;
+  border: 1px solid color-mix(in srgb, var(--arc-lavender) 44%, transparent);
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: radial-gradient(ellipse at center, #b3a3ff20, transparent 70%);
+  background: radial-gradient(ellipse at center, color-mix(in srgb, var(--arc-lavender) 13%, transparent), transparent 70%);
   position: relative;
 }
 .jiu-orbit::before {
@@ -323,7 +323,7 @@
   position: absolute;
   width: 86px;
   height: 86px;
-  border: 1px solid #b3a3ff30;
+  border: 1px solid color-mix(in srgb, var(--arc-lavender) 19%, transparent);
   transform: rotate(45deg);
   border-radius: 24px;
 }
@@ -339,17 +339,17 @@
 }
 .jiu-choice {
   text-align: left;
-  border: 1px solid #536381;
+  border: 1px solid var(--line);
   color: var(--text);
-  background: #17243b;
+  background: var(--panel);
   padding: 15px;
-  font: 12px/1.6 var(--sans, sans-serif);
+  font: 12px/1.6 var(--body-font, sans-serif);
   border-radius: 8px;
   cursor: pointer;
   min-height: 65px;
 }
 .jiu-choice.chosen {
-  background: #65ead518;
+  background: color-mix(in srgb, var(--arc-teal) 9%, transparent);
   border-color: var(--arc-teal);
   color: var(--arc-teal);
 }
@@ -377,20 +377,20 @@
   height: 108px;
   display: grid;
   place-items: center;
-  border: 1px solid #65ead570;
+  border: 1px solid color-mix(in srgb, var(--arc-teal) 44%, transparent);
   border-radius: 50%;
   color: var(--arc-teal);
-  background: #65ead50a;
+  background: color-mix(in srgb, var(--arc-teal) 4%, transparent);
   transition: transform 4s linear, background 4s linear;
   font: 12px var(--mono);
 }
 .breath-orb.inhaling {
   transform: scale(1.09);
-  background: #65ead51f;
+  background: color-mix(in srgb, var(--arc-teal) 12%, transparent);
 }
 .breath-orb.exhaling {
   transform: scale(0.85);
-  background: #65ead505;
+  background: color-mix(in srgb, var(--arc-teal) 2%, transparent);
 }
 #breathe-start {
   margin-top: 14px;
@@ -403,15 +403,15 @@
 .soccer-pitch {
   position: relative;
   height: 205px;
-  border: 1px solid #65ead52e;
-  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--arc-teal) 18%, transparent);
+  border-radius: 6px;
   overflow: hidden;
   background: repeating-linear-gradient(
     0deg,
-    #133237 0,
-    #133237 38px,
-    #153c3f 39px,
-    #153c3f 76px
+    var(--panel) 0,
+    var(--panel) 38px,
+    var(--panel) 39px,
+    var(--panel) 76px
   );
 }
 .soccer-pitch::after {
@@ -421,7 +421,7 @@
   left: calc(50% - 90px);
   width: 180px;
   height: 150px;
-  border: 1px solid #b4d9c536;
+  border: 1px solid color-mix(in srgb, var(--muted) 21%, transparent);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -431,7 +431,7 @@
   left: 10%;
   width: 80%;
   height: 97px;
-  border: 3px solid #d4e4eb;
+  border: 3px solid var(--text);
   border-bottom-width: 1px;
   border-radius: 5px 5px 0 0;
 }
@@ -443,14 +443,14 @@
       0deg,
       transparent 0,
       transparent 10px,
-      #d4e4eb 11px,
+      var(--text) 11px,
       transparent 12px
     ),
     repeating-linear-gradient(
       90deg,
       transparent 0,
       transparent 14px,
-      #d4e4eb 15px,
+      var(--text) 15px,
       transparent 16px
     );
 }
@@ -462,7 +462,7 @@
   line-height: 1;
   color: var(--arc-coral);
   transform: translateX(-50%);
-  text-shadow: 0 0 14px #fa907e70;
+  text-shadow: none;
 }
 .soccer-targets {
   position: absolute;
@@ -475,9 +475,9 @@
   gap: 9px;
 }
 .soccer-target {
-  background: #081827d9;
-  border: 1px solid #8ca9b97a;
-  color: #c4d4de;
+  background: color-mix(in srgb, var(--panel) 85%, transparent);
+  border: 1px solid color-mix(in srgb, var(--muted) 48%, transparent);
+  color: var(--muted);
   border-radius: 20px;
   padding: 9px 11px;
   font: 10px var(--mono);
@@ -485,7 +485,7 @@
   cursor: pointer;
 }
 .soccer-target[aria-pressed="true"] {
-  color: #0b2430;
+  color: var(--bg);
   background: var(--arc-teal);
   border-color: var(--arc-teal);
 }
@@ -516,18 +516,18 @@
   display: grid;
   place-items: center;
   border-radius: 50%;
-  border: 1px solid #4b5c7a;
+  border: 1px solid var(--line);
   font: 10px var(--mono);
   color: var(--muted);
 }
 .soccer-scorecard .goal {
   color: var(--arc-teal);
   border-color: var(--arc-teal);
-  background: #65ead518;
+  background: color-mix(in srgb, var(--arc-teal) 9%, transparent);
 }
 .soccer-scorecard .miss {
   color: var(--arc-coral);
-  border-color: #ff907e70;
+  border-color: color-mix(in srgb, var(--arc-coral) 44%, transparent);
 }
 .soccer-power-label {
   display: flex;
@@ -539,8 +539,8 @@
 .soccer-power {
   height: 17px;
   position: relative;
-  background: #27344c;
-  border: 1px solid #5d6e8b;
+  background: var(--panel);
+  border: 1px solid var(--line);
   border-radius: 4px;
   margin-bottom: 20px;
 }
@@ -549,7 +549,7 @@
   inset-block: 0;
   left: 58%;
   width: 28%;
-  background: #65ead55c;
+  background: color-mix(in srgb, var(--arc-teal) 36%, transparent);
   border-inline: 1px solid var(--arc-teal);
 }
 #soccer-power-marker {
@@ -559,7 +559,7 @@
   height: 25px;
   width: 4px;
   border-radius: 3px;
-  background: #fff;
+  background: var(--text);
   transform: translateX(-50%);
 }
 .soccer-precision {
@@ -602,8 +602,8 @@
   margin: 15px 0 12px !important;
 }
 #game-dialog .game-canvas {
-  border-color: #3b4b6b;
-  border-radius: 10px;
+  border-color: var(--line);
+  border-radius: 6px;
 }
 #game-dialog .game-controls {
   flex-wrap: wrap;
@@ -619,8 +619,8 @@
 }
 #game-dialog .touch-controls button {
   color: var(--text);
-  background: #1c2946;
-  border-color: #66738d;
+  background: var(--panel);
+  border-color: var(--line);
   border-radius: 8px;
   min-height: 43px;
   font: 12px var(--mono);
