@@ -1,0 +1,764 @@
+{
+  "version": "2026-09-22",
+  "topics": [
+    {
+      "id": "experience",
+      "title": "Career & experience",
+      "text": "Kshitij Joshi is an AI Engineer at EOX Vantage (February 2026–present), building enterprise RAG, agentic workflows, and multi-model insurance document intelligence. Previously he was a Machine Learning Engineer, Gen AI at Scale AI (February 2025–January 2026), researching code-reasoning model quality and reinforcement learning interventions. He was a Research Assistant at Johns Hopkins CLSP (August 2024–January 2025) and ARCADE (January 2024–January 2025), and a Machine Learning Engineer at MarwizTech (January–August 2023).",
+      "sources": [
+        {
+          "label": "Current resume",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        }
+      ],
+      "related": [
+        "eox",
+        "research",
+        "skills"
+      ],
+      "keywords": [
+        "experience",
+        "career",
+        "background",
+        "introduction",
+        "intro",
+        "role",
+        "scale",
+        "marwiz",
+        "who",
+        "about",
+        "job",
+        "overview"
+      ]
+    },
+    {
+      "id": "eox",
+      "title": "Current work at EOX Vantage",
+      "text": "Since February 2026, Kshitij has worked as an AI Engineer at EOX Vantage in Cleveland. His documented work includes a production RAG platform for enterprise knowledge, a multi-model insurance document pipeline combining OCR, extraction, verification and reconciliation, and agentic workflows with enterprise data and tool orchestration. These summaries describe work at the public resume level; internal customer details are not included.",
+      "sources": [
+        {
+          "label": "Current resume",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        }
+      ],
+      "related": [
+        "agents",
+        "documents",
+        "enterprise-rag"
+      ],
+      "keywords": [
+        "eox",
+        "vantage",
+        "current",
+        "currently",
+        "company",
+        "based",
+        "location",
+        "enterprise",
+        "insurance",
+        "production"
+      ]
+    },
+    {
+      "id": "education",
+      "title": "Education",
+      "text": "Kshitij holds a Master of Science in Data Science from Johns Hopkins University and a Bachelor of Technology in Computer Science and Engineering, with a specialization in Data Science, from GSFC University. His coursework covers machine translation, data mining, algorithms, optimization, machine learning, deep learning and NLP.",
+      "sources": [
+        {
+          "label": "Current resume",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        }
+      ],
+      "related": [
+        "research",
+        "skills"
+      ],
+      "keywords": [
+        "education",
+        "degree",
+        "university",
+        "study",
+        "studied",
+        "school",
+        "masters",
+        "bachelor",
+        "hopkins",
+        "gsfc"
+      ]
+    },
+    {
+      "id": "skills",
+      "title": "Engineering toolkit",
+      "text": "Kshitij’s resume lists Python, SQL, TypeScript/JavaScript, Rust and R; PyTorch, Scikit-Learn and Hugging Face; RAG, LangGraph, LangChain, RLHF, tool calling, MCP and LLM evaluation; FastAPI, Spark, Kafka, MLflow, Kubernetes, AWS, Azure and Google Cloud. His projects connect retrieval, model inference, tool orchestration and evaluation. Listed skills do not imply equal depth or duration across every technology.",
+      "sources": [
+        {
+          "label": "Current resume",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        }
+      ],
+      "related": [
+        "agents",
+        "financial",
+        "eox"
+      ],
+      "keywords": [
+        "skill",
+        "tech",
+        "technology",
+        "stack",
+        "python",
+        "rust",
+        "sql",
+        "typescript",
+        "fastapi",
+        "pytorch",
+        "langgraph",
+        "mcp",
+        "cloud",
+        "aws",
+        "azure",
+        "gcp",
+        "tools"
+      ]
+    },
+    {
+      "id": "research",
+      "title": "Research & publications",
+      "text": "Kshitij co-authored Cognitive-Chair, published in IEEE Xplore in 2023; his resume records a Best Paper Award at AIST 2022. The orthopedic fracture detection manuscript remains under review and received a Clinical Orthopedic Society Rapid Fire Presentation Award. His earlier IoT air and noise pollution monitoring work appears in Springer (2021). At Johns Hopkins he studied low-resource Gujarati–English translation and brightness-aware cognitive load estimation for telerobotic surgery.",
+      "sources": [
+        {
+          "label": "Current resume",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Cognitive-Chair · IEEE",
+          "url": "https://ieeexplore.ieee.org/abstract/document/10065338"
+        },
+        {
+          "label": "IoT monitoring · Springer",
+          "url": "https://link.springer.com/chapter/10.1007/978-3-030-71485-7_2"
+        }
+      ],
+      "related": [
+        "chair",
+        "translation",
+        "cognitive-load"
+      ],
+      "keywords": [
+        "research",
+        "publication",
+        "paper",
+        "award",
+        "fracture",
+        "ieee",
+        "springer",
+        "published"
+      ]
+    },
+    {
+      "id": "interests",
+      "title": "Beyond the terminal",
+      "text": "Kshitij’s personal interests include drumming, DJing, Jiu Jitsu and soccer. His public LinkedIn profile also lists environmental volunteering at the Nirja Foundation from May 2021 to June 2023, including tree planting, plant care and inventory coordination in Vadodara. The portfolio’s music, flow and soccer mini-games are playful expressions of those interests, not claims of professional athletic or musical credentials.",
+      "sources": [
+        {
+          "label": "Personal interests",
+          "url": "#off-duty"
+        },
+        {
+          "label": "LinkedIn · volunteering",
+          "url": "https://www.linkedin.com/in/kshitijjoshi10/"
+        }
+      ],
+      "related": [
+        "experience",
+        "weekend"
+      ],
+      "keywords": [
+        "interest",
+        "hobbies",
+        "hobby",
+        "fun",
+        "drum",
+        "dj",
+        "music",
+        "jiu",
+        "soccer",
+        "volunteer",
+        "environment",
+        "personal",
+        "beyond"
+      ]
+    },
+    {
+      "id": "contact",
+      "title": "Connect with Kshitij",
+      "text": "Contact Kshitij at kshitijjoshi017@gmail.com. His GitHub handle is kshitij1010, and his LinkedIn profile is linkedin.com/in/kshitijjoshi10. The resume is downloadable from this portfolio. Contact him directly for availability, collaboration, or details beyond the public project summaries.",
+      "sources": [
+        {
+          "label": "Current resume",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Contact links",
+          "url": "#contact"
+        }
+      ],
+      "related": [
+        "experience",
+        "eox"
+      ],
+      "keywords": [
+        "contact",
+        "email",
+        "connect",
+        "hire",
+        "resume",
+        "cv",
+        "linkedin",
+        "github",
+        "availability",
+        "available"
+      ]
+    },
+    {
+      "id": "retrieval",
+      "title": "RAG across enterprise and financial documents",
+      "text": "Kshitij’s RAG work covers two distinct settings. At EOX Vantage, he builds production retrieval over enterprise knowledge and connects it to AI workflows. His financial document project uses Llama 3.2, LangChain and FAISS with query rewriting, hybrid retrieval, MMR and a table-aware text splitter. His resume reports a 35% retrieval improvement for the financial project; that metric does not describe the enterprise system.",
+      "sources": [
+        {
+          "label": "Current resume",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Financial RAG repository",
+          "url": "https://github.com/kshitij1010/rag"
+        }
+      ],
+      "related": [
+        "enterprise-rag",
+        "financial",
+        "documents"
+      ],
+      "keywords": [
+        "rag",
+        "retrieval",
+        "retrieval augmented generation"
+      ]
+    },
+    {
+      "id": "projects",
+      "title": "Project mission archive",
+      "text": "The portfolio includes 11 documented work and research missions: enterprise agents, enterprise RAG and Policy Quality Check at EOX Vantage; a local Llama assistant; financial document RAG; Scale AI model evaluation; translation and cognitive-load research at Johns Hopkins; LegalEase; Cognitive-Chair; and fracture detection research. Three additional weekend-lab entries are explicitly planned concepts, not completed work.",
+      "sources": [
+        {
+          "label": "Current resume",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Mission archive",
+          "url": "#missions"
+        }
+      ],
+      "related": [
+        "eox",
+        "research",
+        "weekend"
+      ],
+      "keywords": [
+        "projects",
+        "project",
+        "portfolio",
+        "missions"
+      ]
+    },
+    {
+      "id": "journal",
+      "title": "Photo journals, travel & writing",
+      "text": "Kshitij’s portfolio has a Field Notes section for personal photography, travel diaries and blog posts. No journal entries or new photographs have been supplied or published yet. The visible collection cards are clearly labeled coming soon. Specific destinations, trips and stories are not documented and should not be invented.",
+      "sources": [
+        {
+          "label": "Field Notes",
+          "url": "#journal"
+        }
+      ],
+      "related": [
+        "interests",
+        "contact"
+      ],
+      "keywords": [
+        "travel",
+        "photo",
+        "photography",
+        "blog",
+        "writing",
+        "journal",
+        "trip",
+        "destination"
+      ]
+    },
+    {
+      "id": "weekend",
+      "lifecycle": "planned",
+      "title": "Weekend lab: planned, not completed",
+      "text": "The Weekend Lab is a roadmap of agentic AI projects Kshitij intends to build. These entries are design concepts, not completed projects or demonstrated experience. Proposed architectures and evaluation plans describe future work; no shipped outcomes or benchmark results are claimed.",
+      "sources": [
+        {
+          "label": "Weekend Lab blueprints",
+          "url": "#missions"
+        },
+        {
+          "label": "Content provenance",
+          "url": "docs/content-sources.md"
+        }
+      ],
+      "related": [
+        "agent-observatory",
+        "incident-copilot",
+        "paper-to-experiment"
+      ],
+      "keywords": [
+        "planned",
+        "weekend",
+        "future",
+        "next",
+        "roadmap",
+        "blueprint",
+        "plan"
+      ]
+    },
+    {
+      "id": "agents",
+      "title": "Enterprise AI agents",
+      "text": "At EOX Vantage, I develop agentic AI workflows connecting distributed enterprise data, contextual retrieval, and tool orchestration. I build backend services and model inference workflows, and work with stakeholders to translate business requirements into usable AI systems.\nCurrent work: contextual search and decision support over distributed enterprise information.\nConnect enterprise data with tool orchestration and contextual retrieval. Build backend services for agent workflows and low-latency inference. Translate stakeholder requirements into workflows with LLM evaluation.\nThe supplied resumes document contextual search, tool orchestration, and LLM evaluation. No public task-success benchmark, latency figure, or autonomous-action rate is supplied.",
+      "sources": [
+        {
+          "label": "Public resume · EOX Vantage",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=agents#missions"
+        }
+      ],
+      "related": [
+        "eox",
+        "skills"
+      ],
+      "keywords": [
+        "Enterprise AI agents",
+        "Tool orchestration",
+        "Enterprise data",
+        "LLM evaluation",
+        "agents",
+        "agentic systems",
+        "enterprise agents",
+        "eox agents",
+        "tool orchestration"
+      ],
+      "lifecycle": "built"
+    },
+    {
+      "id": "enterprise-rag",
+      "title": "Enterprise knowledge engine",
+      "text": "At EOX Vantage, I built and deployed a production RAG platform combining proprietary knowledge bases, semantic retrieval, and scalable LLM inference pipelines. This is the retrieval foundation of enterprise AI: connecting the right information to a model before it responds.\nBuilt and deployed for enterprise workflows; implementation and customer data remain private.\nIntegrate enterprise knowledge bases with semantic retrieval. Connect retrieved context to scalable LLM inference pipelines. Deliver a production retrieval foundation for enterprise AI applications.\nProduction deployment is documented in the supplied resumes. Corpus size, retrieval benchmarks, traffic, and latency are not public, so no quantitative outcome is claimed.",
+      "sources": [
+        {
+          "label": "Public resume · EOX Vantage",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=enterprise-rag#missions"
+        }
+      ],
+      "related": [
+        "eox",
+        "skills"
+      ],
+      "keywords": [
+        "Enterprise knowledge engine",
+        "Semantic retrieval",
+        "Knowledge bases",
+        "LLM pipelines",
+        "enterprise rag",
+        "enterprise rag",
+        "eox rag",
+        "knowledge engine",
+        "semantic retrieval"
+      ],
+      "lifecycle": "built"
+    },
+    {
+      "id": "documents",
+      "title": "Policy Quality Check",
+      "text": "I architected an end-to-end multi-model LLM pipeline at EOX Vantage for insurance document quality validation. Policy Quality Check brings OCR, structured extraction, verification, and reconciliation into one document review workflow.\nCurrent work: automating complex insurance document review through explicit validation stages.\nOrchestrate OCR and multiple models across a document processing workflow. Extract structured information from complex insurance documents. Combine verification and reconciliation for quality validation.\nThe resumes describe an implemented pipeline for automating insurance document quality validation. They do not provide public extraction accuracy, reconciliation precision, or time-saved measurements.",
+      "sources": [
+        {
+          "label": "Public resume · document intelligence",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=documents#missions"
+        }
+      ],
+      "related": [
+        "eox",
+        "skills"
+      ],
+      "keywords": [
+        "Policy Quality Check",
+        "OCR",
+        "Structured extraction",
+        "Reconciliation",
+        "documents",
+        "pqc",
+        "policy",
+        "insurance documents",
+        "ocr",
+        "document intelligence"
+      ],
+      "lifecycle": "built"
+    },
+    {
+      "id": "local",
+      "title": "A more personal AI",
+      "text": "A personal AI assistant built around a local Llama 3.2 3B model, fine-tuned using LoRA and Unsloth. The project brings together training and inference workflows with personalized retrieval, ranking, local model serving, and preference learning.\nFocus: personalized retrieval and local model serving.\nFine-tune Llama 3.2 3B locally with LoRA and Unsloth. Connect personalized retrieval and ranking with model inference. Explore preference learning within a personal assistant workflow.\nThe Apple MIND resume documents the model and workflow. No public comparison against the base model, hardware profile, latency measurements, or preference-learning benchmark is provided.",
+      "sources": [
+        {
+          "label": "Author-supplied resume · source notes",
+          "url": "docs/content-sources.md#local-foundation-models"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=local#missions"
+        }
+      ],
+      "related": [
+        "research",
+        "skills"
+      ],
+      "keywords": [
+        "A more personal AI",
+        "Llama 3.2",
+        "LoRA",
+        "Unsloth",
+        "local",
+        "personal assistant",
+        "local llama",
+        "lora",
+        "fine tuning",
+        "unsloth"
+      ],
+      "lifecycle": "built"
+    },
+    {
+      "id": "financial",
+      "title": "Financial RAG, with context",
+      "text": "Built an end-to-end financial document intelligence and evaluation pipeline with Llama 3.2, LangChain, and FAISS. Query rewriting, hybrid retrieval, and maximal marginal relevance improve document selection. A custom HTMLTableAwareTextSplitter preserves table structure instead of flattening away relationships.\nResume-reported result: 35% improvement in retrieval accuracy on financial reports.\nPreserve tabular context with a custom HTMLTableAwareTextSplitter. Combine query rewriting, hybrid retrieval, and MMR selection. Build retrieval, document reasoning, and evaluation into one pipeline.\nThe resumes report a 35% improvement in retrieval accuracy. The public source does not specify the baseline, evaluation set, or statistical uncertainty; this result has not been independently reproduced here.",
+      "sources": [
+        {
+          "label": "Public resume · financial document intelligence",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=financial#missions"
+        }
+      ],
+      "related": [
+        "research",
+        "skills"
+      ],
+      "keywords": [
+        "Financial RAG, with context",
+        "Llama 3.2",
+        "LangChain",
+        "FAISS",
+        "financial",
+        "financial rag",
+        "finance",
+        "table aware",
+        "mmr",
+        "faiss"
+      ],
+      "lifecycle": "built"
+    },
+    {
+      "id": "evaluations",
+      "title": "Understanding model behavior",
+      "text": "As a Machine Learning Engineer in Gen AI at Scale AI, I evaluated frontier LLMs for code reasoning, studied failure modes and model outputs, and designed experiments on reinforcement learning and post-training interventions. The work informed evaluation reliability and training decisions.\nWork experience: improving model evaluation reliability through behavioral analysis and experimentation.\nEvaluate large-scale language models on code reasoning. Analyze model failures and behavioral trends to inform evaluation quality. Study reinforcement learning and post-training interventions through experiments.\nThe resumes support the evaluation and experimentation responsibilities. They do not disclose model identities, dataset sizes, intervention-specific gains, or public benchmark results.",
+      "sources": [
+        {
+          "label": "Public resume · Scale AI",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=evaluations#missions"
+        }
+      ],
+      "related": [
+        "research",
+        "skills"
+      ],
+      "keywords": [
+        "Understanding model behavior",
+        "Code reasoning",
+        "Failure analysis",
+        "RL experiments",
+        "evaluations",
+        "scale ai",
+        "rlhf",
+        "reinforcement learning",
+        "code reasoning",
+        "model evaluation"
+      ],
+      "lifecycle": "built"
+    },
+    {
+      "id": "translation",
+      "title": "Language without barriers",
+      "text": "At the Johns Hopkins Center for Language and Speech Processing, I researched Gujarati-to-English neural machine translation using LLM-assisted methods. I optimized MarianMT and NLLB through training and error analysis, with evaluation on Flores200.\nResume-reported results: 15% improvement on Flores200 and 20% reduction in translation errors.\nResearch LLM-assisted approaches to low-resource translation. Optimize MarianMT and NLLB training and evaluation workflows. Use benchmark performance and error analysis to guide improvements.\nThe resumes report 15% improvement on Flores200 and 20% fewer translation errors. Exact baseline configurations, metric definitions, and evaluation split sizes are not supplied in the public resume.",
+      "sources": [
+        {
+          "label": "Public resume · JHU CLSP",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=translation#missions"
+        }
+      ],
+      "related": [
+        "research",
+        "skills"
+      ],
+      "keywords": [
+        "Language without barriers",
+        "MarianMT",
+        "NLLB",
+        "Gujarati–English",
+        "translation",
+        "gujarati",
+        "nllb",
+        "marianmt",
+        "clsp",
+        "low resource"
+      ],
+      "lifecycle": "built"
+    },
+    {
+      "id": "legalease",
+      "title": "LegalEase",
+      "text": "Fine-tuned and evaluated IndicTrans using Fairseq for domain-specific legal translation. I built an NLP inference and document processing pipeline to automate translation and reduce manual work. LegalEase is a separate project from my Gujarati–English research at Johns Hopkins.\nResume-reported results: BLEU score of 0.58 and 40% reduction in manual translation effort.\nFine-tune IndicTrans for domain-specific legal documents. Train and evaluate with Fairseq. Connect translation to an automated document processing pipeline.\nThe resumes report BLEU 0.58 and a 40% reduction in manual translation effort. The BLEU value is preserved exactly as supplied; the metric scale, test corpus, and effort measurement method are not publicly documented.",
+      "sources": [
+        {
+          "label": "Public resume · LegalEase",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=legalease#missions"
+        }
+      ],
+      "related": [
+        "research",
+        "skills"
+      ],
+      "keywords": [
+        "LegalEase",
+        "IndicTrans",
+        "Fairseq",
+        "Legal NLP",
+        "legalease",
+        "legal",
+        "indictrans",
+        "fairseq",
+        "legal translation"
+      ],
+      "lifecycle": "built"
+    },
+    {
+      "id": "cognitive-load",
+      "title": "Reading cognitive load",
+      "text": "At the Johns Hopkins ARCADE Lab, I developed personalized machine learning models for real-time cognitive load estimation in telerobotic surgery. The work combined pupillometry, gaze entropy, and brightness-aware feature engineering with Random Forest models to improve classification robustness.\nResume-reported result: 20% reduction in cognitive load misclassification.\nDevelop personalized models using pupillometry signals. Engineer brightness-aware features and gaze entropy measures. Apply Random Forest to real-time cognitive load estimation.\nThe resumes report a 20% reduction in cognitive load misclassification. Participant counts, experimental protocol, latency, and validation splits are not disclosed in the supplied public material.",
+      "sources": [
+        {
+          "label": "Public resume · JHU ARCADE Lab",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=cognitive-load#missions"
+        }
+      ],
+      "related": [
+        "research",
+        "skills"
+      ],
+      "keywords": [
+        "Reading cognitive load",
+        "Pupillometry",
+        "Gaze entropy",
+        "Random Forest",
+        "cognitive load",
+        "pupillometry",
+        "surgery",
+        "robotics",
+        "arcade",
+        "gaze"
+      ],
+      "lifecycle": "built"
+    },
+    {
+      "id": "chair",
+      "title": "Thought into movement",
+      "text": "Co-authored Cognitive-Chair, a brain-sensing wheelchair research project for paraplegic and quadriplegic people. The work explores brain–computer interfaces, EEG, and EOG for assistive mobility. Published in IEEE Xplore in 2023.\nBest Paper Award, AIST 2022, as reported in my resume.\nExplore brain-sensing interfaces for assistive wheelchair control. Work with EEG and EOG signals for human–machine interaction. Co-author research published in IEEE Xplore in 2023.\nThe resume lists IEEE Xplore publication in 2023 and a Best Paper Award at AIST 2022. Signal-classification accuracy, user-study results, and safety-validation metrics are not supplied here.",
+      "sources": [
+        {
+          "label": "IEEE Xplore · Cognitive-Chair",
+          "url": "https://ieeexplore.ieee.org/abstract/document/10065338"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=chair#missions"
+        }
+      ],
+      "related": [
+        "research",
+        "skills"
+      ],
+      "keywords": [
+        "Thought into movement",
+        "Brain–computer interface",
+        "EEG",
+        "EOG",
+        "chair",
+        "cognitive chair",
+        "wheelchair",
+        "brain computer",
+        "eeg",
+        "eog"
+      ],
+      "lifecycle": "built"
+    },
+    {
+      "id": "fracture",
+      "title": "AI for fracture detection",
+      "text": "Co-authored research titled Evaluation of Artificial Intelligence Methods for Fracture Detection in Orthopedic X-Rays. The supplied resume lists the manuscript as under review and reports a Rapid Fire Presentation Award from the Clinical Orthopedic Society. Publication acceptance is not claimed.\nManuscript under review; Rapid Fire Presentation Award reported in the supplied resume.\nContribute to research on AI methods for orthopedic X-ray analysis. Study fracture detection as a medical imaging evaluation problem. Co-author a manuscript currently listed as under review.\nThe resume reports a Clinical Orthopedic Society Rapid Fire Presentation Award and under-review manuscript status. It does not provide sensitivity, specificity, sample sizes, or external validation results.",
+      "sources": [
+        {
+          "label": "Public resume · publications",
+          "url": "assets/Kshitij-Joshi-Resume.pdf"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=fracture#missions"
+        }
+      ],
+      "related": [
+        "research",
+        "skills"
+      ],
+      "keywords": [
+        "AI for fracture detection",
+        "Computer vision",
+        "Orthopedic X-rays",
+        "Model evaluation",
+        "fracture",
+        "fracture detection",
+        "x rays",
+        "orthopedic"
+      ],
+      "lifecycle": "built"
+    },
+    {
+      "id": "agent-observatory",
+      "title": "Agent Observatory",
+      "text": "PLANNED CONCEPT. Not implemented. Planned concept, not yet implemented. I want to build an evaluation harness that replays agent traces against synthetic tool failures, misleading retrieved text, and strict token budgets. The first milestone would be a small reproducible task suite with a dashboard comparing task success, tool calls, latency, and cost.\nPlanned first milestone: a reproducible agent evaluation suite. No implementation or benchmark results yet.\nPlan: evaluate tool selection, recovery behavior, and evidence use. Plan: test synthetic prompt injection and tool failure scenarios. Plan: compare task success against token, latency, and cost budgets.\nProposed evaluation only: task completion, evidence use, recovery behavior, and budget adherence. No benchmark has been run and no performance result exists.",
+      "sources": [
+        {
+          "label": "Planned concept · scope and milestones",
+          "url": "docs/content-sources.md#planned-weekend-labs"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=agent-observatory#missions"
+        }
+      ],
+      "related": [
+        "weekend",
+        "skills"
+      ],
+      "keywords": [
+        "Agent Observatory",
+        "Trace replay",
+        "Tool-use evals",
+        "Budget controls",
+        "agent observatory",
+        "agent observatory",
+        "agent evaluations"
+      ],
+      "lifecycle": "planned"
+    },
+    {
+      "id": "incident-copilot",
+      "title": "Incident Flight Recorder",
+      "text": "PLANNED CONCEPT. Not implemented. Planned concept, not yet implemented. I want to build an agent that investigates a simulated service incident using read-only log tools and retrieved runbooks, then assembles an evidence-linked timeline and suggested next steps. Any proposed change would stop at a human approval gate. The weekend scope would use a local demo service and synthetic incidents.\nPlanned first milestone: one simulated incident investigated end to end. No deployment or operational claims yet.\nPlan: investigate synthetic incidents with read-only diagnostic tools. Plan: cite log evidence and runbook passages for each recommendation. Plan: enforce bounded tool calls and human approval for proposed changes.\nProposed evaluation only: whether the timeline matches the synthetic incident, recommendations cite the correct evidence, and the workflow respects read-only tools and call limits.",
+      "sources": [
+        {
+          "label": "Planned concept · scope and milestones",
+          "url": "docs/content-sources.md#planned-weekend-labs"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=incident-copilot#missions"
+        }
+      ],
+      "related": [
+        "weekend",
+        "skills"
+      ],
+      "keywords": [
+        "Incident Flight Recorder",
+        "Log retrieval",
+        "Read-only tools",
+        "Human approval",
+        "incident copilot",
+        "incident flight recorder",
+        "incident copilot"
+      ],
+      "lifecycle": "planned"
+    },
+    {
+      "id": "paper-to-experiment",
+      "title": "Paper → Experiment",
+      "text": "PLANNED CONCEPT. Not implemented. Planned concept, not yet implemented. I want to build a small agent workflow that extracts a paper's claims, links them to supporting passages, proposes a minimal reproduction experiment, and critiques missing assumptions. The initial scope would produce an experiment specification from one open-access paper, with human review before code execution.\nPlanned first milestone: a cited reproduction plan for one paper. No completed experiments or results yet.\nPlan: map research claims to their exact supporting passages. Plan: produce a minimal experiment specification and evaluation checklist. Plan: flag missing assumptions and require review before code execution.\nProposed evaluation only: claim-to-passage accuracy, completeness of the experiment specification, and whether missing assumptions are surfaced. No completed experiments or measurements exist.",
+      "sources": [
+        {
+          "label": "Planned concept · scope and milestones",
+          "url": "docs/content-sources.md#planned-weekend-labs"
+        },
+        {
+          "label": "Detailed project brief",
+          "url": "./?mission=paper-to-experiment#missions"
+        }
+      ],
+      "related": [
+        "weekend",
+        "skills"
+      ],
+      "keywords": [
+        "Paper → Experiment",
+        "Citation grounding",
+        "Experiment planning",
+        "Reproducibility",
+        "paper to experiment",
+        "paper to experiment",
+        "paper reproduction"
+      ],
+      "lifecycle": "planned"
+    }
+  ]
+}

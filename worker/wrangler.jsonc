@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kj-portfolio-copilot",
+  "main": "index.mjs",
+  "compatibility_date": "2026-09-22",
+  "workers_dev": true,
+  "observability": { "enabled": false },
+  "vars": {
+    "AI_ENABLED": "false",
+    "AI_PROVIDER": "openai",
+    "AI_MODEL": "",
+    "DAILY_AI_CALLS": "25",
+    "MONTHLY_AI_CALLS": "120",
+    "DAILY_RESERVED_TOKENS": "160000",
+    "MONTHLY_RESERVED_TOKENS": "800000",
+    "DAILY_REQUESTS": "500",
+    "MONTHLY_REQUESTS": "5000",
+    "CLIENT_HOURLY_REQUESTS": "8",
+    "CLIENT_DAILY_REQUESTS": "24",
+    "ALLOW_LOCAL_DEV": "false",
+    "DEV_ORIGIN": ""
+  },
+  "durable_objects": {
+    "bindings": [{ "name": "PORTFOLIO_GUARD", "class_name": "PortfolioGuard" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["PortfolioGuard"] }]
+}

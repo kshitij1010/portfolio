@@ -1,5 +1,95 @@
-# Portfolio Website
+# Kshitij Joshi · Neural Portfolio
 
-Check out my portfolio website to learn more about my projects, skills, and experience: [https://kshitij1010.github.io/portfolio](https://kshitij1010.github.io/portfolio)
+An interactive neural-network portfolio for **https://kshitij1010.github.io/portfolio/**. The existing GitHub Pages main/root configuration stays in place.
 
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/kshitijjoshi10/) or explore my other projects here on [GitHub](https://www.github.com/kshitij1010)!
+## Local preview
+
+```sh
+python3 -m http.server 5178 --bind 127.0.0.1
+```
+
+Open `http://127.0.0.1:5178`. The portfolio needs no build, API key, package install, or backend to run.
+
+## Explore
+
+- Deep indigo/violet surfaces, cyan or emerald accents, 17 px body text, larger project descriptions, and readable Inter/Space Grotesk typography.
+- Conventional responsive navigation, a subtle 14-node interactive hero, Input → Embedding → Retrieval → Generation layers, and a collapsible interest guide. Node probes and recommendations use no AI calls.
+- Fourteen expanded project profiles: eleven documented projects/research items and three explicitly **planned** weekend lab concepts. Each includes the problem, approach, contribution, evaluation, limitations, next steps, and resource slots.
+- Activity labels show documented work periods, not live deployment telemetry. Missing code/demo links are clearly marked pending; see [docs/project-catalog-guide.md](docs/project-catalog-guide.md).
+- Three EOX Vantage workstreams: enterprise agent workflows, enterprise knowledge retrieval, and Policy Quality Check.
+- Project filters, text search, shareable `?mission=project-id` links, source citations, architecture flows, and a locally saved mission passport.
+- Keyboard command palette (`⌘K` / `Ctrl+K`), responsive navigation, reduced-motion support, and accessible native dialogs.
+- An expanded music/game deck: drumming, DJing, Jiu Jitsu flow decisions, soccer, and Orbit Runner.
+
+The planned labs (Agent Observatory, Incident Flight Recorder, and Paper → Experiment) are future designs, not accomplishments. Their cards, details, sources, and copilot topics preserve that distinction.
+
+## Interactive architecture and one-pagers
+
+Every project has a four-component interactive schematic with 56 original component explanations and design considerations across the catalog. Click a component or use arrow keys to inspect its role. These explain public, high-level workflows; they do not claim exact private production topologies. Planned diagrams remain labeled as proposals.
+
+Each project also has a static, shareable summary at `briefs/<project-id>.html`, with an interactive diagram and a Print / save PDF action. Text and the workflow remain available without JavaScript. `node scripts/build-content.mjs` regenerates all 14 summaries through `scripts/build-briefs.mjs`.
+
+Edit component explanations in `assets/js/architecture.js`. To add a personal GitHub or demo link, update its `resources` record in `assets/js/projects.js` with the real URL and `status: "available"`, then rerun the generator. Missing URLs remain explicitly pending.
+
+## Orbit: source-first portfolio guide
+
+Orbit retrieves from 25 curated topics in `assets/data/knowledge.json`. Each response includes resume, project, or publication links; ambiguous queries offer topic choices. Visitors can jump directly from a mission brief into its corresponding copilot topic.
+
+The default **Source Mode** uses no model tokens. It displays documented facts locally rather than pretending to be an LLM. It refuses general-purpose requests, does not execute tools or browse visitor links, and never invents details to fill gaps. Conversation text stays in the current tab and is not saved to local storage.
+
+An optional backend supports OpenAI or Anthropic summaries. It accepts exactly `{ "topicId": "approved-topic" }`, never visitor questions, prompts, uploaded documents, or conversation history. Only server-owned facts reach the provider. Persistent request/token reservations, per-client limits, cached answers, short output limits, and no retries control usage. See [worker/README.md](worker/README.md) for configuration, limitations, and activation. This is **not deployed or connected to a paid account by default**; the frontend uses `enableAI: false` and an empty endpoint in `assets/data/copilot-config.json`.
+
+Consumer Pro login sessions are not embedded or repurposed for public site traffic. Optional hosted AI requires server-side API credentials and a separately deployed backend. Hard call and output limits are implemented; reserved token estimates are not a guaranteed dollar cap. The site stays functional if the backend is disabled, unavailable, or out of quota.
+
+## Photos, travel, and personal writing
+
+The Field Notes section has photo, travel, and writing filters, full-entry readers, and a keyboard-accessible photo viewer. It shows explicitly labeled upcoming collections until the owner supplies real photos and posts. Add content to `assets/data/journal.json`; see [docs/journal-guide.md](docs/journal-guide.md) for the schema and photo folder. No trips or posts are invented.
+
+## Upcoming events
+
+“Next on the calendar” lists confirmed attendance, with chronological cards, event links, and Upcoming / Past events views. Edit `assets/data/events.json`; see [docs/events-guide.md](docs/events-guide.md). Multi-day events remain upcoming through their final date, then move to the past view automatically. No backend or calendar account is needed.
+
+## Papers, articles, and blogs
+
+The Reading Radar includes 23 verified links: 13 foundational papers, seven September 2026 preprints, and three articles/blog posts. It supports text search, collection filters, and progressive disclosure. The curation date is explicit; this is a selected snapshot, not a live feed or citation ranking. Personal picks stay empty until Kshitij selects favorites. Edit `assets/data/reading.json`; see [docs/reading-guide.md](docs/reading-guide.md).
+
+## Content updates
+
+1. Edit `assets/js/projects.js` for project titles, content, status, sources, and architecture flows.
+2. Edit the profile topics in `scripts/build-content.mjs` when profile facts change.
+3. Run `node scripts/build-content.mjs`. It refreshes static cards in `index.html` and the copilot catalog from the same project source.
+4. Review the visible status and source links, and rerun the checks below.
+
+Profile, timeline, publications, and section layout live in `index.html`. Base styles are in `assets/css/orbit.css`; the current palette and layout are in `assets/css/neural.css`, loaded after the retained base styles. Arcade and copilot logic are separate modules.
+
+The four owner-supplied September 2026 resumes inform current facts. The public download is the Palantir variant. The local assistant is sourced from the Apple MIND variant and cites that distinction in [docs/content-sources.md](docs/content-sources.md). Metrics and awards are resume-reported. Enterprise descriptions stay at the public resume level: no customer data, private code, internal URLs, or credentials. LinkedIn's public profile supports the environmental volunteering summary; no unverified X handle is included.
+
+The old top-level experience, education, project, publications, and skills URLs redirect to the new sections. Older individual project pages remain historical case studies.
+
+## Verification
+
+```sh
+python3 scripts/verify.py
+node --check assets/js/orbit.js
+node --check assets/js/command-center.js
+node --check assets/js/neural.js
+node --check assets/js/architecture.js
+node --check assets/js/brief.js
+node --check assets/js/copilot.js
+node --check assets/js/arcade.js
+node --test scripts/test-worker.mjs scripts/test-copilot.mjs
+```
+
+Optional browser smoke tests use Playwright and a running preview:
+
+```sh
+node scripts/browser-smoke.cjs
+node scripts/arcade-smoke.cjs
+node scripts/integration-smoke.cjs
+```
+
+Install Playwright in your development environment first. `PLAYWRIGHT_MODULE` can point at an existing installation; `CHROME_PATH` can point at a local Chrome executable; `PORTFOLIO_URL` overrides the preview URL. Browser tests make no paid model requests. Worker tests mock the providers and verify both scope and quota enforcement. A Wrangler deployment dry-run also validates the optional Worker bundle; it does not publish or call a model.
+
+## Hosting and privacy
+
+Merging into `main` publishes at the existing GitHub Pages URL. All frontend asset paths are relative to support `/portfolio/`; `.nojekyll` enables direct static asset serving. Google Fonts is the only external runtime stylesheet, with system fallbacks. No analytics scripts are loaded on the homepage. Local storage holds UI preferences, mission progress, and game/music settings. Audio starts only on explicit interaction and stops on close/backgrounding. Optional remote AI has separate provider/hosting plans; GitHub Pages and Source Mode remain free of AI usage costs.

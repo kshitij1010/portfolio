@@ -1,0 +1,379 @@
+{
+  "updated": "2026-09-22",
+  "entries": [
+    {
+      "id": "transformer",
+      "title": "Attention Is All You Need",
+      "authors": "Vaswani et al.",
+      "published": "2017",
+      "kind": "paper",
+      "collection": "foundations",
+      "tags": [
+        "Transformers",
+        "Architecture"
+      ],
+      "summary": "Introduces the attention-based Transformer. A starting point for understanding the architecture behind modern language models.",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "sourceLabel": "Research paper · arXiv",
+      "favorite": false
+    },
+    {
+      "id": "rag",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": "Lewis et al.",
+      "published": "2020",
+      "kind": "paper",
+      "collection": "foundations",
+      "tags": [
+        "RAG",
+        "Retrieval"
+      ],
+      "summary": "Combines a language model with retrieved documents. Useful grounding for systems that need external knowledge and traceable evidence.",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "sourceLabel": "Research paper · arXiv",
+      "favorite": false
+    },
+    {
+      "id": "react",
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "authors": "Yao et al.",
+      "published": "2022",
+      "kind": "paper",
+      "collection": "foundations",
+      "tags": [
+        "Agents",
+        "Tool use"
+      ],
+      "summary": "Interleaves reasoning and actions, letting observations influence the next step. A central reference for tool-using agent loops.",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "sourceLabel": "Research paper · arXiv",
+      "favorite": false
+    },
+    {
+      "id": "lora",
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "authors": "Hu et al.",
+      "published": "2021",
+      "kind": "paper",
+      "collection": "foundations",
+      "tags": [
+        "Fine-tuning",
+        "Efficiency"
+      ],
+      "summary": "Adapts a frozen model using small trainable low-rank updates. A practical foundation for customizing models with fewer trainable parameters.",
+      "url": "https://arxiv.org/abs/2106.09685",
+      "sourceLabel": "Research paper · arXiv",
+      "favorite": false
+    },
+    {
+      "id": "cot",
+      "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+      "authors": "Wei et al.",
+      "published": "2022",
+      "kind": "paper",
+      "collection": "foundations",
+      "tags": [
+        "Reasoning",
+        "Prompting"
+      ],
+      "summary": "Explores how worked reasoning examples affect language-model performance on multi-step tasks. A useful reference for the evolution of reasoning methods.",
+      "url": "https://arxiv.org/abs/2201.11903",
+      "sourceLabel": "Research paper · arXiv",
+      "favorite": false
+    },
+    {
+      "id": "instructgpt",
+      "title": "Training language models to follow instructions with human feedback",
+      "authors": "Ouyang et al.",
+      "published": "2022",
+      "kind": "paper",
+      "collection": "foundations",
+      "tags": [
+        "Alignment",
+        "RLHF"
+      ],
+      "summary": "Connects demonstrations, preference judgments, and reinforcement learning to instruction following. A key reference for post-training assistants.",
+      "url": "https://arxiv.org/abs/2203.02155",
+      "sourceLabel": "Research paper · arXiv",
+      "favorite": false
+    },
+    {
+      "id": "dpo",
+      "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+      "authors": "Rafailov et al.",
+      "published": "2023",
+      "kind": "paper",
+      "collection": "foundations",
+      "tags": [
+        "Alignment",
+        "Preferences"
+      ],
+      "summary": "Derives a direct objective for learning from preference pairs, offering an alternative to a separate reward-model and RL training loop.",
+      "url": "https://arxiv.org/abs/2305.18290",
+      "sourceLabel": "Research paper · arXiv",
+      "favorite": false
+    },
+    {
+      "id": "swebench",
+      "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+      "authors": "Jimenez et al.",
+      "published": "2023",
+      "kind": "paper",
+      "collection": "foundations",
+      "tags": [
+        "Evaluation",
+        "Coding agents"
+      ],
+      "summary": "Turns real repository issues into a software-engineering benchmark. Useful for thinking about executable checks and realistic agent evaluation.",
+      "url": "https://arxiv.org/abs/2310.06770",
+      "sourceLabel": "Research paper · arXiv",
+      "favorite": false
+    },
+    {
+      "id": "deepseek-r1",
+      "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+      "authors": "DeepSeek-AI",
+      "published": "2025",
+      "kind": "paper",
+      "collection": "foundations",
+      "tags": [
+        "Reasoning",
+        "Reinforcement learning"
+      ],
+      "summary": "Explores reinforcement learning for reasoning and distillation into smaller models. A reference for how reasoning behavior can develop during post-training.",
+      "url": "https://arxiv.org/abs/2501.12948",
+      "sourceLabel": "Research paper · arXiv",
+      "favorite": false
+    },
+    {
+      "id": "gpt3",
+      "title": "Language Models are Few-Shot Learners",
+      "authors": "Brown et al.",
+      "published": "2020",
+      "kind": "paper",
+      "collection": "foundations",
+      "tags": [
+        "Scaling",
+        "In-context learning"
+      ],
+      "summary": "Examines task performance from examples in the prompt without parameter updates. A landmark for scaling and in-context learning.",
+      "url": "https://arxiv.org/abs/2005.14165",
+      "sourceLabel": "Research paper · arXiv",
+      "favorite": false
+    },
+    {
+      "id": "bert",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "authors": "Devlin et al.",
+      "published": "2018",
+      "kind": "paper",
+      "collection": "foundations",
+      "tags": [
+        "Language understanding",
+        "Pre-training"
+      ],
+      "summary": "Builds bidirectional language representations that transfer to downstream tasks. Helpful background for language understanding and model adaptation.",
+      "url": "https://arxiv.org/abs/1810.04805",
+      "sourceLabel": "Research paper · arXiv",
+      "favorite": false
+    },
+    {
+      "id": "clip",
+      "title": "Learning Transferable Visual Models From Natural Language Supervision",
+      "authors": "Radford et al.",
+      "published": "2021",
+      "kind": "paper",
+      "collection": "foundations",
+      "tags": [
+        "Multimodal",
+        "Vision"
+      ],
+      "summary": "Learns shared image-text representations from paired data. A foundation for zero-shot visual recognition and multimodal retrieval.",
+      "url": "https://arxiv.org/abs/2103.00020",
+      "sourceLabel": "Research paper · arXiv",
+      "favorite": false
+    },
+    {
+      "id": "diffusion",
+      "title": "Denoising Diffusion Probabilistic Models",
+      "authors": "Ho, Jain & Abbeel",
+      "published": "2020",
+      "kind": "paper",
+      "collection": "foundations",
+      "tags": [
+        "Generative AI",
+        "Vision"
+      ],
+      "summary": "Studies image generation through an iterative denoising process. A foundational reading for diffusion-based generative models.",
+      "url": "https://arxiv.org/abs/2006.11239",
+      "sourceLabel": "Research paper · arXiv",
+      "favorite": false
+    },
+    {
+      "id": "harness-zero",
+      "title": "Harness-Zero: Harness Distillation via Agent-as-Harness",
+      "authors": "Ye et al.",
+      "published": "2026-09-21",
+      "kind": "paper",
+      "collection": "recent",
+      "tags": [
+        "Agents",
+        "Distillation"
+      ],
+      "summary": "Investigates transferring behavior induced by specialized agent infrastructure into model weights. New preprint; the reported gains need independent scrutiny.",
+      "url": "https://arxiv.org/abs/2609.24974",
+      "sourceLabel": "arXiv · preprint",
+      "favorite": false
+    },
+    {
+      "id": "agent-collusion",
+      "title": "Emergent Collusion in Long-Horizon LLM Agent Interaction",
+      "authors": "Shi, Zhang & Yang",
+      "published": "2026-09-21",
+      "kind": "paper",
+      "collection": "recent",
+      "tags": [
+        "Multi-agent",
+        "Safety"
+      ],
+      "summary": "Studies how repeated agent interactions and reward incentives can produce protocol violations. Relevant to designing independent verification and oversight.",
+      "url": "https://arxiv.org/abs/2609.24967",
+      "sourceLabel": "arXiv · preprint",
+      "favorite": false
+    },
+    {
+      "id": "gruet",
+      "title": "GRUET: Quantifying Uncertainty of Agentic Reasoning-and-Acting Processes",
+      "authors": "Liang, Hu & Zhang",
+      "published": "2026-09-21",
+      "kind": "paper",
+      "collection": "recent",
+      "tags": [
+        "Agents",
+        "Uncertainty",
+        "Evaluation"
+      ],
+      "summary": "Models branching reasoning as a graph to estimate uncertainty across an agent trajectory. An emerging approach to assessing when an agent may be unreliable.",
+      "url": "https://arxiv.org/abs/2609.24831",
+      "sourceLabel": "arXiv · preprint",
+      "favorite": false
+    },
+    {
+      "id": "evopathbench",
+      "title": "Beyond Endpoint Performance: Process-Level Evaluation of Self-Evolving Agents",
+      "authors": "Lin et al.",
+      "published": "2026-09-21",
+      "kind": "paper",
+      "collection": "recent",
+      "tags": [
+        "Evaluation",
+        "Memory",
+        "Agents"
+      ],
+      "summary": "Introduces EvoPathBench to track how capabilities change as agent artifacts evolve. Looks beyond final scores to retention, transfer, and adaptation.",
+      "url": "https://arxiv.org/abs/2609.24663",
+      "sourceLabel": "arXiv · preprint",
+      "favorite": false
+    },
+    {
+      "id": "ascent",
+      "title": "Ascent: An Agentic System over the Model Context Protocol for Real-World Clinical Data Analysis",
+      "authors": "Ziletti et al.",
+      "published": "2026-09-21",
+      "kind": "paper",
+      "collection": "recent",
+      "tags": [
+        "MCP",
+        "Agents",
+        "Data analysis"
+      ],
+      "summary": "Uses a shared MCP interface for clinical data tools and compares agents with fixed pipelines. Useful reading on domain-specific tool design and accuracy-cost tradeoffs.",
+      "url": "https://arxiv.org/abs/2609.24620",
+      "sourceLabel": "arXiv · preprint",
+      "favorite": false
+    },
+    {
+      "id": "sparse-supervision",
+      "title": "Extremely Sparse Supervision Incentivizes Reasoning Ability",
+      "authors": "Liu et al.",
+      "published": "2026-09-03",
+      "kind": "paper",
+      "collection": "recent",
+      "tags": [
+        "Reasoning",
+        "Distillation",
+        "Efficiency"
+      ],
+      "summary": "Investigates whether supervising a small fraction of tokens can improve reasoning during on-policy distillation. A recent hypothesis about more efficient post-training.",
+      "url": "https://arxiv.org/abs/2609.04565",
+      "sourceLabel": "arXiv · preprint",
+      "favorite": false
+    },
+    {
+      "id": "symbolic-reasoning",
+      "title": "From Symbolic Perception to Logical Deduction: A Framework for Guiding Language Models in Geometric Reasoning",
+      "authors": "Dai et al.",
+      "published": "2026-09-09",
+      "kind": "paper",
+      "collection": "recent",
+      "tags": [
+        "Reasoning",
+        "Neuro-symbolic",
+        "Multimodal"
+      ],
+      "summary": "Combines visual parsing with symbolic deduction for geometry problems. A concrete example of using specialized components alongside language models.",
+      "url": "https://arxiv.org/abs/2609.10335",
+      "sourceLabel": "arXiv · preprint",
+      "favorite": false
+    },
+    {
+      "id": "illustrated-transformer",
+      "title": "The Illustrated Transformer",
+      "authors": "Jay Alammar",
+      "published": "2018-06-27",
+      "kind": "blog",
+      "collection": "guides",
+      "tags": [
+        "Transformers",
+        "Visual guide"
+      ],
+      "summary": "A visual companion to the Transformer paper, walking through attention, representations, and the encoder-decoder structure.",
+      "url": "https://jalammar.github.io/illustrated-transformer/",
+      "sourceLabel": "Author’s blog",
+      "favorite": false
+    },
+    {
+      "id": "effective-agents",
+      "title": "Building effective agents",
+      "authors": "Anthropic Engineering",
+      "published": "2024-12-19",
+      "kind": "article",
+      "collection": "guides",
+      "tags": [
+        "Agents",
+        "Architecture"
+      ],
+      "summary": "Practical patterns for choosing workflows, orchestration, and autonomous tool loops. Read as a design reference; tooling has evolved since publication.",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "sourceLabel": "Engineering article",
+      "favorite": false
+    },
+    {
+      "id": "context-engineering",
+      "title": "Effective context engineering for AI agents",
+      "authors": "Anthropic Engineering",
+      "published": "2025-09-29",
+      "kind": "article",
+      "collection": "guides",
+      "tags": [
+        "Context",
+        "Memory",
+        "Agents"
+      ],
+      "summary": "Treats context as a limited resource. Covers selecting relevant information and managing agent state over longer tasks.",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "sourceLabel": "Engineering article",
+      "favorite": false
+    }
+  ]
+}
